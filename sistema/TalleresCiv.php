@@ -13,7 +13,7 @@
 <body>
     <header>
         <?php 
-    require 'header.html'
+    require 'header.php'
     ?>
     </header>
     

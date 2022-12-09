@@ -1,4 +1,20 @@
+<?php
+if(strlen(session_id())<1)
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SIC</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
 <header>
     <div class="header__superior">
         <div class="logo">
@@ -9,10 +25,10 @@
         </div>
         
         <div class="dropdown">
-            <a> Profile <i class="fa-solid fa-sort-down"></i></a>
+            <a> Perfil <i class="fa-solid fa-sort-down"></i></a>
             <div class="dropdown-options">
                 <a href="#"><i class="fa-solid fa-gear"></i>Configuración</a>
-                <a href="#"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
+                <a href="../ajax/usuario.php?op=salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
             </div>
         </div>
     </div>
@@ -32,12 +48,7 @@
                     </li>
                     <li><a href="#">Talleres</a>
                         <ul>
-                            <li><a href="TalleresDep.php">Talleres Deportivos</a>
-                                <ul style="position:absolute; left:90%; top: 5%;">
-                                    <li><a href="">Grupos Disponibles</a></li>
-                                    <li><a href="">Inscribirse</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="TalleresDep.php">Talleres Deportivos</a></li>
                             <li><a href="TalleresCul.php">Talleres Culturales</a></li>
                             <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
                         </ul>

@@ -15,20 +15,21 @@ header{
     background: #fff;
 }
 
-h1 {
+.title > h1 { 
     text-align: left;
     position: absolute;
     left: 15%;
-    top: 20%;
+    top: 10%;
     bottom: 5%;
     right: 5%;
     color: #00325F;
     font-family: 'Raleway';
-    font-weight:800;
-    font-size: 25px;
-  }
+    font-weight: 800;
+    font-size: 20px;
+}
 
 /*HEADER SUPERIOR*/
+
 
 .header__superior{
     max-width: 1200px;

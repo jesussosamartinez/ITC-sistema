@@ -8,86 +8,172 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet/less" type="text/css" href="../css/t.Less">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="../dist/style.css">
 </head>
 <body>
     <header>
         <?php 
-    require 'header.html'
+    require 'header.php'
     ?>
     </header>
-    
+
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"></i> Talleres Deportivos</a>
+        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i> Inicio <i
+                class="fa-solid fa-chevron-right"></i> Talleres Deportivos</a>
     </div>
     <hr>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="card__image-holder">
-                <img class="card__image" src="https://www.cuautla.tecnm.mx/img/construccion.png" alt="" />
+<!-- Table Taller Dep -->
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Departamento
+                    </th>
+                    <th>
+                        SELECCIONAR
+                    </th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th colspan='3'>
+                        Year: 2022
+                    </th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td data-title='Nombre'>
+                        FUTBOL SOCCER - MAT
+                    </td>
+                    <td data-title='Departamento'>
+                        SERVICIOS EXTRAEXCOLARES
+                    </td>
+                    <td class='select'>
+                        <a class='button ver' href='#'>
+                            ver
+                        </a>
+                        <a class='button' href='#'>
+                            Inscribirse
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-title='Nombre'>
+                        FUTBOL - VESP
+                    </td>
+                    <td data-title='Departamento'>
+                    SERVICIOS EXTRAEXCOLARES
+                    </td>
+                    <td class='select'>
+                        <a class='button ver' href='#'>
+                            ver
+                        </a>
+                        <a class='button inscribirse' href='#'>
+                            Inscribirse
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-title='Nombre'>
+                        AJEDREZ - MAT
+                    </td>
+                    <td data-title='Departamento'>
+                    SERVICIOS EXTRAEXCOLARES
+                    </td>
+                    <td class='select'>
+                    <a class='button ver' href='#'>
+                            ver
+                        </a>
+                        <a class='button' href='#'>
+                            Inscribirse
+                        </a>
+                        <a class='button' href='#'>
+                            Activar
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-title='Nombre'>
+                        AJEDREZ - VESP
+                    </td>
+                    <td data-title='Departamento'>
+                    SERVICIOS EXTRAEXCOLARES
+                    </td>
+                    <td class='select'>
+                    <a class='button ver' href='#'>
+                            ver
+                        </a>
+                        <a class='button' href='#'>
+                            Inscribirse
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class='detail'>
+            <div class='detail-container'>
+                <dl>
+                    <dt>
+                        Nombre
+                    </dt>
+                    <dd>
+                        FUTBOL SOCCER - MAT
+                    </dd>
+                    <dt>
+                        Departamento
+                    </dt>
+                    <dd>
+                    SERVICIOS EXTRAEXCOLARES
+                    </dd>
+                    <dt>
+                        CUPO DISPONIBLE
+                    </dt>
+                    <dd>
+                        30
+                    </dd>
+                    <dt>
+                        HORAS MAX
+                    </dt>
+                    <dd>
+                        555
+                    </dd>
+                    <dt>
+                        Actualizacion
+                    </dt>
+                    <dd>
+                        2022
+                    </dd>
+                    <dt>
+                        Notes
+                    </dt>
+                    <dd>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
+                        eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit,
+                        posuere a, pede.
+                    </dd>
+                </dl>
             </div>
-            <div class="card-title">
-                <a href="#" class="toggle-info btn">
-                    <span class="left"></span>
-                    <span class="right"></span>
-                </a>
-                <h2>
-                    Grupos disponibles
-                    <small>más información</small>
-                </h2>
-            </div>
-            <div class="card-flap flap1">
-                <div class="card-description">
-                    This grid is an attempt to make something nice that works on touch devices. Ignoring hover states
-                    when they're not available etc.
-                </div>
-                <div class="card-flap flap2">
-                    <div class="card-actions">
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                </div>
+            <div class='detail-nav'>
+                <button class='close'>
+                    Cerrar
+                </button>
             </div>
         </div>
+    </main>
+    <!-- partial -->
 
-        <div class="card">
-            <div class="card__image-holder">
-                <img class="card__image" src="https://www.cuautla.tecnm.mx/img/construccion.png" alt="" />
-            </div>
-            <div class="card-title">
-                <a href="#" class="toggle-info btn">
-                    <span class="left"></span>
-                    <span class="right"></span>
-                </a>
-                <h2>
-                    Inscribirse
-                    <small>Image</small>
-                </h2>
-            </div>
-            <div class="card-flap flap1">
-                <div class="card-description">
-                    This grid is an attempt to make something nice that works on touch devices. Ignoring hover states
-                    when they're not available etc.
-                </div>
-                <div class="card-flap flap2">
-                    <div class="card-actions">
-                        <a href="#" class="btn">Read more</a>
-                    </div>
-                </div>
-            </div>
-
-
-
-        </div>
-    </div>
-
-   
 
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../assets/js/cards.js" type="text/javascript"></script>
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="../dist/script.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
 <body>
 <header>
         <?php 
-    require 'header.html'
+    require 'header.php'
     ?>
     </header>
 
@@ -19,5 +19,22 @@
         <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"></i> Departamentos</a>
     </div>
     <hr>
+
+    <section class="departamentos" style="top:45%; position:absolute; left:15%;">
+        <div class="">
+            Departamento de Ciencias Basicas
+        </div>
+        <div class="">
+            Departamento de Actividades Extraescolares
+        </div>
+        <div class="">
+            Departamento de Desarrollo Academico
+        </div>
+        <div class="">
+            Departamento de Sistemas y Computación
+        </div>
+    </section>
+
+
 </body>
 </html>

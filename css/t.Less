@@ -13,7 +13,7 @@
 @tealShade:	#007c85;
 
 @darkGrey: #4f585e;
-
+@azultec: #023877;
 
 a.btn {
   background: @teal;
@@ -28,7 +28,7 @@ a.btn {
 }
 
 .no-touch a.btn:hover {
-  background: lighten(@teal,2.5);
+  background: lighten(@azultec,2.5);
   box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
   transform: translateY(-2px);
   transition: all 0.25s 0s ease-out;
@@ -36,7 +36,7 @@ a.btn {
 
 .no-touch a.btn:active,
 a.btn:active {
-  background: darken(@teal,2.5);
+  background: darken(@azultec,2.5);
   box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
   transform: translate3d(0,1px,0);
   transition: all 0.025s 0s ease-out;
@@ -45,11 +45,12 @@ a.btn:active {
 div.cards {
   position: absolute;
   top: 33%;
-  left: 30%;
+  left: 20%;
   margin: 20px auto;
   max-width: 960px;
   text-align: center;
   z-index: -1;
+  border-radius: 18px;
 }
 
 div.card {
@@ -110,13 +111,16 @@ div.card {
     }
     
     h2 {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.05em;
+      font-size: 17px;
+      font-weight: bolder;
+      letter-spacing: 0.01em;
       margin: 0;
       padding: 0;
-      font-family: 'Raleway', monospace;
+      font-family: 'Raleway';
       text-transform: uppercase;
+      text-align: center;
+      color: #916F09;
+
       
       small {
         display: block;
@@ -179,7 +183,7 @@ div.card.show {
 
   div.card-title {
     a.toggle-info {
-      background: @salmon !important;
+      background: #023877 !important;
       span {
         top: 15px;
       }

@@ -1,11 +1,11 @@
 $("#login-form").on('submit',function(e)
 {
 	e.preventDefault();
-    logina=$("#logina").val();
-    clavea=$("#clavea").val();
+    email=$("#email").val();
+    password=$("#password").val();
 
     $.post("../ajax/usuario.php?op=verificar",
-        {"logina":logina,"clavea":clavea},
+        {"email":email,"Password":password},
         function(data)
     {
         if (data!="null")
@@ -14,7 +14,7 @@ $("#login-form").on('submit',function(e)
         }
         else
         {
-            bootbox.alert("Usuario y/o Password incorrectos");
+        alert("Usuario y/o Password incorrectos");
         }
     });
 })
