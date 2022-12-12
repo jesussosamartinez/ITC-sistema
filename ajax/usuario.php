@@ -8,7 +8,7 @@ require_once "../modelos/Usuario.php";
 
 $usuario = new Usuario();
 
-$idUsuario= isset($_POST["idusuario"])? limpiarCadena($_POST["idusuario"]):"";
+$idUsuario= isset($_POST["idUsuario"])? limpiarCadena($_POST["idusuario"]):"";
 $email = isset($_POST["email"])? limpiarCadena($_POST["email"]): "";
 $Password = isset($_POST["Password"])? limpiarCadena($_POST["Password"]):"";
 $idRol = isset($_POST["idRol"])? limpiarCadena($_POST["idRol"]):"";

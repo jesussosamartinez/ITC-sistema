@@ -1,23 +1,21 @@
-<?php
-
-//Incluimos la conexion a la base de datos
+<?php 
+//Incluímos inicialmente la conexión a la base de datos
 require "../config/Conexion.php";
 
-Class Usuario {
+Class Usuario
+{
+	//Implementamos nuestro constructor
+	public function __construct()
+	{
 
-    //Implementamos un constructor
-    public function __construct(){
+	}
 
+    //Función para verificar el acceso al sistema
+	public function verificar($email,$Password)
+    {
+    	$sql="SELECT idUsuario, email, Password, IdRol FROM usuarios WHERE email='$email' AND Password='$Password';"; 
+    	return ejecutarConsulta($sql);  
     }
-
-
-
-    //funcion para verificar el acceso al sistema
-    public function verificar($email,$Password){
-        $sql = "SELECT * FROM usuarios WHERE email='$email' and Password='$Password' and condicion='1'";
-        return ejecutarConsulta($sql);   
-    }
-
 }
 
 ?>
