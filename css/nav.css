@@ -19,7 +19,7 @@ header{
     text-align: left;
     position: absolute;
     left: 15%;
-    top: 10%;
+    top: 19%;
     bottom: 5%;
     right: 5%;
     color: #00325F;
@@ -257,3 +257,158 @@ nav ul li ul li a:hover{
     color: #000000;
     z-index: -3;
   }
+
+
+  /* Formulario para ver los datos generales*/
+
+  form {
+    background-color: #00325F;
+    position: absolute;
+    width: 30%;
+    text-transform: uppercase;
+    
+  }
+
+  form>.nombre> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 46%;
+    left: 15%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .nombre > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 18%;
+    height: 3rem;
+    top: 50%;
+    left: 9%;
+  }
+  form>.apellidoP> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 46%;
+    left: 32%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .apellidoP > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 18%;
+    top: 50%;
+    height: 3rem;
+    left: 28%;
+  }
+
+  form>.apellidoM> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .apellidoM > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 18%;
+    top: 50%;
+    height: 3rem;
+    left: 47%;
+  }
+  form>.correoinstitucional> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 46%;
+    left:69%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .correoinstitucional > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 20%;
+    top: 50%;
+    height: 3rem;
+    left: 66%;
+  }
+
+  form>.numcontrol> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 59%;
+    left:13.2%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .numcontrol > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 16%;
+    height: 3rem;
+    left: 9%;
+    top: 63%;
+  }
+
+  form>.lic> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 59%;
+    left:33%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .lic > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 23%;
+    height: 3rem;
+    left: 26%;
+    top: 63%;
+  }
+
+  form>.semestre> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 59%;
+    left: 56%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .semestre > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 18%;
+    height: 3rem;
+    left: 50%;
+    top: 63%;
+  }
+  form>.telefono> label {
+    font-family: 'Raleway';
+    position: fixed;
+    top: 59%;
+    left: 74%;
+    color:#023877;
+    font-weight: bold;
+  }
+
+  form > .telefono > input {
+    position: fixed;
+    border-radius: 10px;
+    width: 17%;
+    height: 3rem;
+    left: 69%;
+    top: 63%;
+  }
+
+
+

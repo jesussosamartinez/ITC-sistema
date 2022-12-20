@@ -11,6 +11,7 @@
 
 </head>
 <body>
+    <!-- Aqui va hacer informacion de las actividades del alumno-->
     <header>
         <?php 
     require 'header.php'

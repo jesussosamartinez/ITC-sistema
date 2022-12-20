@@ -11,11 +11,11 @@ function init(){
 	})
 
 	//Cargamos los items al select categoria
-	//$.post("../ajax/talleres.php?op=selectCategoria", function(r){
+	$.post("../ajax/talleres.php?op=selectCategoria", function(r){
 	  //          $("#idcategoria").html(r);
 	    //        $('#idcategoria').selectpicker('refresh');
 
-	//});
+	});
 	//$("#imagenmuestra").hide();
 	//$('#mAlmacen').addClass("treeview active");
     //$('#lArticulos').addClass("active");

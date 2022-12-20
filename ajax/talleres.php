@@ -2,16 +2,10 @@
 ob_start();
 if (strlen(session_id()) < 1){
 	session_start();//Validamos si existe o no la sesión
-}
-if (!isset($_SESSION["email"]))
-{
-  header("Location: index.php");//Validamos el acceso solo a los usuarios logueados al sistema.
-}
-else
-{
+
     require_once "../modelos/Talleres.php";
     
-    $Talleres=new Talleres();
+    $talleres=new Talleres();
 
     $idTaller = isset($_POST["idTaller"])? limpiarCadena($_POST["idTaller"]): "";
     $ClaveTaller = isset($_POST["ClaveTaller"])? limpiarCadena($_POST["ClaveTaller"]): "";
@@ -23,23 +17,23 @@ else
     switch ($_GET["op"]){
         
         case 'desactivar':
-            $rspta=$Talleres->desactivar($idTaller);
+            $rspta=$talleres->desactivar($idTaller);
              echo $rspta ? "Taller Desactivado" : "Taller no desactivado";
         break;
     
         case 'activar':
-            $rspta=$Talleres->activar($idTaller);
+            $rspta=$talleres->activar($idTaller);
              echo $rspta ? "Taller activado" : "Taller no activado";
         break;
     
         case 'mostrar':
-            $rspta=$Talleres->mostrar($idTaller);
+            $rspta=$talleres->mostrar($idTaller);
              //Codificar el resultado utilizando json
              echo json_encode($rspta);
         break;
 
         case 'listar':
-            $rspta=$Talleres->listar();
+            $rspta=$talleres->listar();
              //Vamos a declarar un array
              $data= Array();
     

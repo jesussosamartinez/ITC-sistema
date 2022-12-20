@@ -33,7 +33,7 @@ Class Talleres
 
     public function listar()
 	{
-		$sql="SELECT * FROM talleres";
+		$sql="SELECT  FROM talleres";
 		return ejecutarConsulta($sql);		
 	}
 }

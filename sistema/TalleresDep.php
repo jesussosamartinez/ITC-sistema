@@ -10,6 +10,7 @@
     <link rel="stylesheet/less" type="text/css" href="../css/t.Less">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="../dist/style.css">
+
 </head>
 <body>
     <header>
@@ -24,28 +25,7 @@
     </div>
     <hr>
 
-    <div class="panel-body table-responsive" id="listadoregistros">
-                        <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
-                          <thead>
-                            <th>Nombre</th>
-                            <th>Tipo</th>
-                            <th>Grupo</th>
-                            <th>Turno</th>
-                            <th>Opciones</th>
-                          </thead>
-                          <tbody>                            
-                          </tbody>
-                          <tfoot>
-                            <th>Nombre</th>
-                            <th>Tipo</th>
-                            <th>Grupo</th>
-                            <th>Turno</th>
-                            <th>Opciones</th>
-                          </tfoot>
-                        </table>
-                    </div>
-
-<!-- Table Taller Dep -->
+    <!-- Table Taller Dep -->
     <main>
         <table>
             <thead>
@@ -90,7 +70,7 @@
                         FUTBOL - VESP
                     </td>
                     <td data-title='Departamento'>
-                    SERVICIOS EXTRAEXCOLARES
+                        SERVICIOS EXTRAEXCOLARES
                     </td>
                     <td class='select'>
                         <a class='button ver' href='#'>
@@ -106,10 +86,10 @@
                         AJEDREZ - MAT
                     </td>
                     <td data-title='Departamento'>
-                    SERVICIOS EXTRAEXCOLARES
+                        SERVICIOS EXTRAEXCOLARES
                     </td>
                     <td class='select'>
-                    <a class='button ver' href='#'>
+                        <a class='button ver' href='#'>
                             ver
                         </a>
                         <a class='button' href='#'>
@@ -125,10 +105,10 @@
                         AJEDREZ - VESP
                     </td>
                     <td data-title='Departamento'>
-                    SERVICIOS EXTRAEXCOLARES
+                        SERVICIOS EXTRAEXCOLARES
                     </td>
                     <td class='select'>
-                    <a class='button ver' href='#'>
+                        <a class='button ver' href='#'>
                             ver
                         </a>
                         <a class='button' href='#'>
@@ -151,7 +131,7 @@
                         Departamento
                     </dt>
                     <dd>
-                    SERVICIOS EXTRAEXCOLARES
+                        SERVICIOS EXTRAEXCOLARES
                     </dd>
                     <dt>
                         CUPO DISPONIBLE
@@ -195,5 +175,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../dist/script.js"></script>
     <script src="scripts/talleres.js" type="text/javascript"></script>
+
 </body>
 </html>

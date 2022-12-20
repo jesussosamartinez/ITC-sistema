@@ -13,11 +13,7 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/home.css">
-    <!-- DATATABLES -->
-    <link rel="stylesheet" type="text/css" href="../public/datatables/jquery.dataTables.min.css">    
-    <link href="../public/datatables/buttons.dataTables.min.css" rel="stylesheet"/>
-    <link href="../public/datatables/responsive.dataTables.min.css" rel="stylesheet"/>
-
+    
 </head>
 <body>
 <header>
@@ -48,7 +44,7 @@ session_start();
                         <ul>
                             <li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>
                             <li><a href="#">Horario</a></li>
-                            <li><a href="#">Datos Generales</a></li>
+                            <li><a href="datosgenerales.php">Datos Generales</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Talleres</a>
