@@ -5,6 +5,6 @@ $('.ver, .close').on('click', function(e) {
 
 $('.active').on('click', function(e){
   e.preventDefault();
-  $('.active').style('hidden');
-})
+
+});
 
