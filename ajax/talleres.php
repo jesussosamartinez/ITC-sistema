@@ -5,7 +5,7 @@ if (strlen(session_id()) < 1){
 
     require_once "../modelos/Talleres.php";
     
-    $talleres=new Talleres();
+    $talleres = new Talleres();
 
     $idTaller = isset($_POST["idTaller"])? limpiarCadena($_POST["idTaller"]): "";
     $ClaveTaller = isset($_POST["ClaveTaller"])? limpiarCadena($_POST["ClaveTaller"]): "";
@@ -40,7 +40,7 @@ if (strlen(session_id()) < 1){
              while ($reg=$rspta->fetch_object()){
                  $data[]=array(
                      "0"=>($reg->condicion)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
-                         ' <button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
+                         ' <button class="btn btn-danger" onclick="desactivar('.$reg->$idTaller.')"><i class="fa fa-close"></i></button>':
                          '<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
                          ' <button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
                      "1"=>$reg->Nombre,

@@ -4,6 +4,7 @@ var tabla;
 function init(){
 	mostrarform(false);
 	listar();
+	console.table(listar());
 
 	$("#formulario").on("submit",function(e)
 	{
@@ -11,22 +12,33 @@ function init(){
 	})
 
 	//Cargamos los items al select categoria
-	$.post("../ajax/talleres.php?op=selectCategoria", function(r){
-	  //          $("#idcategoria").html(r);
-	    //        $('#idcategoria').selectpicker('refresh');
+	$.post("../ajax/articulo.php?op=selectCategoria", function(r){
+	            $("#idcategoria").html(r);
+	            $('#idcategoria').selectpicker('refresh');
 
 	});
-	//$("#imagenmuestra").hide();
-	//$('#mAlmacen').addClass("treeview active");
-    //$('#lArticulos').addClass("active");
-//}
+	$("#imagenmuestra").hide();
+	$('#mAlmacen').addClass("treeview active");
+    $('#lArticulos').addClass("active");
+}
 
 //Función limpiar
+function limpiar()
+{
+	$("#codigo").val("");
+	$("#nombre").val("");
+	$("#descripcion").val("");
+	$("#stock").val("");
+	$("#imagenmuestra").attr("src","");
+	$("#imagenactual").val("");
+	$("#print").hide();
+	$("#idarticulo").val("");
 }
+
 //Función mostrar formulario
 function mostrarform(flag)
 {
-	
+	limpiar();
 	if (flag)
 	{
 		$("#listadoregistros").hide();
@@ -45,6 +57,7 @@ function mostrarform(flag)
 //Función cancelarform
 function cancelarform()
 {
+	limpiar();
 	mostrarform(false);
 }
 
@@ -113,34 +126,35 @@ function guardaryeditar(e)
 	limpiar();
 }
 
-function mostrar(idTaller)
+function mostrar(idarticulo)
 {
-	$.post("../ajax/talleres.php?op=mostrar",{idTaller : idTaller}, function(data, status)
+	$.post("../ajax/articulo.php?op=mostrar",{idarticulo : idarticulo}, function(data, status)
 	{
 		data = JSON.parse(data);		
 		mostrarform(true);
 
-		$("#idTaller").val(data.idTaller);
-		$('#idTaller').selectpicker('refresh');
-		//$("#codigo").val(data.codigo);
-		$("#nombre").val(data.Nombre);
-		$("#Tipo").val(data.Tipo);
-		$("#Grupo").val(data.Grupo);
-		//$("#imagenmuestra").show();
-		//$("#imagenmuestra").attr("src","../files/articulos/"+data.imagen);
-		//$("#imagenactual").val(data.imagen);
- 		$("#Turno").val(data.Turno);
+		$("#idcategoria").val(data.idcategoria);
+		$('#idcategoria').selectpicker('refresh');
+		$("#codigo").val(data.codigo);
+		$("#nombre").val(data.nombre);
+		$("#stock").val(data.stock);
+		$("#descripcion").val(data.descripcion);
+		$("#imagenmuestra").show();
+		$("#imagenmuestra").attr("src","../files/articulos/"+data.imagen);
+		$("#imagenactual").val(data.imagen);
+ 		$("#idarticulo").val(data.idarticulo);
+ 		generarbarcode();
 
  	})
 }
 
 //Función para desactivar registros
-function desactivar(idTaller)
+function desactivar(idarticulo)
 {
 	bootbox.confirm("¿Está Seguro de desactivar el artículo?", function(result){
 		if(result)
         {
-        	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(e){
+        	$.post("../ajax/articulo.php?op=desactivar", {idarticulo : idarticulo}, function(e){
         		bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
@@ -149,12 +163,12 @@ function desactivar(idTaller)
 }
 
 //Función para activar registros
-function activar(idTaller)
+function activar(idarticulo)
 {
-	bootbox.confirm("¿Está Seguro de activar el Taller?", function(result){
+	bootbox.confirm("¿Está Seguro de activar el Artículo?", function(result){
 		if(result)
         {
-        	$.post("../ajax/talleres.php?op=activar", {idTaller : idTaller}, function(e){
+        	$.post("../ajax/articulo.php?op=activar", {idarticulo : idarticulo}, function(e){
         		bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
@@ -162,5 +176,18 @@ function activar(idTaller)
 	})
 }
 
+//función para generar el código de barras
+function generarbarcode()
+{
+	codigo=$("#codigo").val();
+	JsBarcode("#barcode", codigo);
+	$("#print").show();
+}
+
+//Función para imprimir el Código de barras
+function imprimir()
+{
+	$("#print").printArea();
+}
 
 init();

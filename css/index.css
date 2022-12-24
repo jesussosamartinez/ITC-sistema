@@ -20,7 +20,7 @@ nav {
     top: 10%;
     bottom: 0%;
     height: 39em;
-    background-image: url('https://educacion.cuautla.tecnm.mx/pluginfile.php/1/theme_moove/sliderimage2/1648230435/EDIFICIO%20F.JPG');
+    background-image: url('../assets/img/EDIFICIO F.JPG');
     background-size: cover;
     width: auto;
   }

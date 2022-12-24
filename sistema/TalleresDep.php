@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="../dist/style.css">
 
-</head>
 <body>
     <header>
         <?php 
@@ -23,7 +22,6 @@
                 class="fa-solid fa-chevron-right"></i> Talleres Deportivos</a>
     </div>
     <hr>
-
     <!-- Table Taller Dep -->
     <main>
         <table>
@@ -174,6 +172,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../dist/script.js"></script>
     <script src="scripts/talleres.js" type="text/javascript"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
 </body>
 </html>

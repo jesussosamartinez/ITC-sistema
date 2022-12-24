@@ -14,7 +14,12 @@ $("#login-form").on('submit',function(e)
         }
         else
         {
-        alert("Usuario y/o Password incorrectos");
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Usuario y/o Password incorrectos',
+                
+              })
         }
     });
 })
