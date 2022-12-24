@@ -16,7 +16,7 @@
     </header>
 
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"></i> Departamentos</a>
+        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"> </i> Departamentos</a>
     </div>
     <hr>
 

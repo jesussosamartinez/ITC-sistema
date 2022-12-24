@@ -55,7 +55,7 @@ session_start();
                         </ul>
                     </li>
                     <li><a href="departamentos.php">Departamentos</a></li>
-                    <li><a href="#">Creditos Complementarios</a></li>
+                    <li><a href="constancias.php">Creditos Complementarios</a></li>
                     <li><a href="#">Reporte</a></li>
                     <li><a href="#">Control de Accesos</a>
                         <ul>

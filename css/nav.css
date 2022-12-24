@@ -19,10 +19,10 @@ header{
     text-align: left;
     position: absolute;
     left: 15%;
-    top: 19%;
+    top: 10%;
     bottom: 5%;
     right: 5%;
-    color: #00325F;
+    color: #1B396A;
     font-family: 'Raleway';
     font-weight: 800;
     font-size: 20px;
@@ -50,7 +50,7 @@ header{
 .container__menu{
     width: 100%;
     height: 60px;
-    background: #023877;
+    background: #1B396A;
     padding: 0px 20px;
 }
 
@@ -192,7 +192,7 @@ nav ul li ul li a:hover{
     text-transform: uppercase;
     font-family: 'Raleway';
     font-weight: bolder;
-    color: #00325F;
+    color: #1B396A;
   }
   
   .dropdown a:hover {
@@ -262,11 +262,9 @@ nav ul li ul li a:hover{
   /* Formulario para ver los datos generales*/
 
   form {
-    background-color: #00325F;
     position: absolute;
     width: 30%;
     text-transform: uppercase;
-    
   }
 
   form>.nombre> label {
@@ -274,7 +272,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 46%;
     left: 15%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -291,7 +289,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 46%;
     left: 32%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -309,7 +307,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 46%;
     left: 50%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -326,7 +324,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 46%;
     left:69%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -344,7 +342,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 59%;
     left:13.2%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -362,7 +360,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 59%;
     left:33%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -380,7 +378,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 59%;
     left: 56%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
@@ -397,7 +395,7 @@ nav ul li ul li a:hover{
     position: fixed;
     top: 59%;
     left: 74%;
-    color:#023877;
+    color:#1B396A;
     font-weight: bold;
   }
 
