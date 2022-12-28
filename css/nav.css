@@ -17,9 +17,9 @@ header{
 
 .title > h1 { 
     text-align: left;
-    position: absolute;
+    position:fixed;
     left: 15%;
-    top: 10%;
+    top: 4.5%;
     bottom: 5%;
     right: 5%;
     color: #1B396A;
@@ -73,6 +73,7 @@ nav ul li{
     height: 100%;
     list-style: none;
     position: relative;
+    text-decoration: none;
 }
 
 nav > ul > li:first-child > a{
@@ -98,9 +99,11 @@ nav > ul > li > a{
     text-transform: uppercase;
     font-size: 14px;
     transition: all 300ms ease;
+    text-decoration: none;
 }
 
 nav > ul > li > a:hover{
+  text-decoration: none;
     font-weight: 800;
     transform: scale(1.1);
     background: #0074C7;
@@ -159,6 +162,7 @@ nav ul li ul li a{
     font-size: 14px;
     text-transform: uppercase;
     transition: all 300ms ease;
+    text-decoration: none;
 }
 nav ul li ul li a:hover{
     font-weight: 800;
@@ -168,6 +172,7 @@ nav ul li ul li a:hover{
     padding-left: 30px;
     font-size: 14px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    text-decoration: none;
 }
 
 
@@ -175,19 +180,21 @@ nav ul li ul li a:hover{
 /*Profile-Dropdown*/
 
 .dropdown {
-    display: inline-block;
-    position: fixed;
-    z-index: 200;
+    position: absolute;
+    display: block;
+    z-index: 100;
     left: 86%;
-    top: 4%;
+    top: 10%;
+    background-color: #0074C7;
   }
   
   .dropdown>a {
-    position: relative;
+    background-color: #000000;
+    position: absolute;
     border: none;
     border-radius: 5px;
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 5px 3px;
+    font-size: 8px;
     cursor: pointer;
     text-transform: uppercase;
     font-family: 'Raleway';
@@ -239,8 +246,8 @@ nav ul li ul li a:hover{
   }
 
   .navegacion {
-    position: absolute;
-    top: 28%;
+    position: fixed;
+    top: 31%;
     left: 8%;
     color:#916F09;
     font-family: 'Raleway';

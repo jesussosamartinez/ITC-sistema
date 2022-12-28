@@ -13,6 +13,12 @@ session_start();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" href="../assets/librerias/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../assets/librerias/alertifyjs/css/alertify.css">
+    <link rel="stylesheet" type="text/css" href="../assets/librerias/alertifyjs/css/themes/default.css">
+
+    <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
+    <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     
 </head>
 <body>
@@ -57,7 +63,7 @@ session_start();
                     <li><a href="departamentos.php">Departamentos</a></li>
                     <li><a href="constancias.php">Creditos Complementarios</a></li>
                     <li><a href="#">Reporte</a></li>
-                    <li><a href="#">Control de Accesos</a>
+                    <li><a href="accesos.php">Control de Accesos</a>
                         <ul>
                             <li><a href="#">Accesos Disponibles</a></li>
                             <li><a href="#">Solicitudes de Accesos</a></li>
