@@ -10,7 +10,7 @@ require "header.php";
     </div>
     <hr>
 
-    <section class="container">
+    <section class="contain">
         <div class="text">
           <p >BIENVENIDO <br> <?php echo $_SESSION['email']?></p>
     </div>
