@@ -22,158 +22,38 @@
                 class="fa-solid fa-chevron-right"></i> Talleres Deportivos</a>
     </div>
     <hr>
-    <!-- Table Taller Dep -->
-    <main>
-        <table>
+
+
+    <div class="panel-body table-responsive" id="listadoregistros">
+        <table id="tbllistadoD" class=" striped bordered condensed hover">
             <thead>
-                <tr>
-                    <th>
-                        Nombre
-                    </th>
-                    <th>
-                        Departamento
-                    </th>
-                    <th>
-                        SELECCIONAR
-                    </th>
-                </tr>
+                <th>Opciones</th>
+                <th>Nombre</th>
+                <th>Grupo</th>
+                <th>Turno</th>
+                <th>Estado</th>
             </thead>
-            <tfoot>
-                <tr>
-                    <th colspan='3'>
-                        Year: 2022
-                    </th>
-                </tr>
-            </tfoot>
             <tbody>
-                <tr>
-                    <td data-title='Nombre'>
-                        FUTBOL SOCCER - MAT
-                    </td>
-                    <td data-title='Departamento'>
-                        SERVICIOS EXTRAEXCOLARES
-                    </td>
-                    <td class='select'>
-                        <a class='button ver' href='#'>
-                            ver
-                        </a>
-                        <a class='button' href='#'>
-                            Inscribirse
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-title='Nombre'>
-                        FUTBOL - VESP
-                    </td>
-                    <td data-title='Departamento'>
-                        SERVICIOS EXTRAEXCOLARES
-                    </td>
-                    <td class='select'>
-                        <a class='button ver' href='#'>
-                            ver
-                        </a>
-                        <a class='button inscribirse' href='#'>
-                            Inscribirse
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-title='Nombre'>
-                        AJEDREZ - MAT
-                    </td>
-                    <td data-title='Departamento'>
-                        SERVICIOS EXTRAEXCOLARES
-                    </td>
-                    <td class='select'>
-                        <a class='button ver' href='#'>
-                            ver
-                        </a>
-                        <a class='button' href='#'>
-                            Inscribirse
-                        </a>
-                        <a class='button' href='#'>
-                            Activar
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-title='Nombre'>
-                        AJEDREZ - VESP
-                    </td>
-                    <td data-title='Departamento'>
-                        SERVICIOS EXTRAEXCOLARES
-                    </td>
-                    <td class='select'>
-                        <a class='button ver' href='#'>
-                            ver
-                        </a>
-                        <a class='button' href='#'>
-                            Inscribirse
-                        </a>
-                    </td>
-                </tr>
             </tbody>
+            <tfoot>
+                <th>Opciones</th>
+                <th>Nombre</th>
+                <th>Grupo</th>
+                <th>Turno</th>
+                <th>Estado</th>
+            </tfoot>
         </table>
-        <div class='detail'>
-            <div class='detail-container'>
-                <dl>
-                    <dt>
-                        Nombre
-                    </dt>
-                    <dd>
-                        FUTBOL SOCCER - MAT
-                    </dd>
-                    <dt>
-                        Departamento
-                    </dt>
-                    <dd>
-                        SERVICIOS EXTRAEXCOLARES
-                    </dd>
-                    <dt>
-                        CUPO DISPONIBLE
-                    </dt>
-                    <dd>
-                        30
-                    </dd>
-                    <dt>
-                        HORAS MAX
-                    </dt>
-                    <dd>
-                        555
-                    </dd>
-                    <dt>
-                        Actualizacion
-                    </dt>
-                    <dd>
-                        2022
-                    </dd>
-                    <dt>
-                        Notes
-                    </dt>
-                    <dd>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis
-                        eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit,
-                        posuere a, pede.
-                    </dd>
-                </dl>
-            </div>
-            <div class='detail-nav'>
-                <button class='close'>
-                    Cerrar
-                </button>
-            </div>
-        </div>
-    </main>
-    <!-- partial -->
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </div>
+    
+    <!-- Bootstrap -->
+    <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
+    <!-- Jquey -->
+    <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
+    <!-- DataTable -->
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
     <script src="../dist/script.js"></script>
     <script src="scripts/talleres.js" type="text/javascript"></script>
-   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
 </body>
 </html>

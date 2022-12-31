@@ -15,16 +15,17 @@ session_start();
     <link rel="stylesheet" href="../css/home.css">
 
     <!-- Librerias -->
+    <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="../assets/librerias/bootstrap/css/bootstrap.css">
+
+    <!-- Alertify -->
     <link rel="stylesheet" type="text/css" href="../assets/librerias/alertifyjs/css/alertify.css">
     <link rel="stylesheet" type="text/css" href="../assets/librerias/alertifyjs/css/themes/default.css">
-    <link rel="stylesheet" href="../assets/librerias/DataTables/jquery.dataTables.min.css">
 
 
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
-    <script src="../assets/librerias/DataTables/jquery.dataTables.min.js"></script>
 
 </head>
 <body>

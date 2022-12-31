@@ -16,9 +16,14 @@
     
    
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
+  
+    <!-- Bootstrap -->
+    <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
+    <!-- Jquey -->
+    <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
+    <!-- DataTable -->
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
 </body>
 </html>
 

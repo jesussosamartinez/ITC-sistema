@@ -3,8 +3,7 @@ var tabla;
 //Función que se ejecuta al inicio
 function init(){
 	mostrarform(false);
-	listar();
-	console.table(listar());
+	listarD();
 
 	$("#formulario").on("submit",function(e)
 	{
@@ -62,9 +61,9 @@ function cancelarform()
 }
 
 //Función Listar
-function listar()
+function listarD()
 {
-	tabla=$('#tbllistado').dataTable(
+	tabla=$('#tbllistadoD').DataTable(
 	{
 		"lengthMenu": [ 5, 10, 25, 75, 100],//mostramos el menú de registros a revisar
 		"aProcessing": true,//Activamos el procesamiento del datatables
@@ -78,7 +77,7 @@ function listar()
 		        ],
 		"ajax":
 				{
-					url: '../ajax/talleres.php?op=listar',
+					url: '../../ajax/talleres.php?op=listarD',
 					type : "get",
 					dataType : "json",						
 					error: function(e){
@@ -149,13 +148,13 @@ function mostrar(idarticulo)
 }
 
 //Función para desactivar registros
-function desactivar(idarticulo)
+function desactivar(idTaller)
 {
-	bootbox.confirm("¿Está Seguro de desactivar el artículo?", function(result){
+	bootbox.confirm("¿Está Seguro de desactivar el Taller?", function(result){
 		if(result)
         {
-        	$.post("../ajax/articulo.php?op=desactivar", {idarticulo : idarticulo}, function(e){
-        		bootbox.alert(e);
+        	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(e){
+        		alert(e);
 	            tabla.ajax.reload();
         	});	
         }
@@ -163,12 +162,12 @@ function desactivar(idarticulo)
 }
 
 //Función para activar registros
-function activar(idarticulo)
+function activar(idTaller)
 {
-	bootbox.confirm("¿Está Seguro de activar el Artículo?", function(result){
+	bootbox.confirm("¿Está Seguro de activar el Taller?", function(result){
 		if(result)
         {
-        	$.post("../ajax/articulo.php?op=activar", {idarticulo : idarticulo}, function(e){
+        	$.post("../ajax/talleres.php?op=activar", {idTaller : idTaller}, function(e){
         		bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	

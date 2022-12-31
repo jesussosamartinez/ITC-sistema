@@ -32,24 +32,22 @@ if (strlen(session_id()) < 1){
              echo json_encode($rspta);
         break;
 
-        case 'listar':
-            $rspta=$talleres->listar();
+        case 'listarD':
+            $rspta=$talleres->listarTD();
              //Vamos a declarar un array
              $data= Array();
     
              while ($reg=$rspta->fetch_object()){
                  $data[]=array(
-                     "0"=>($reg->condicion)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
-                         ' <button class="btn btn-danger" onclick="desactivar('.$reg->$idTaller.')"><i class="fa fa-close"></i></button>':
+                     "0"=>($reg->Condicion)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
+                         ' <button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
                          '<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
                          ' <button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
                      "1"=>$reg->Nombre,
-                     "2"=>$reg->Tipo,
-                     "3"=>$reg->Grupo,
-                     "4"=>$reg->Turno,
-                     //"5"=>"<img src='../files/articulos/".$reg->imagen."' height='50px' width='50px' >",
-                     "5"=>($reg->condicion)?'<span class="label bg-green">Activado</span>':
-                     '<span class="label bg-red">Desactivado</span>'
+                     "2"=>$reg->Grupo,
+                     "3"=>$reg->Turno,
+                     "4"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
+                     '<span class="badge text-bg-danger">Desactivado</span>'
                      );
              }
              $results = array(
@@ -60,6 +58,65 @@ if (strlen(session_id()) < 1){
              echo json_encode($results);
     
         break;
+
+    
+
+    case 'listarC':
+        $rspta=$talleres->listarTC();
+         //Vamos a declarar un array
+         $data= Array();
+
+         while ($reg=$rspta->fetch_object()){
+             $data[]=array(
+                 "0"=>($reg->Condicion)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
+                     ' <button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
+                     '<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
+                     ' <button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
+                 "1"=>$reg->Nombre,
+                 "2"=>$reg->Tipo,
+                 "3"=>$reg->Grupo,
+                 "4"=>$reg->Turno,
+                 "5"=>($reg->Condicion)?'<span class="label bg-green">Activado</span>':
+                 '<span class="label bg-red">Desactivado</span>'
+                 );
+         }
+         $results = array(
+             "sEcho"=>1, //Información para el datatables
+             "iTotalRecords"=>count($data), //enviamos el total registros al datatable
+             "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+             "aaData"=>$data);
+         echo json_encode($results);
+
+    break;
+
+    case 'listarCUL':
+        $rspta=$talleres->listarTCUL();
+         //Vamos a declarar un array
+         $data= Array();
+
+         while ($reg=$rspta->fetch_object()){
+             $data[]=array(
+                 "0"=>($reg->condicion)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
+                     ' <button class="btn btn-danger" onclick="desactivar('.$reg->$idTaller.')"><i class="fa fa-close"></i></button>':
+                     '<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
+                     ' <button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
+                 "1"=>$reg->Nombre,
+                 "2"=>$reg->Tipo,
+                 "3"=>$reg->Grupo,
+                 "4"=>$reg->Turno,
+                 //"5"=>"<img src='../files/articulos/".$reg->imagen."' height='50px' width='50px' >",
+                 "5"=>($reg->condicion)?'<span class="label bg-green">Activado</span>':
+                 '<span class="label bg-red">Desactivado</span>'
+                 );
+         }
+         $results = array(
+             "sEcho"=>1, //Información para el datatables
+             "iTotalRecords"=>count($data), //enviamos el total registros al datatable
+             "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+             "aaData"=>$data);
+         echo json_encode($results);
+
+    break;
 
     }
 }

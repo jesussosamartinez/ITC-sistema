@@ -31,11 +31,27 @@ Class Talleres
 		return ejecutarConsultaSimpleFila($sql);
 	}
 
-    public function listar()
+    public function listarTC()
 	{
-		$sql="SELECT * FROM talleres";
+		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
+		FROM talleres WHERE Tipo='TALLER CIVICO'";
 		return ejecutarConsulta($sql);		
 	}
+
+	public function listarTD()
+	{
+		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
+		FROM talleres WHERE Tipo='TALLER DEPORTIVO'";
+		return ejecutarConsulta($sql);		
+	}
+
+	public function listarTCUL()
+	{
+		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
+		FROM talleres WHERE Tipo='TALLER CULTURAL'";
+		return ejecutarConsulta($sql);		
+	}
+	
 }
 
 ?>
