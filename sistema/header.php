@@ -38,7 +38,7 @@ session_start();
                 <h1>SISTEMA DE INTEGRACIÓN COMPLEMENTARIA</h1>
             </div>
 
-            <div class="dropdown">
+            <div class="dropdowns">
                 <a> Perfil <i class="fa-solid fa-sort-down"></i></a>
                 <div class="dropdown-options">
                     <a href="#"><i class="fa-solid fa-gear"></i>Configuración</a>
@@ -60,7 +60,7 @@ session_start();
                                 <li><a href="datosgenerales.php">Datos Generales</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Talleres</a>
+                        <li><a href="#">Actividades Complementarias</a>
                             <ul>
                                 <li><a href="TalleresDep.php">Talleres Deportivos</a></li>
                                 <li><a href="TalleresCul.php">Talleres Culturales</a></li>

@@ -16,6 +16,8 @@ Class Usuario
 	//	$sql="SELECT * FROM usuario";
 	//	return ejecutarConsulta($sql);		
 	//}
+	
+	
 
     //Función para verificar el acceso al sistema
 	public function verificar($email,$Password)

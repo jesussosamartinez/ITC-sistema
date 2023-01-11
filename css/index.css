@@ -30,17 +30,17 @@ nav {
     width: 50px;
     height: 42px;
     position: absolute;
-    left: 11%;
+    left: 5%;
     top: 18%;
   }
 
   #TECNM>img {
     float: left;
-    width: 45px;
-    height: 45px;
+    width: 150px;
+    height: 50px;
     position: absolute;
-    left: 5%;
-    top: 15%;
+    left: 11%;
+    top: 12%;
   }
 
   form{

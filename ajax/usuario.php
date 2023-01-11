@@ -29,6 +29,18 @@ switch ($_GET["op"]){
         $_SESSION['email']=$fetch->email;
         $_SESSION['Password']=$fetch->Password;
         $_SESSION['idRol']=$fetch->idRol;
+    
+        //obtenemos los permisos del usuario segun rol
+        $marcados = $usuario->listarmarcados($fetch->idusuario);
+
+        //Declaramos el array para almacenar todos los permisos marcados
+        $valores= array();
+        
+        //Almacenamos los permisos marcados en el array
+        while($per = $marcados->fetch_object())
+        {
+            array_push($valores, $per->idpermiso);
+        }
     }
 
     echo json_encode($fetch);
