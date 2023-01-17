@@ -52,18 +52,29 @@ session_start();
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>
+                        <?php
+                        if($_SESSION['HOME']==0)
+                        {
+                        echo '<li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>';
+                        }?>
                         <li><a href="#">Información Escolar</a>
+                       
                             <ul>
-                                <li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>
-                                <li><a href="#">Horario</a></li>
-                                <li><a href="datosgenerales.php">Datos Generales</a></li>
+                               <?php if($_SESSION['InfoEscolar Historial']==1){
+                                echo '<li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>';
+                                }?> 
+                               <?php if($_SESSION['InfoEscolar Horario']==1){
+                                echo '<li><a href="#">Horario</a></li>';
+                                }?>
+                               <?php if($_SESSION['InfoEscolar DatosGen']==1){
+                                echo '<li><a href="datosgenerales.php">Datos Generales</a></li>';
+                               }?>
                             </ul>
                         </li>
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
-                                <li><a href="TalleresDep.php">Talleres Deportivos</a></li>
-                                <li><a href="TalleresCul.php">Talleres Culturales</a></li>
+                                <li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>
+                                <li><a href="TalleresCul.php">Seleccion de Actividades</a></li>
                                 <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
                             </ul>
                         </li>

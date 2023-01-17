@@ -3,9 +3,10 @@
 ?>
 <style>
 .panel-body {
-    position: fixed;
+    position: absolute;
     top: 45%;
     left: 13%;
+    z-index: -3;
 }
 </style>
 
@@ -22,7 +23,7 @@
         <tbody>
             <?php
                 $sql = "SELECT idTaller, Nombre, Grupo, Turno, condicion
-                FROM talleres WHERE Tipo='TALLER CIVICO'";
+                FROM talleres ";
 
                 $result=mysqli_query($conexion,$sql);
                 while($ver=mysqli_fetch_row($result)){

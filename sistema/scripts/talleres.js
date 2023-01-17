@@ -77,7 +77,7 @@ function listarD()
 		        ],
 		"ajax":
 				{
-					url: '../../ajax/talleres.php?op=listarD',
+					url: '../../ajax/talleres.php?op=listarActividades',
 					type : "get",
 					dataType : "json",						
 					error: function(e){

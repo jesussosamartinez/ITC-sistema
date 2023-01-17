@@ -17,12 +17,16 @@ Class Usuario
 	//	return ejecutarConsulta($sql);		
 	//}
 	
-	
+	public function listarmarcados($idRol)
+	{
+		$sql="SELECT * FROM permisos_rol WHERE rol_id='$idRol'";
+		return ejecutarConsulta($sql);
+	}
 
     //Función para verificar el acceso al sistema
 	public function verificar($email,$Password)
     {
-    	$sql="SELECT idUsuario, email, Password, IdRol FROM usuarios WHERE email='$email' AND Password='$Password';"; 
+    	$sql="SELECT idUsuario, email, Password, idRol FROM usuarios WHERE email='$email' AND Password='$Password';"; 
     	return ejecutarConsulta($sql);  
     }
 }

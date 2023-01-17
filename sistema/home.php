@@ -2,8 +2,10 @@
 if(strlen(session_id())<1)
 session_start();
 
-
 require "header.php";
+
+if($_SESSION['HOME']==0)
+{
  ?>
  <div class="navegacion">
         <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio</a>
@@ -16,11 +18,11 @@ require "header.php";
     </div>
     </section>
 
-    <script type="text/javascript" src="scripts/usuario.js"></script>
+    
     <script src="../assets/js/nav.js" type="text/javascript"></script>
    
 </body>
 <?php 
-
+}
 ob_end_flush();
 ?>
