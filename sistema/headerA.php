@@ -52,39 +52,31 @@ session_start();
             <div class="menu">
                 <nav>
                     <ul>
-                        <?php
-                        if($_SESSION['HOME']==1)
-                        {
-                        echo '<li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>';
-                        }?>
+                
                         <li><a href="#">Información Escolar</a>
-                       
-                            <ul>
-                               <?php if($_SESSION['InfoEscolar Historial']==0){
-                                echo '<li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>';
-                                }?> 
-                               <?php if($_SESSION['InfoEscolar Horario']==0){
-                                echo '<li><a href="#">Horario</a></li>';
-                                }?>
-                               <?php if($_SESSION['InfoEscolar DatosGen']==0){
-                                echo '<li><a href="datosgenerales.php">Datos Generales</a></li>';
-                               }?>
+                        <ul>
+                                <li><a href="actividadescomplementarias.php">Datos Generales</a></li>
+                                <li><a href="TalleresCiv.php">Historial de Actividades</a></li>
                             </ul>
                         </li>
+
+
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
                                 <li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>
-                                <li><a href="TalleresCul.php">Seleccion de Actividades</a></li>
-                                <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
+                                <li><a href="TalleresCiv.php">Seleccion de Actividades</a></li>
                             </ul>
                         </li>
-                        <li><a href="departamentos.php">Departamentos</a></li>
-                        <li><a href="constancias.php">Creditos Complementarios</a></li>
-                        <li><a href="#">Reporte</a></li>
-                        <li><a href="accesos.php">Control de Accesos</a>
+
+                        <li><a href="departamentos.php">Departamentos</a>
                             <ul>
-                                <li><a href="#">Accesos Disponibles</a></li>
-                                <li><a href="#">Solicitudes de Accesos</a></li>
+                                <li><a href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing">PROGRAMA DE ACT COMPLEMENTARIAS 2022-2023 BORRADOR</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="accesos.php">Creditos Complementarios</a>
+                        <ul>
+                                <li><a href="#">Evidencias</a></li>
                             </ul>
                         </li>
                     </ul>
