@@ -23,9 +23,9 @@
     <hr>
 
     <!--Contenido-->
-                        <div class="panel-body" id="listadoregistros" >
+                        <div class="panel-body panel-center" id="listadoregistros">
                             <table id="tbllistadoD"
-                                class=" table-striped table-bordered table-condensed table-hover">
+                                class="display table-striped table-bordered table-condensed table-hover">
                                 <thead>
                                     <th>Opciones</th>
                                     <th>Nombre</th>

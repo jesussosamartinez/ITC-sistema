@@ -51,7 +51,7 @@ header{
     width: 100%;
     height: 60px;
     background: #1B396A;
-    padding: 0px 20px;
+    padding: 0px 10px;
 }
 
 .menu{
@@ -417,6 +417,4 @@ nav ul li ul li a:hover{
     left: 69%;
     top: 63%;
   }
-
-
 

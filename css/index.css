@@ -30,7 +30,7 @@ nav {
     width: 50px;
     height: 42px;
     position: absolute;
-    left: 15%;
+    left: 17%;
     top: 18%;
   }
 
@@ -40,7 +40,7 @@ nav {
     height: 50px;
     position: absolute;
     left: 3%;
-    top: 12%;
+    top: 10%;
   }
 
   form{
@@ -289,5 +289,3 @@ nav {
     top: 30%;
     left: 80%;
   }
-
- 

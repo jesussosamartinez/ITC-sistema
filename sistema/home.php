@@ -8,7 +8,7 @@ if($_SESSION['HOME']==0)
 {
  ?>
  <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio</a>
+        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-slash-back"></i> Inicio</a>
     </div>
     <hr>
 
