@@ -21,7 +21,6 @@
     </div>
     <hr>
 
-<<<<<<< Updated upstream
     <section class="departamentos" style="top:45%; position:absolute; left:10%;">
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
