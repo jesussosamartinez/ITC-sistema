@@ -23,37 +23,38 @@
     <hr>
 
     <!--Contenido-->
-                        <div class="panel-body panel-center" id="listadoregistros">
-                            <table id="tbllistadoD"
-                                class="display table-striped table-bordered table-condensed table-hover">
-                                <thead>
-                                    <th>Opciones</th>
-                                    <th>Nombre</th>
-                                    <th>Grupo</th>
-                                    <th>Turno</th>
-                                    <th>Estado</th>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                                <tfoot>
-                                    <th>Opciones</th>
-                                    <th>Nombre</th>
-                                    <th>Grupo</th>
-                                    <th>Turno</th>
-                                    <th>Estado</th>
-                                </tfoot>
-                            </table>
-                        </div>
+    <div class="panel-body panel-center" id="listadoregistros">
+        <table id="tbllistadoD" class="display table-striped table-bordered table-condensed table-hover">
+            <thead>
+                <th>Opciones</th>
+                <th>Nombre</th>
+                <th>Grupo</th>
+                <th>Turno</th>
+                <th>Estado</th>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <th>Opciones</th>
+                <th>Nombre</th>
+                <th>Grupo</th>
+                <th>Turno</th>
+                <th>Estado</th>
+            </tfoot>
+        </table>
+    </div>
 
 
-                        <!-- Bootstrap -->
-                        <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
-                        <!-- Jquey -->
-                        <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
-                        <!-- DataTable -->
-                        <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-                        <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-                        <script src="scripts/talleres.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
+    <!-- Jquey -->
+    <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
+    <!-- DataTable -->
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="scripts/talleres.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js"></script>
 
 </body>
 </html>

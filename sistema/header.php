@@ -27,7 +27,7 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
-
+    
 </head>
 <body>
     <header>
@@ -54,7 +54,7 @@ session_start();
                 <nav>
                     <ul>
                         <?php
-                        if($_SESSION['HOME']==1)
+                        if($_SESSION['HOME']==0)
                         {
                         echo '<li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>';
                         }?>

@@ -1,13 +1,19 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Información Escolar- SIC</title>
-</head>
+<?php 
+ require "../config/Conexion.php";
+if(strlen(session_id())<1)
+session_start();
+$alumno = mysqli_query($conexion, "SELECT * FROM alumnos WHERE correo= '".$_SESSION['email']."' ");
+$alumno  = mysqli_fetch_array($alumno);
+$nombre=$alumno['Nombre'];
+$apellidoP=$alumno['ApellidoP'];
+$apellidoM=$alumno['ApellidoM'];
+$email=$alumno['Correo'];
+$NoControl=$alumno['NumeroControl'];
+$semestre=$alumno['Semestre'];
+$telefono=$alumno['Telefono'];
+?>
 <body>
-    <!-- Aqui va la informacion del alumno o departamento-->
+    <!-- Aqui va la informacion del alumno-->
     <header>
         <?php 
     require 'header.php'
@@ -19,27 +25,27 @@
     </div>
     <hr>
 
-    <form class="custom-form" method="get"   id="datosgenerales">
+    <form class="custom-form"  id="datosgenerales">
       
         <div class="formgroup nombre ">
           <label for="">NOMBRE</label>
-          <input class="inputcenter" type="text"  name="nombre" id="nombre">
+          <input class="inputcenter" type="text"  name="nombre" <?php if(isset($nombre)) { ?> value="<?php echo $nombre; ?>" <?php } ?> readonly>
         </div>
         <div class="formgroup apellidoP ">
           <label for="">Apellido Paterno</label>
-          <input class="inputcenter" type="text"  name="apellidoP" id="apellidoP">
+          <input class="inputcenter" type="text"  name="apellidoP" <?php if(isset($apellidoP)) { ?> value="<?php echo $apellidoP; ?>" <?php } ?> readonly >
         </div>
         <div class="formgroup apellidoM ">
           <label for="">Apellido Materno</label>
-          <input class="inputcenter" type="text"  name="apellidoM" id="apellidoM">
+          <input class="inputcenter" type="text"  name="apellidoM" <?php if(isset($apellidoM)) { ?> value="<?php echo $apellidoM; ?>" <?php } ?> readonly>
         </div>
         <div class="formgroup correoinstitucional">
           <label for="">CORREO INSTITUCIONAL</label>
-          <input class="inputcenter" type="email" name="email" id="email">
+          <input class="inputcenter" type="email" name="email" <?php if(isset($email)) { ?> value="<?php echo $email; ?>" <?php } ?> readonly>
         </div>
         <div class="formgroup numcontrol">
           <label for="">No. Control</label>
-          <input class="inputcenter" type="text" name="nocontrol" id="nocontrol">
+          <input class="inputcenter" type="text" name="nocontrol" <?php if(isset($NoControl)) { ?> value="<?php echo $NoControl; ?>" <?php } ?> readonly>
         </div>
         <div class="formgroup lic">
           <label for="">LICENCIATURA</label>
@@ -47,11 +53,11 @@
         </div>
         <div class="formgroup semestre">
           <label for="">SEMESTRE</label>
-          <input class="inputcenter" type="text" name="semestre" id="semestre">
+          <input class="inputcenter" type="text" name="semestre" <?php if(isset($semestre)) { ?> value="<?php echo $semestre; ?>" <?php } ?> readonly>
         </div>
         <div class="formgroup telefono">
           <label for="">TELEFONO</label>
-          <input class="inputcenter" type="text" name="telefono" id="telefono">
+          <input class="inputcenter" type="text" name="telefono" <?php if(isset($telefono)) { ?> value="<?php echo $telefono; ?>" <?php } ?> readonly>
         </div>
 </form>
 
