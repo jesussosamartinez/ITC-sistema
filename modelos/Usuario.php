@@ -10,12 +10,16 @@ Class Usuario
 
 	}
 
+	
+
 	//Implementar un método para listar los registros
 	//public function listar()
 	//{
 	//	$sql="SELECT * FROM usuario";
 	//	return ejecutarConsulta($sql);		
 	//}
+
+	
 	
 	public function listarmarcados($idRol)
 	{

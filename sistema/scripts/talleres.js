@@ -63,7 +63,7 @@ function cancelarform()
 //Función Listar
 function listarD()
 {
-	tabla=$('#tbllistadoD').DataTable(
+	tabla=$('#tbllistadoD').dataTable(
 	{
 		"lengthMenu": [ 5, 10, 25, 75, 100],//mostramos el menú de registros a revisar
 		"aProcessing": true,//Activamos el procesamiento del datatables
@@ -125,27 +125,7 @@ function guardaryeditar(e)
 	limpiar();
 }
 
-function mostrar(idarticulo)
-{
-	$.post("../ajax/articulo.php?op=mostrar",{idarticulo : idarticulo}, function(data, status)
-	{
-		data = JSON.parse(data);		
-		mostrarform(true);
 
-		$("#idcategoria").val(data.idcategoria);
-		$('#idcategoria').selectpicker('refresh');
-		$("#codigo").val(data.codigo);
-		$("#nombre").val(data.nombre);
-		$("#stock").val(data.stock);
-		$("#descripcion").val(data.descripcion);
-		$("#imagenmuestra").show();
-		$("#imagenmuestra").attr("src","../files/articulos/"+data.imagen);
-		$("#imagenactual").val(data.imagen);
- 		$("#idarticulo").val(data.idarticulo);
- 		generarbarcode();
-
- 	})
-}
 
 //Función para desactivar registros
 function desactivar(idTaller)
@@ -154,7 +134,7 @@ function desactivar(idTaller)
 		if(result)
         {
         	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(e){
-        		alert(e);
+        		bootbox.alert(e);
 	            tabla.ajax.reload();
         	});	
         }
