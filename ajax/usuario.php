@@ -32,13 +32,6 @@ switch ($_GET["op"]){
 			{
 				array_push($valores, $per->idpermiso);
 			}
-
-		//Mostramos la lista de permisos en la vista y si están o no marcados
-		while ($reg = $rspta->fetch_object())
-				{
-					$sw=in_array($reg->idpermiso,$valores)?'checked':'';
-					echo '<li> <input type="checkbox" '.$sw.'  name="permiso[]" value="'.$reg->idpermiso.'">'.$reg->nombre.'</li>';
-				}
 	break;
 
     case 'verificar':

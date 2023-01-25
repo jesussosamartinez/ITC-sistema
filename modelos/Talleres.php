@@ -24,7 +24,7 @@ Class Talleres
 		$sql="UPDATE talleres SET Condicion='1' WHERE idTaller='$idTaller'";
 		return ejecutarConsulta($sql);
 	}
-    //Implementar un método para mostrar los datos de un registro a modificar
+    //Implementar un método para mostrar los datos.
 	public function mostrar($idTaller)
 	{
 		$sql="SELECT * FROM talleres WHERE idTaller='$idTaller'";
