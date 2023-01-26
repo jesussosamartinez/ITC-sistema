@@ -2,15 +2,7 @@
  require "../config/Conexion.php";
 if(strlen(session_id())<1)
 session_start();
-$alumno = mysqli_query($conexion, "SELECT * FROM alumnos WHERE correo= '".$_SESSION['email']."' ");
-$alumno  = mysqli_fetch_array($alumno);
-$nombre=$alumno['Nombre'];
-$apellidoP=$alumno['ApellidoP'];
-$apellidoM=$alumno['ApellidoM'];
-$email=$alumno['Correo'];
-$NoControl=$alumno['NumeroControl'];
-$semestre=$alumno['Semestre'];
-$telefono=$alumno['Telefono'];
+
 ?>
 <body>
     <!-- Aqui va la informacion del alumno-->
@@ -29,40 +21,40 @@ $telefono=$alumno['Telefono'];
       
         <div class="formgroup nombre ">
           <label for="">NOMBRE</label>
-          <input class="inputcenter" type="text"  name="nombre" <?php if(isset($nombre)) { ?> value="<?php echo $nombre; ?>" <?php } ?> readonly>
+          <input class="inputcenter" type="text"  name="nombre" id="nombre" readonly>
         </div>
         <div class="formgroup apellidoP ">
           <label for="">Apellido Paterno</label>
-          <input class="inputcenter" type="text"  name="apellidoP" <?php if(isset($apellidoP)) { ?> value="<?php echo $apellidoP; ?>" <?php } ?> readonly >
+          <input class="inputcenter" type="text"  name="apellidoP" id="apellidop" readonly >
         </div>
         <div class="formgroup apellidoM ">
           <label for="">Apellido Materno</label>
-          <input class="inputcenter" type="text"  name="apellidoM" <?php if(isset($apellidoM)) { ?> value="<?php echo $apellidoM; ?>" <?php } ?> readonly>
+          <input class="inputcenter" type="text"  name="apellidoM" id="apellidom" readonly>
         </div>
         <div class="formgroup correoinstitucional">
           <label for="">CORREO INSTITUCIONAL</label>
-          <input class="inputcenter" type="email" name="email" <?php if(isset($email)) { ?> value="<?php echo $email; ?>" <?php } ?> readonly>
+          <input class="inputcenter" type="email" name="email" id="email" readonly>
         </div>
         <div class="formgroup numcontrol">
           <label for="">No. Control</label>
-          <input class="inputcenter" type="text" name="nocontrol" <?php if(isset($NoControl)) { ?> value="<?php echo $NoControl; ?>" <?php } ?> readonly>
+          <input class="inputcenter" type="text" name="nocontrol" id="numerocontrol" readonly>
         </div>
         <div class="formgroup lic">
           <label for="">LICENCIATURA</label>
-          <input class="inputcenter" type="text" name="licenciatura" id="licenciatura">
+          <input class="inputcenter" type="text" name="licenciatura" id="licenciatura" readonly>
         </div>
         <div class="formgroup semestre">
           <label for="">SEMESTRE</label>
-          <input class="inputcenter" type="text" name="semestre" <?php if(isset($semestre)) { ?> value="<?php echo $semestre; ?>" <?php } ?> readonly>
+          <input class="inputcenter" type="text" name="semestre" id="semestre" readonly>
         </div>
         <div class="formgroup telefono">
           <label for="">TELEFONO</label>
-          <input class="inputcenter" type="text" name="telefono" <?php if(isset($telefono)) { ?> value="<?php echo $telefono; ?>" <?php } ?> readonly>
+          <input class="inputcenter" type="text" name="telefono" id="telefono" readonly>
         </div>
 </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
+    <script src="scripts/datos.js" type="text/javascript"></script>
 </body>
 </html>
