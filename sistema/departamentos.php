@@ -23,7 +23,7 @@
 
 <!-- Departamentos menu -->
 
-    <section class="departamentos" style="top:45%; position:absolut; left:10%; z-index:-5; width: 70%">
+    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%">
   
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -38,6 +38,7 @@
   </div>
   <!------------------------------------------------------------------------------------------------------------------->
   <div class="accordion-item">
+  <br><h5> Subdirección Académica </h5>
     <h2 class="accordion-header" id="flush-heading2">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapseTwo">
       Subdirección Académica
@@ -137,145 +138,147 @@
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
+<br><h5> Subdirección de Planeación y Vinculación</h5>
     <h2 class="accordion-header" id="flush-heading11">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse11" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Subdirección de Planeación y Vinculación
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- C.P. María Magdalena Leyva Valles <br>Correo Electrónico -- sub.planeacion@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading12">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse12" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Centro de Información
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- Lic. Norma Angélica Morales Tablas <br>Correo Electrónico -- ci_cuautla@tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading13">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse13" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Actividades Extraescolares
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- Lic. Roberto Marcio Cuauhtle Pluma <br>Correo Electrónico -- c.informacion@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading14">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse14" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Gestión Tecnología y Vinculación
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- M.F.G. Areli Soledad Ruíz Martínez <br>Correo Electrónico -- gestion@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading15">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse15" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Planeación, Programación y Presupuestación
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- M. E. Guillermina Sánchez Marino <br>Correo Electrónico -- planeacion@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading16">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse16" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Servicios Escolares
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- M. C. Moisés Román Sedeño <br>Correo Electrónico -- escolares@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading17">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse17" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Comunicación y Difusión
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- M.L.G.E. Josué Iván Jaimes Pérez <br>Correo Electrónico -- comunicacion@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
+<br><h5> Subdirección de Servicios Administrativos</h5>
     <h2 class="accordion-header" id="flush-heading18">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse18" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Subdirección de Servicios Administrativos
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- M. A. Angélica Gómez Cárdenas <br>Correo Electrónico -- sub.administrativa@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading19">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse19" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Recursos Financieros
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- C. P. Estela Mendoza Mondragón<br>Correo Electrónico -- financieros@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading20">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse20" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Recursos Humanos
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- Mtro. José Luís Eguía Rivas <br>Correo Electrónico -- humanos@cuautlatecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading21">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse21" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Recursos Materiales y Servicios
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- Ing. Braulio González Román<br>Correo Electrónico -- materiales@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading22">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse22" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Mantenimiento y Equipo
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- Ing. Noel Morales Muñiz <br>Correo Electrónico -- mantenimiento@cuautlatecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading23">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse23" aria-expanded="false" aria-controls="flush-collapseThree">
-      Departamento de Sistemas y Computación5
+      Departamento de Centro de Cómputo
       </button>
     </h2>
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body"> Jefe del Departamento -- M.C. Porfirio Roberto Nájera Medina <br>Correo Electrónico -- direccion@cuautla.tecnm.mx</div>
+      <div class="accordion-body"> Jefe del Departamento -- Ing. Víctor Manuel Ayala Lara <br>Correo Electrónico -- c.computo@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
