@@ -81,7 +81,11 @@ session_start();
                         </li>
                         <li><a href="departamentos.php">Departamentos</a></li>
                         <li><a href="constancias.php">Creditos Complementarios</a></li>
-                        <li><a href="#">Reporte</a></li>
+                        <li><a href="#">Reporte</a>
+                        <ul>
+                                <li><a href="estadisticas.php">Estadisticas</a></li>
+                            </ul>
+                            </li>
                         <li><a href="accesos.php">Control de Accesos</a>
                             <ul>
                                 <li><a href="#">Accesos Disponibles</a></li>

@@ -23,7 +23,7 @@
 
 <!-- Departamentos menu -->
 
-    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%">
+    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%;">
   
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
