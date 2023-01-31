@@ -27,7 +27,7 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
-    
+
 </head>
 <body>
     <header>
@@ -40,11 +40,7 @@ session_start();
             </div>
 
             <div class="dropdowns">
-                <a> Perfil <i class="fa-solid fa-sort-down"></i></a>
-                <div class="dropdown-options">
-                    <a href="#"><i class="fa-solid fa-gear"></i>Configuración</a>
-                    <a href="../ajax/usuario.php?op=salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
-                </div>
+            <a href="../ajax/usuario.php?op=salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
             </div>
         </div>
 
@@ -54,20 +50,20 @@ session_start();
                 <nav>
                     <ul>
                         <?php
-                        if($_SESSION['HOME']==0)
+                        if($_SESSION['Home']==1)
                         {
                         echo '<li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>';
                         }?>
                         <li><a href="#">Información Escolar</a>
-                       
+
                             <ul>
-                               <?php if($_SESSION['InfoEscolar Historial']==0){
+                                <?php if($_SESSION['InfoEscolar Historial']==1){
                                 echo '<li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>';
-                                }?> 
-                               <?php if($_SESSION['InfoEscolar Horario']==0){
+                                }?>
+                                <?php if($_SESSION['InfoEscolar Horario']==1){
                                 echo '<li><a href="#">Horario</a></li>';
                                 }?>
-                               <?php if($_SESSION['InfoEscolar DatosGen']==0){
+                                <?php if($_SESSION['InfoEscolar DatosGen']==1){
                                 echo '<li><a href="datosgenerales.php">Datos Generales</a></li>';
                                }?>
                             </ul>
@@ -79,15 +75,27 @@ session_start();
                                 <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
                             </ul>
                         </li>
-                        <li><a href="departamentos.php">Departamentos</a></li>
+                        <li><a href="departamentos.php">Departamentos</a>
+                            <ul>
+                                <li><a
+                                        href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing">PROGRAMA
+                                        DE ACT COMPLEMENTARIAS 2022-2023 BORRADOR</a></li>
+                            </ul>
+                        </li>
                         <li><a href="constancias.php">Creditos Complementarios</a></li>
-                        <li><a href="#">Reporte</a></li>
-                        <li><a href="accesos.php">Control de Accesos</a>
+                        <?php if($_SESSION['Reporte']==1)
+                        {
+                            echo '<li><a href="#">Reporte</a></li>';
+                        }?>
+                        <?php if($_SESSION['control_acceso']==1)
+                        {
+                        echo '<li><a href="accesos.php">Control de Accesos</a>
                             <ul>
                                 <li><a href="#">Accesos Disponibles</a></li>
                                 <li><a href="#">Solicitudes de Accesos</a></li>
                             </ul>
-                        </li>
+                        </li>';
+                        }?>
                     </ul>
                 </nav>
             </div>

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+  <style>
+    
+  </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +26,7 @@
 
 <!-- Departamentos menu -->
 
-    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%">
+    <section class="departamentos" style="max-width: 90%;">
   
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -62,40 +65,40 @@
 <!------------------------------------------------------------------------------------------------------------------->
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading4">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapseThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapseFour">
       Departamento de Ciencias Económico-Administrativas
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Mtro. Omar Oswaldo Torres Fernández <br>Correo Electrónico -- economico@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading5">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapseThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapseFive">
       Departamento de Metal Mecánica
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Ing. María del Rubí Hernández Andrade <br>Correo Electrónico -- metal@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading6">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseSix">
       Departamento de Eléctrica y Electrónica
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Mtra. Marlem Flores Montiel <br>Correo Electrónico -- electronica@cuautla.tecnm.mx</div>
     </div>
   </div>
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading7">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapseThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse7" aria-expanded="false" aria-controls="flush-collapseSeven">
       Departamento de Sistemas y Computación
       </button>
     </h2>
@@ -106,7 +109,7 @@
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading8">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapseThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse8" aria-expanded="false" aria-controls="flush-collapseEight">
       Departamento de Desarrollo Académico
       </button>
     </h2>

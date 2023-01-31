@@ -21,16 +21,16 @@ Class Usuario
 
 	
 	
-	public function listarmarcados($idRol)
+	public function listarmarcados($email)
 	{
-		$sql="SELECT * FROM permisos_rol WHERE rol_id='$idRol'";
+		$sql="SELECT * FROM usuarios u INNER JOIN permisos_rol r ON r.rol_id = u.idRol WHERE email = '$email'";
 		return ejecutarConsulta($sql);
 	}
 
     //Función para verificar el acceso al sistema
 	public function verificar($email,$Password)
     {
-    	$sql="SELECT idUsuario, email, Password, idRol FROM usuarios WHERE email='$email' AND Password='$Password';"; 
+    	$sql="SELECT idUsuario, email, Password, idRol FROM usuarios WHERE email='$email' AND Password='$Password'"; 
     	return ejecutarConsulta($sql);  
     }
 }

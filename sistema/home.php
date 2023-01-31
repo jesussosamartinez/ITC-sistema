@@ -4,7 +4,7 @@ session_start();
 
 require "header.php";
 
-if($_SESSION['HOME']==0)
+if($_SESSION['Home']==1)
 {
  ?>
  <div class="navegacion">

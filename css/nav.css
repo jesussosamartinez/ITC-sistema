@@ -184,9 +184,9 @@ nav ul li ul li a:hover{
 .dropdowns {
     position: fixed;
     display: block;
-    z-index: 1;
     left: 80%;
     top: 4%;
+    margin-left: 5rem;
   }
   
   .dropdowns a {
@@ -200,6 +200,7 @@ nav ul li ul li a:hover{
     font-family: 'Raleway';
     font-weight: bolder;
     color: #1B396A;
+    text-decoration: none;
   }
   
   .dropdowns a:hover {

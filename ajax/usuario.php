@@ -50,7 +50,7 @@ switch ($_GET["op"]){
         $_SESSION['idRol']=$fetch->idRol;
     
         //obtenemos los permisos del usuario segun rol
-        $marcados = $usuario->listarmarcados($fetch->idRol);
+        $marcados = $usuario->listarmarcados($fetch->email);
 
         //Declaramos el array para almacenar todos los permisos marcados
         $valores= array();
@@ -58,15 +58,20 @@ switch ($_GET["op"]){
         //Almacenamos los permisos marcados en el array
         while($per = $marcados->fetch_object())
         {
-            array_push($valores, $per->idpermiso);
+            array_push($valores, $per->permisos_id);
         }
 
         //Determinamos los permisos del usuario
-            in_array(1,$valores)?$_SESSION['HOME']=1:$_SESSION['HOME']=0;
+            in_array(1,$valores)?$_SESSION['Home']=1:$_SESSION['Home']=0;
 			in_array(2,$valores)?$_SESSION['InfoEscolar Historial']=1:$_SESSION['InfoEscolar Historial']=0;
 			in_array(3,$valores)?$_SESSION['InfoEscolar Horario']=1:$_SESSION['InfoEscolar Horario']=0;
 			in_array(4,$valores)?$_SESSION['InfoEscolar DatosGen']=1:$_SESSION['InfoEscolar DatosGen']=0;
-			//in_array(5,$valores)?$_SESSION['acceso']=1:$_SESSION['acceso']=0;
+			in_array(5,$valores)?$_SESSION['control_acceso']=1:$_SESSION['control_acceso']=0;
+            in_array(6,$valores)?$_SESSION['Act Complementarias']=1:$_SESSION['Act Complementarias']=0;
+			in_array(7,$valores)?$_SESSION['ActividadesDisponibles']=1:$_SESSION['ActividadesDisponibles']=0;
+			in_array(8,$valores)?$_SESSION['Departamentos']=1:$_SESSION['Departamentos']=0;
+			in_array(9,$valores)?$_SESSION['Reporte']=1:$_SESSION['Reporte']=0;
+			in_array(10,$valores)?$_SESSION['Creditos']=1:$_SESSION['Creditos']=0;
     }
 
     echo json_encode($fetch);
