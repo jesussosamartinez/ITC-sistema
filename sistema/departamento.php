@@ -43,7 +43,7 @@
   <div class="accordion-item">
   <br><h5> Subdirección Académica </h5>
     <h2 class="accordion-header" id="flush-heading2">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapseTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
       Subdirección Académica
       </button>
     </h2>
@@ -87,11 +87,11 @@
 <!------------------------------------------------------------------------------------------------------------------->
 <div class="accordion-item">
     <h2 class="accordion-header" id="flush-heading6">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapseSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
       Departamento de Eléctrica y Electrónica
       </button>
     </h2>
-    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Mtra. Marlem Flores Montiel <br>Correo Electrónico -- electronica@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -102,7 +102,7 @@
       Departamento de Sistemas y Computación
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse7" class="accordion-collapse collapse" aria-labelledby="flush-heading7" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Ing. Gisela Vega Torres <br>Correo Electrónico -- sistemas@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -113,7 +113,7 @@
       Departamento de Desarrollo Académico
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse8" class="accordion-collapse collapse" aria-labelledby="flush-heading8" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M.C. Julio Pérez Machorro <br>Correo Electrónico -- desarrollo@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -124,7 +124,7 @@
       División de Estudios Profesionales
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse9" class="accordion-collapse collapse" aria-labelledby="flush-heading9" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M. I. Leticia Bedolla Vázquez <br>Correo Electrónico -- division@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -135,7 +135,7 @@
       Posgrado
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse10" class="accordion-collapse collapse" aria-labelledby="flush-heading10" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- C. P. Mónica Leticia Acosta Miránda <br>Correo Electrónico -- posgrado@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -147,7 +147,7 @@
       Subdirección de Planeación y Vinculación
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse11" class="accordion-collapse collapse" aria-labelledby="flush-heading11" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- C.P. María Magdalena Leyva Valles <br>Correo Electrónico -- sub.planeacion@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -158,7 +158,7 @@
       Departamento de Centro de Información
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse12" class="accordion-collapse collapse" aria-labelledby="flush-heading12" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Lic. Norma Angélica Morales Tablas <br>Correo Electrónico -- ci_cuautla@tecnm.mx</div>
     </div>
   </div>
@@ -169,7 +169,7 @@
       Departamento de Actividades Extraescolares
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse13" class="accordion-collapse collapse" aria-labelledby="flush-heading13" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Lic. Roberto Marcio Cuauhtle Pluma <br>Correo Electrónico -- c.informacion@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -180,7 +180,7 @@
       Departamento de Gestión Tecnología y Vinculación
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse14" class="accordion-collapse collapse" aria-labelledby="flush-heading14" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M.F.G. Areli Soledad Ruíz Martínez <br>Correo Electrónico -- gestion@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -191,7 +191,7 @@
       Departamento de Planeación, Programación y Presupuestación
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse15" class="accordion-collapse collapse" aria-labelledby="flush-heading15" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M. E. Guillermina Sánchez Marino <br>Correo Electrónico -- planeacion@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -202,7 +202,7 @@
       Departamento de Servicios Escolares
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse16" class="accordion-collapse collapse" aria-labelledby="flush-heading16" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M. C. Moisés Román Sedeño <br>Correo Electrónico -- escolares@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -213,7 +213,7 @@
       Departamento de Comunicación y Difusión
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse17" class="accordion-collapse collapse" aria-labelledby="flush-heading17" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M.L.G.E. Josué Iván Jaimes Pérez <br>Correo Electrónico -- comunicacion@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -225,7 +225,7 @@
       Subdirección de Servicios Administrativos
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse18" class="accordion-collapse collapse" aria-labelledby="flush-heading18" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- M. A. Angélica Gómez Cárdenas <br>Correo Electrónico -- sub.administrativa@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -236,7 +236,7 @@
       Departamento de Recursos Financieros
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse19" class="accordion-collapse collapse" aria-labelledby="flush-heading19" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- C. P. Estela Mendoza Mondragón<br>Correo Electrónico -- financieros@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -247,7 +247,7 @@
       Departamento de Recursos Humanos
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse20" class="accordion-collapse collapse" aria-labelledby="flush-heading20" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Mtro. José Luís Eguía Rivas <br>Correo Electrónico -- humanos@cuautlatecnm.mx</div>
     </div>
   </div>
@@ -258,7 +258,7 @@
       Departamento de Recursos Materiales y Servicios
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse21" class="accordion-collapse collapse" aria-labelledby="flush-heading21" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Ing. Braulio González Román<br>Correo Electrónico -- materiales@cuautla.tecnm.mx</div>
     </div>
   </div>
@@ -269,7 +269,7 @@
       Departamento de Mantenimiento y Equipo
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse22" class="accordion-collapse collapse" aria-labelledby="flush-heading22" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Ing. Noel Morales Muñiz <br>Correo Electrónico -- mantenimiento@cuautlatecnm.mx</div>
     </div>
   </div>
@@ -280,7 +280,7 @@
       Departamento de Centro de Cómputo
       </button>
     </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+    <div id="flush-collapse23" class="accordion-collapse collapse" aria-labelledby="flush-heading23" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body"> Jefe del Departamento -- Ing. Víctor Manuel Ayala Lara <br>Correo Electrónico -- c.computo@cuautla.tecnm.mx</div>
     </div>
   </div>

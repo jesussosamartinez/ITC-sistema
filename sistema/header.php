@@ -71,11 +71,11 @@ session_start();
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
                                 <li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>
-                                <li><a href="TalleresCul.php">Seleccion de Actividades</a></li>
+                                <li><a href="SelecAct.php">Seleccion de Actividades</a></li>
                                 <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
                             </ul>
                         </li>
-                        <li><a href="departamentos.php">Departamentos</a>
+                        <li><a href="departamento.php">Departamentos</a>
                             <ul>
                                 <li><a
                                         href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing">PROGRAMA

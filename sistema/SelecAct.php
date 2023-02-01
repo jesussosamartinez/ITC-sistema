@@ -16,11 +16,12 @@
     </header>
     
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"></i> Talleres Culturales</a>
+        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"></i> Seleccion de Actividades</a>
     </div>
     <hr>
 
-    <!-- Table Taller CUL -->
+    <!-- Table Seleccion de actividades -->
+
     
 
    
