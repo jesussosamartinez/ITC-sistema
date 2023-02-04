@@ -10,6 +10,13 @@ Class Talleres
 	{
 
 	}
+	//Implementamos un método para insertar registros
+	public function insertar($Nombre,$Grupo,$Turno,)
+	{
+		$sql="INSERT INTO talleres (Nombre,Grupo,Turno,Condicion)
+		VALUES ('$Nombre','$Grupo','$Turno','1')";
+		return ejecutarConsulta($sql);
+	}
 
     //Implementamos un método para desactivar registros
 	public function desactivar($idTaller)

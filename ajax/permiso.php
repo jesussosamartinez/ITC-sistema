@@ -4,6 +4,15 @@ if (strlen(session_id()) < 1){
 	session_start();//Validamos si existe o no la sesión
 }
 
+if (!isset($_SESSION["email"]))
+{
+  header("Location: ../sistema/index.html");//Validamos el acceso solo a los usuarios logueados al sistema.
+}
+else
+{
+//Validamos el acceso solo al usuario logueado y autorizado.
+if ($_SESSION['control_acceso']==1)
+{ 
 require_once "../modelos/Permiso.php";
 
 $permiso=new Permiso();
@@ -30,9 +39,7 @@ switch ($_GET["op"]){
 	break;
 }
 //Fin de las validaciones de acceso
-{
-  require 'noacceso.php';
 }
-
+}
 ob_end_flush();
 ?>

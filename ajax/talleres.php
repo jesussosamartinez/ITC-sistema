@@ -15,10 +15,21 @@ if (strlen(session_id()) < 1){
     $Turno = isset($_POST["Turno"])? limpiarCadena($_POST["Turno"]): "";
 
     switch ($_GET["op"]){
-        
+        case 'guardaryeditar':
+
+            if (empty($idarticulo)){
+                $rspta=$talleres->insertar($idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
+                echo $rspta ? "Artículo registrado" : "Artículo no se pudo registrar";
+            }
+            else {
+                $rspta=$talleres->editar($idarticulo,$idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
+                echo $rspta ? "Artículo actualizado" : "Artículo no se pudo actualizar";
+            }
+        break;
         case 'desactivar':
             $rspta=$talleres->desactivar($idTaller);
              echo $rspta ? "Taller Desactivado" : "Taller no desactivado";
+             //Fin de las validaciones de acceso
         break;
     
         case 'activar':
@@ -38,17 +49,16 @@ if (strlen(session_id()) < 1){
              $data= Array();
     
              while ($reg=$rspta->fetch_object()){
+            
                  $data[]=array(
-                     "0"=>($reg->Condicion)?'<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
-                         ' <button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
-                         '<button class="btn btn-warning" onclick="mostrar('.$reg->idTaller.')"><i class="fa fa-pencil"></i></button>'.
-                         ' <button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
+                     "0"=>($reg->Condicion)?'<button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
+                         '<button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
                      "1"=>$reg->Nombre,
                      "2"=>$reg->Grupo,
                      "3"=>$reg->Turno,
                      "4"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
                      '<span class="badge text-bg-danger">Desactivado</span>'
-                     );
+                 );
              }
              $results = array(
                  "sEcho"=>1, //Información para el datatables
@@ -56,9 +66,9 @@ if (strlen(session_id()) < 1){
                  "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
                  "aaData"=>$data);
              echo json_encode($results);
-    
+     
         break;
-
+    
     }
 }
 ob_end_flush();

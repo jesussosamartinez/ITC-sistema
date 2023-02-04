@@ -27,6 +27,7 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
+    
 
 </head>
 <body>
@@ -75,14 +76,17 @@ session_start();
                                 <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
                             </ul>
                         </li>
-                        <li><a href="departamentos.php">Departamentos</a>
+                        <?php if($_SESSION['Departamentos']==1)
+                        {
+                        echo '<li><a href="departamentos.php">Departamentos</a>
                             <ul>
                                 <li><a
                                         href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing">PROGRAMA
                                         DE ACT COMPLEMENTARIAS 2022-2023 BORRADOR</a></li>
                             </ul>
-                        </li>
-                        <li><a href="constancias.php">Creditos Complementarios</a></li>
+                        </li>'; }?>
+                        <?php if($_SESSION['Creditos']==1){
+                        echo '<li><a href="constancias.php">Creditos Complementarios</a></li>'; }?>
                         <?php if($_SESSION['Reporte']==1)
                         {
                             echo '<li><a href="#">Reporte</a>

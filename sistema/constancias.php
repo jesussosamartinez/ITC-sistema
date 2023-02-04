@@ -15,20 +15,25 @@
     require 'header.php'
     ?>
     </header>
-    
+
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i>  Inicio <i class="fa-solid fa-chevron-right"></i> Constancias </a>
+        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i> Inicio <i
+                class="fa-solid fa-chevron-right"></i> Constancias </a>
     </div>
     <hr>
 
 
     <div class="btn" style="top: 40%; position: absolute;">
-          <button type="submit" id="generar">Generar</button>
+        <button type="submit" id="generar">Generar</button>
     </div>
 
-    
-   
 
+
+    <!-- jQuery library -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- jsPDF library -->
+    <script src="js/jsPDF/dist/jspdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="../PDF/constancia.js"></script>
