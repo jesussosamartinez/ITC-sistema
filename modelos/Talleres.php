@@ -38,9 +38,14 @@ Class Talleres
 		return ejecutarConsultaSimpleFila($sql);
 	}
 
-  
-
 	public function listarActividades()
+	{
+		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
+		FROM talleres";
+		return ejecutarConsulta($sql);		
+	}
+
+	public function listarActividadesA()
 	{
 		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
 		FROM talleres";

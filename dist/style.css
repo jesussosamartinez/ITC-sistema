@@ -28,6 +28,7 @@ tr, td, tbody, tfoot {
 
 thead {
   display: none;
+  background-color: #023877;
 }
 
 tr {

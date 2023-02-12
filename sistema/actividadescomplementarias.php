@@ -1,24 +1,23 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talleres Deportivos- SIC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../dist/style.css">
-<body>
-    <header>
-        <?php 
+
+<style>
+.box-header {
+    display: contents;
+    float: none;
+    box-sizing: border-box;
+}
+
+.box-title {
+    padding-top: 1em;
+}
+</style>
+
+    <?php 
     require 'header.php'
     ?>
-    </header>
+
 
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i
-                class="fa-solid fa-chevron-right"></i> Actividades Disponibles</a>
+        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i> Actividades Disponibles</a>
     </div>
     <hr>
 
@@ -30,17 +29,19 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="box">
-                        <div class="box-header with-border" style="display: flexbox; align:center; float: fixed; z-index: 2;  background-color: blue; left:50%;">
-                            <h1 class="box-title" ><button class="btn btn-success" id="btnagregar"
-                                    onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button> <a
-                                    href="../reportes/rptarticulos.php" target="_blank"><button class="btn btn-info"><i
-                                            class="fa fa-clipboard"></i> Reporte</button></a></h1>
+                        <?php if($_SESSION['idRol']==1){
+                            echo '
+                        <div class="box-header with-border">
+                            <h1 class="box-title"><button class="btn btn-success" id="btnagregar"
+                                    onclick="mostrarform(true)"><i class="fa fa-plus-circle"></i> Agregar</button> 
+                                    <a href="../reportes/rptarticulos.php" target="_blank"><button class="btn btn-info"><i
+                                    class="fa fa-clipboard"></i> Reporte</button></a></h1>
                             <div class="box-tools pull-right">
                             </div>
                         </div>
-                        <div class="panel-body panel-center" id="listadoregistros">
+                        <div class="panel-body" id="listadoregistros">
                             <table id="tbllistadoD"
-                                class="display table-striped table-bordered table-condensed table-hover">
+                                class="table  table-striped table-bordered table-condensed table-hover">
                                 <thead>
                                     <th>Opciones</th>
                                     <th>Nombre</th>
@@ -58,46 +59,60 @@
                                     <th>Estado</th>
                                 </tfoot>
                             </table>
-                        </div>
+                        </div>';
+                        } ?>
+                        <?php if($_SESSION['idRol']==3){ echo '
+                        <div class="panel-body" id="listadoregistros">
+                            <table id="tbllistadoDA"
+                                class="table-striped table-bordered table-condensed table-hover">
+                                <thead>
+                                    <th>Nombre</th>
+                                    <th>Grupo</th>
+                                    <th>Turno</th>
+                                    <th>Estado</th>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                                <tfoot>
+                                    <th>Nombre</th>
+                                    <th>Grupo</th>
+                                    <th>Turno</th>
+                                    <th>Estado</th>
+                                </tfoot>
+                            </table>
+                        </div>'; } ?>
                         <div class="panel-body" id="formularioregistros">
                             <form name="formulario" id="formulario" method="POST">
                                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Nombre(*):</label>
-                                    <input type="hidden" name="idarticulo" id="idarticulo">
+                                    <label>Nombre de la Actividad(*):</label>
+                                    <input type="hidden" name="idTaller" id="idTaller">
                                     <input type="text" class="form-control" name="nombre" id="nombre" maxlength="100"
                                         placeholder="Nombre" required>
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Categoría(*):</label>
-                                    <select id="idcategoria" name="idcategoria" class="form-control selectpicker"
-                                        data-live-search="true" required></select>
+                                    <label>Tipo de Actividad(*):</label>
+                                    <select class="form-control select-picker" name="tipo_actividad" id="tipo_actividad"
+                                        required>
+                                        <option value="ACTIVIDAD EXTRAESCOLAR">ACTIVIDAD EXTRAESCOLAR</option>
+                                        <option value="FOMENTO A LA LECTURA">FOMENTO A LA LECTURA</option>
+                                        <option value="EVENTOS ACADÉMICOS">EVENTOS ACADÉMICOS</option>
+                                        <option value="CONSTRUCCIÓN DE PROTOTIPOS Y DESARROLLO TECNOLÓGICO">CONSTRUCCIÓN DE PROTOTIPOS Y DESARROLLO TECNOLÓGICO</option>
+                                        <option value="PROYECTO DE INVESTIGACIÓN">PROYECTO DE INVESTIGACIÓN</option>
+                                        <option value="PRODUCTIVIDAD LABORAL">PRODUCTIVIDAD LABORAL</option>
+                                        <option value="COMITÉ ORGANIZADOR DE EVENTOS LOCALES, REGIONALES Y NACIONALES DEL TECNM">COMITÉ ORGANIZADOR DE EVENTOS LOCALES, REGIONALES Y NACIONALES DEL TECNM</option>
+                                        <option value="HABILIDADES SOCIOEMOCIONALES">HABILIDADES SOCIOEMOCIONALES</option>
+                                        <option value="PUEBLOS ORIGINARIOS">PUEBLOS ORIGINARIOS</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Stock(*):</label>
-                                    <input type="number" class="form-control" name="stock" id="stock" required>
+                                    <label>Grupo:</label>
+                                    <input type="text" class="form-control" name="Grupo" id="Grupo" maxlength="256"
+                                        placeholder="Grupo">
                                 </div>
                                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Descripción:</label>
-                                    <input type="text" class="form-control" name="descripcion" id="descripcion"
-                                        maxlength="256" placeholder="Descripción">
-                                </div>
-                                <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Imagen:</label>
-                                    <input type="file" class="form-control" name="imagen" id="imagen"
-                                        accept="image/x-png,image/gif,image/jpeg">
-                                    <input type="hidden" name="imagenactual" id="imagenactual">
-                                    <img src="" width="150px" height="120px" id="imagenmuestra">
-                                </div>
-                                <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <label>Código:</label>
-                                    <input type="text" class="form-control" name="codigo" id="codigo"
-                                        placeholder="Código Barras">
-                                    <button class="btn btn-success" type="button"
-                                        onclick="generarbarcode()">Generar</button>
-                                    <button class="btn btn-info" type="button" onclick="imprimir()">Imprimir</button>
-                                    <div id="print">
-                                        <svg id="barcode"></svg>
-                                    </div>
+                                    <label>Turno:</label>
+                                    <input type="text" class="form-control" name="Turno" id="Turno" maxlength="256"
+                                        placeholder="Turno">
                                 </div>
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <button class="btn btn-primary" type="submit" id="btnGuardar"><i
@@ -129,5 +144,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js"></script>
 
 
-</body>
+    </body>
 </html>

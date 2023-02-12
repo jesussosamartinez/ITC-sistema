@@ -17,15 +17,12 @@
     </header>
 
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i> Inicio <i
+        <a><i class="fa-solid fa-house"></i> <i
                 class="fa-solid fa-chevron-right"></i> Constancias </a>
     </div>
     <hr>
 
 
-    <div class="btn" style="top: 40%; position: absolute;">
-        <button type="submit" id="generar">Generar</button>
-    </div>
 
 
 

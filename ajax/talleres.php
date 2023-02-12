@@ -68,6 +68,30 @@ if (strlen(session_id()) < 1){
              echo json_encode($results);
      
         break;
+
+        case 'listarActividadesAlumnos':
+            $rspta=$talleres->listarActividadesA();
+             //Vamos a declarar un array
+             $data= Array();
+    
+             while ($reg=$rspta->fetch_object()){
+            
+                 $data[]=array(
+                     "0"=>$reg->Nombre,
+                     "1"=>$reg->Grupo,
+                     "2"=>$reg->Turno,
+                     "3"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
+                     '<span class="badge text-bg-danger">No Disponible</span>'
+                 );
+             }
+             $results = array(
+                 "sEcho"=>1, //Información para el datatables
+                 "iTotalRecords"=>count($data), //enviamos el total registros al datatable
+                 "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+                 "aaData"=>$data);
+             echo json_encode($results);
+     
+        break;
     
     }
 }
