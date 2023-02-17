@@ -8,7 +8,7 @@ if (strlen(session_id()) < 1){
     $talleres = new Talleres();
 
     $idTaller = isset($_POST["idTaller"])? limpiarCadena($_POST["idTaller"]): "";
-    $ClaveTaller = isset($_POST["ClaveTaller"])? limpiarCadena($_POST["ClaveTaller"]): "";
+    $tipo_actividad = isset($_POST["tipo_actividad"])? limpiarCadena($_POST["tipo_actividad"]): "";
     $Nombre = isset($_POST["Nombre"])? limpiarCadena($_POST["Nombre"]): "";
     $Tipo = isset($_POST["Tipo"])? limpiarCadena($_POST["Tipo"]): "";
     $Grupo = isset($_POST["Grupo"])? limpiarCadena($_POST["Grupo"]): "";
@@ -18,8 +18,8 @@ if (strlen(session_id()) < 1){
         case 'guardaryeditar':
 
             if (empty($idarticulo)){
-                $rspta=$talleres->insertar($idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
-                echo $rspta ? "Artículo registrado" : "Artículo no se pudo registrar";
+                $rspta=$talleres->insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno);
+                echo $rspta ? "Actividad Registrada" : "Actividad no registrada";
             }
             else {
                 $rspta=$talleres->editar($idarticulo,$idcategoria,$codigo,$nombre,$stock,$descripcion,$imagen);
@@ -53,10 +53,12 @@ if (strlen(session_id()) < 1){
                  $data[]=array(
                      "0"=>($reg->Condicion)?'<button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
                          '<button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
-                     "1"=>$reg->Nombre,
-                     "2"=>$reg->Grupo,
-                     "3"=>$reg->Turno,
-                     "4"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
+                     "1"=>$reg->tipo_actividad,
+                     "2"=>$reg->Tipo,
+                     "3"=>$reg->Nombre,
+                     "4"=>$reg->Grupo,
+                     "5"=>$reg->Turno,
+                     "6"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
                      '<span class="badge text-bg-danger">Desactivado</span>'
                  );
              }
@@ -77,10 +79,12 @@ if (strlen(session_id()) < 1){
              while ($reg=$rspta->fetch_object()){
             
                  $data[]=array(
-                     "0"=>$reg->Nombre,
-                     "1"=>$reg->Grupo,
-                     "2"=>$reg->Turno,
-                     "3"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
+                     "0"=>$reg->tipo_actividad,
+                     "1"=>$reg->Tipo,
+                     "2"=>$reg->Nombre,
+                     "3"=>$reg->Grupo,
+                     "4"=>$reg->Turno,
+                     "5"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
                      '<span class="badge text-bg-danger">No Disponible</span>'
                  );
              }

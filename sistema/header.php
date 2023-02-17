@@ -72,8 +72,8 @@ session_start();
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
                                 <li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>
-                                <li><a href="SelecAct.php">Seleccion de Actividades</a></li>
-                                <li><a href="TalleresCiv.php">Talleres Civicos</a></li>
+                                <li><a href="SelecAct.php">Selección de Talleres</a></li>
+                                <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>
                             </ul>
                         </li>
                         <?php if($_SESSION['Departamentos']==1)

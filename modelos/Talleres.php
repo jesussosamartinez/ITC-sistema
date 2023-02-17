@@ -11,10 +11,10 @@ Class Talleres
 
 	}
 	//Implementamos un método para insertar registros
-	public function insertar($Nombre,$Grupo,$Turno,)
+	public function insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno,)
 	{
-		$sql="INSERT INTO talleres (Nombre,Grupo,Turno,Condicion)
-		VALUES ('$Nombre','$Grupo','$Turno','1')";
+		$sql="INSERT INTO talleres (tipo_actividad,Nombre,Tipo,Grupo,Turno,Condicion)
+		VALUES ('$tipo_actividad','$Nombre','$Tipo','$Grupo','$Turno','1')";
 		return ejecutarConsulta($sql);
 	}
 
@@ -40,16 +40,20 @@ Class Talleres
 
 	public function listarActividades()
 	{
-		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
+		$sql="SELECT idTaller,tipo_actividad,Tipo, Nombre, Grupo, Turno, Condicion
 		FROM talleres";
 		return ejecutarConsulta($sql);		
 	}
 
 	public function listarActividadesA()
 	{
-		$sql="SELECT idTaller, Nombre, Grupo, Turno, Condicion
+		$sql="SELECT idTaller,tipo_actividad,Tipo, Nombre, Grupo, Turno, Condicion
 		FROM talleres";
 		return ejecutarConsulta($sql);		
+	}
+
+	public function alumnocomp(){
+		
 	}
 	
 }

@@ -19,7 +19,7 @@ nav {
     right: 0%;
     top: 10%;
     bottom: 0%;
-    height: 39em;
+    height: auto;
     background-image: url('../assets/img/TCNMCampusCuautla/EDIFICIO G.JPG');
     background-size: cover;
     width: auto;
@@ -43,7 +43,7 @@ nav {
     top: 10%;
   }
 
-  form{
+  #login-form{
     background-color: #F9F9F9;
     position: absolute;
     width: 430px;

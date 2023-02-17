@@ -18,7 +18,7 @@
     require 'header.php'
     ?>
     </header>
-
+<div class="container">
     <div class="navegacion">
         <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"> </i> Departamentos</a>
     </div>
@@ -26,7 +26,7 @@
 
 <!-- Departamentos menu -->
 
-    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%;">
+    <section class="departamentos" style="top:30%; position:absolute; left:10%; z-index:-5; width: 70%;">
   
     <div class="accordion accordion-flush" id="accordionFlushExample">
   <div class="accordion-item">
@@ -288,7 +288,7 @@
   </div>
 </section>
     
-
+</div>
 </body>
 
 

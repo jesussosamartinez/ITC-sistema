@@ -248,7 +248,7 @@ nav ul li ul li a:hover{
 
   .navegacion {
     position: absolute;
-    top: 30%;
+    top: 23%;
     left: 8%;
     color:#916F09;
     font-family: 'Raleway';
@@ -261,7 +261,7 @@ nav ul li ul li a:hover{
   hr{
     position: absolute;
     width: 22%;
-    top: 33%;
+    top: 25%;
     left: 8%;
     color: #000000;
     z-index: -3;

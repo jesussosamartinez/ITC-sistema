@@ -5,6 +5,11 @@ function init(){
 	mostrarform(false);
 	listarD();	
 	listarDA();
+
+	$("#formulario").on("submit",function(e)
+	{
+		guardaryeditar(e);	
+	})
 }
 //Función mostrar formulario
 function mostrarform(flag)
