@@ -59,7 +59,8 @@ th {
 
 thead th {
   background-color: #023877;
-  color: #fff;
+  color: #fff; 
+  text-align: center;
   border: 1px solid #202932;
 }
 
@@ -68,7 +69,6 @@ tfoot th {
   padding: 10px;
   text-align: center;
   color: #b8c4d2;
-  
 }
 
 .close {

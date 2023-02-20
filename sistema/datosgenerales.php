@@ -18,7 +18,7 @@ if ($_SESSION['InfoEscolar DatosGen']==1)
     
 
     <div class="navegacion">
-        <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i> Inicio <i
+        <a><i class="fa-solid fa-house"></i><i
                 class="fa-solid fa-chevron-right"></i> Datos Generales</a>
     </div>
     <hr>

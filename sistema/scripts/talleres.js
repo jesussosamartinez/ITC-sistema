@@ -11,6 +11,18 @@ function init(){
 		guardaryeditar(e);	
 	})
 }
+
+//Función limpiar
+function limpiar()
+{
+	$("#Tipo").val("");
+	$("#tipo_actividad").val("");
+	$("#Nombre").val("");
+	$("#Grupo").val("");
+	$("#Turno").val("");
+	$("#print").hide();
+	$("#idTaller").val("");
+}
 //Función mostrar formulario
 function mostrarform(flag)
 {
@@ -29,6 +41,14 @@ function mostrarform(flag)
 		$("#btnagregar").show();
 	}
 }
+
+//Función cancelarform
+function cancelarform()
+{
+	limpiar();
+	mostrarform(false);
+}
+
 //Función Listar
 function listarD()
 {
