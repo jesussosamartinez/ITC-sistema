@@ -72,8 +72,13 @@ session_start();
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
                                 <li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>
+<<<<<<< Updated upstream
                                 <li><a href="SelecAct.php">Selección de Talleres</a></li>
                                 <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>
+=======
+                                <li><a href="SelecTalleres.php">Seleccion de Talleres</a></li>
+                                <li><a href="TalleresCiv.php">Seleccion de Actividades</a></li>
+>>>>>>> Stashed changes
                             </ul>
                         </li>
                         <?php if($_SESSION['Departamentos']==1)
