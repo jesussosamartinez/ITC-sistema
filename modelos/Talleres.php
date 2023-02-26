@@ -51,10 +51,6 @@ Class Talleres
 		FROM talleres";
 		return ejecutarConsulta($sql);		
 	}
-
-	public function alumnocomp(){
-		
-	}
 	
 }
 

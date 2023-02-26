@@ -18,5 +18,9 @@ public function mostrar()
     return ejecutarConsultaSimpleFila($sql);
 }
 
+public function alumnocomp($NumeroControl){
+	$sql="SELECT NumeroControl, ApellidoP, ApellidoM, Nombre, Correo, ClaveCarrera FROM alumnos WHERE NumeroControl='$NumeroControl'"; 
+	return ejecutarConsultaSimpleFila($sql);
+}
 
 }   

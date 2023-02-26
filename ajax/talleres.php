@@ -17,7 +17,7 @@ if (strlen(session_id()) < 1){
     switch ($_GET["op"]){
         case 'guardaryeditar':
 
-            if (empty($idarticulo)){
+            if (empty($idTaller)){
                 $rspta=$talleres->insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno);
                 echo $rspta ? "Actividad Registrada" : "Actividad no registrada";
             }

@@ -23,6 +23,13 @@ if (strlen(session_id()) < 1){
              //Codificar el resultado utilizando json
              echo json_encode($rspta);
             break;
+
+        case 'alumnom':
+            $NumeroControl = $_POST['numerocontrol'];
+
+            $rspta=$datos->alumnocomp($NumeroControl);
+            echo json_encode($rspta);
+            break; 
          
     }
 }
