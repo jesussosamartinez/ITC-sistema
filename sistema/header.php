@@ -11,6 +11,7 @@ session_start();
     <title>SIC - ITCUAUTLA</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../dist/style.css">
@@ -24,6 +25,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="../assets/librerias/alertifyjs/css/themes/default.css">
 
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
