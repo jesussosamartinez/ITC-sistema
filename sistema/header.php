@@ -79,22 +79,26 @@ session_start();
                                 <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>';
                           }
                            ?>     
+                                <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>
+
+                               
+
                             </ul>
                         </li>
-                        <?php if($_SESSION['Departamentos']==1)
+                        <?php if($_SESSION['Departamentos']==0)
                         {
-                        echo '<li><a href="departamento.php">Departamentos</a>
+                        echo' <li> <a href="departamento.php"> Departamentos</a> 
                             <ul>
                                 <li><a
                                         href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing">PROGRAMA
                                         DE ACT COMPLEMENTARIAS 2022-2023 BORRADOR</a></li>
                             </ul>
                         </li>'; }?>
-                        <?php if($_SESSION['Creditos']==1){
+                        <?php if($_SESSION['Creditos']==0){
                         echo '<li><a href="constancias.php">Creditos Complementarios</a></li>'; }?>
                         <?php if($_SESSION['Reporte']==1)
                         {
-                            echo '<li><a href="#">Reporte</a>
+                            echo' <li><a href="#">Reporte</a> 
                             <ul>
                                 <li><a href="estadisticas.php">Estadisticas</a></li>
                             </ul>
@@ -103,12 +107,12 @@ session_start();
                         <?php if($_SESSION['control_acceso']==1)
                         {
                         echo '
-                        <li><a href="accesos.php">Control de Accesos</a>
+                        <li><a href="accesos.php">Control de Accesos</a> 
                             <ul>
                                 <li><a href="#">Accesos Disponibles</a></li>
                                 <li><a href="#">Solicitudes de Accesos</a></li>
                             </ul>
-                        </li>';
+                        </li> ';
                         }?>
                     </ul>
                 </nav>
