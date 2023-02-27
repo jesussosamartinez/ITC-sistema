@@ -28,7 +28,7 @@
         </div>
         <hr>
 
-
+<div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="box">
@@ -66,7 +66,8 @@
                                     <th>Estado</th>
                                 </tfoot>
                             </table>
-                        </div>';
+                        </div>
+                        ';
                         } ?>
                     <?php if($_SESSION['idRol']==3){ echo '
                         <div class="panel-body" id="listadoregistros">
@@ -155,6 +156,7 @@
                 </div><!-- /.box -->
             </div><!-- /.col -->
         </div><!-- /.row -->
+        </div>
     </section><!-- /.content -->
 
 </div><!-- /.content-wrapper -->

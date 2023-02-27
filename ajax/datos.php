@@ -25,7 +25,7 @@ if (strlen(session_id()) < 1){
             break;
 
         case 'alumnom':
-            $NumeroControl = $_POST['numerocontrol'];
+            $NumeroControl = $_POST['NumeroControl'];
 
             $rspta=$datos->alumnocomp($NumeroControl);
             echo json_encode($rspta);
