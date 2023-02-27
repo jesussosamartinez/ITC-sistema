@@ -1,13 +1,26 @@
+<?php 
+//Incluímos inicialmente la conexión a la base de datos
+require_once  "../config/Conexion.php";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Talleres Culturales- SIC</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../dist/style.css">
-</head>
+
+<script type="text/javascript">
+function Confirmar()
+{
+  var respuesta = conf ("Esta seguro que desea INSCRIBIRSE");
+  if(respuesta == true)
+  {
+    return true;
+  }
+  else
+  {
+    return false;
+  }
+}
+</script>
+
 <body>
     <header>
         <?php 
@@ -22,6 +35,7 @@
 
         <!-- Table Seleccion de actividades -->
 
+<<<<<<< Updated upstream
         <section class="departamentos" style="padding-top:30px; padding-left:60px; width: auto;">
 
             <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -110,15 +124,66 @@
 
     </div>
     </div>
+=======
+    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%;">
+  
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+  
+<div class="accordion-item">
+<br><h5> DEPARTAMENTO DE ACTIVIDADES EXTRAESCOLARES </h5>
+  <h2 class="accordion-header" id="flush-headingOne">
+    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+      TALLERES DEPORTIVOS
+    </button>
+  </h2>
+  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+  <?php 
+     $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Grupo, Turno, area_responsable
+     FROM talleres WHERE Tipo='TALLER DEPORTIVO' ";
+
+$result=mysqli_query($conexion,$sql);
+while($ver=mysqli_fetch_row($result)){
+    ?>
+ 
+
+  <div class="card-group">
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-text"><?php  echo $ver  [ '2']; ?></h5>
+      <h6 class="card-text"><?php  echo $ver  [ '3']; ?></h6>
+      <h6 class="card-text"> GRUPO <?php  echo $ver  [ '4']; ?></h6>
+      <h6 class="card-text"> TURNO <?php echo $ver  [ '5']; ?></h6>
+      <h6 class="card-text"><?php  echo $ver  [ '6']; ?></h6>
+      <button type="button" class="btn btn-primary" onclick="return Confirmar()" >SELECCIONAR</button>
+      
+    </div>
+    
+  </div>
+
+<?php
+}
+                ?>
+<!------------------TC--------------------->
+
+
+ 
+
+>>>>>>> Stashed changes
 
 
 
 
 
     </section>
+<<<<<<< Updated upstream
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+=======
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>    
+>>>>>>> Stashed changes
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="../dist/script.js"></script>
 </body>
