@@ -5,7 +5,7 @@ require_once  "../config/Conexion.php";
 
 <!DOCTYPE html>
 <html lang="es">
-
+<!-- funcion ventana emergente
 <script type="text/javascript">
 function Confirmar()
 {
@@ -19,7 +19,7 @@ function Confirmar()
     return false;
   }
 }
-</script>
+</script> -->
 
 <body>
     <header>
@@ -64,7 +64,30 @@ while($ver=mysqli_fetch_row($result)){
       <h6 class="card-text"> GRUPO <?php  echo $ver  [ '4']; ?></h6>
       <h6 class="card-text"> TURNO <?php echo $ver  [ '5']; ?></h6>
       <h6 class="card-text"><?php  echo $ver  [ '6']; ?></h6>
-      <button type="button" class="btn btn-primary" onclick="return Confirmar()" > SELECCIONAR </button>
+   <!----   <button type="button" class="btn btn-primary" onclick="return Confirmar()" > SELECCIONAR </button>-->
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  SELECCIONAR
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: fixed; z-index:1000;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title" id="exampleModalLabel">Esta seguro de desea inscribirse</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+        <button type="button" class="btn btn-primary">INSCRIBIR</button>
+      </div>
+    </div>
+  </div>
+</div>
       
     </div>
     
