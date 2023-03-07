@@ -44,14 +44,6 @@ Class Talleres
 		FROM talleres";
 		return ejecutarConsulta($sql);		
 	}
-
-	public function listarActividadesA()
-	{
-		$sql="SELECT idTaller,tipo_actividad,Tipo, Nombre, Grupo, Turno, Condicion
-		FROM talleres";
-		return ejecutarConsulta($sql);		
-	}
-	
 }
 
 ?>

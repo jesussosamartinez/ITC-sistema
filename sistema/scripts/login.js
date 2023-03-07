@@ -17,7 +17,7 @@ $("#login-form").on('submit',function(e)
             Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
-                text: 'Usuario y/o Password incorrectos',
+                text: 'Usuario y/o Contraseña incorrectos',
                 
               })
         }

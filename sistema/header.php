@@ -11,7 +11,7 @@ session_start();
     <title>SIC - ITCUAUTLA</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    
+
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../dist/style.css">
@@ -29,7 +29,7 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
-    
+
 
 </head>
 <body>
@@ -43,7 +43,7 @@ session_start();
             </div>
 
             <div class="dropdowns">
-            <a href="../ajax/usuario.php?op=salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
+                <a href="../ajax/usuario.php?op=salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
             </div>
         </div>
 
@@ -57,35 +57,31 @@ session_start();
                         {
                         echo '<li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>';
                         }?>
-                        <li><a href="#">Información Escolar</a>
-
+                        <?php if($_SESSION['Informacion']==1){ echo
+                        '<li><a href="Informacion.php">Información Escolar</a>';
+                       } ?>
+                        <?php if($_SESSION['Información_Escolar']==1){
+                            echo '
                             <ul>
-                                <?php if($_SESSION['InfoEscolar Historial']==1){
-                                echo '<li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>';
-                                }?>
-                                <?php if($_SESSION['InfoEscolar Horario']==1){
-                                echo '<li><a href="#">Horario</a></li>';
-                                }?>
-                                <?php if($_SESSION['InfoEscolar DatosGen']==1){
-                                echo '<li><a href="datosgenerales.php">Datos Generales</a></li>';
-                               }?>
-                            </ul>
+                                <li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>
+                                <li><a href="#">Horario</a></li>
+                                <li><a href="datosgenerales.php">Datos Generales</a></li>
+
+                            </ul>';
+                            }?>
                         </li>
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
-                                <li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>
+                                <?php if($_SESSION['Act Complementarias']==1){ echo '<li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>';}?>
+                                <?php if($_SESSION['idRol']==3){ echo'<li><a href="actividadesdisponibles.php">Actividades Disponibles</a></li>';}?>
                                 <li><a href="SelecTalleres.php">Selección de Talleres</a></li>
-                          <?php  if($_SESSION['Act Complementarias']==1) {  echo'
+                                <?php  if($_SESSION['Act Complementarias']==1) {  echo'
                                 <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>';
                           }
-                           ?>     
-                                <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>
-
-                               
-
+                           ?>
                             </ul>
                         </li>
-                        <?php if($_SESSION['Departamentos']==0)
+                        <?php if($_SESSION['Departamentos']==1)
                         {
                         echo' <li> <a href="departamento.php"> Departamentos</a> 
                             <ul>
@@ -94,7 +90,7 @@ session_start();
                                         DE ACT COMPLEMENTARIAS 2022-2023 BORRADOR</a></li>
                             </ul>
                         </li>'; }?>
-                        <?php if($_SESSION['Creditos']==0){
+                        <?php if($_SESSION['Creditos']==1){
                         echo '<li><a href="constancias.php">Creditos Complementarios</a></li>'; }?>
                         <?php if($_SESSION['Reporte']==1)
                         {

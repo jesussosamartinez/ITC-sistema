@@ -20,7 +20,6 @@ function limpiar()
 	$("#Nombre").val("");
 	$("#Grupo").val("");
 	$("#Turno").val("");
-	$("#print").hide();
 	$("#idTaller").val("");
 }
 //Función mostrar formulario
@@ -58,12 +57,6 @@ function listarD()
 		"aProcessing": true,//Activamos el procesamiento del datatables
 	    "aServerSide": true,//Paginación y filtrado realizados por el servidor
 	    dom: '<Bl<f>rtip>',//Definimos los elementos del control de tabla
-	    buttons: [		          
-		            'copyHtml5',
-		            'excelHtml5',
-		            'csvHtml5',
-		            'pdf'
-		        ],
 		"ajax":
 				{
 					url: '../../ajax/talleres.php?op=listarActividades',
@@ -98,12 +91,6 @@ function listarDA()
 		"aProcessing": true,//Activamos el procesamiento del datatables
 	    "aServerSide": true,//Paginación y filtrado realizados por el servidor
 	    dom: '<Bl<f>rtip>',//Definimos los elementos del control de tabla
-	    buttons: [		          
-		            'copyHtml5',
-		            'excelHtml5',
-		            'csvHtml5',
-		            'pdf'
-		        ],
 		"ajax":
 				{
 					url: '../../ajax/talleres.php?op=listarActividadesAlumnos',

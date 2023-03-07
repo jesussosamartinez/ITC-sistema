@@ -32,8 +32,6 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="box">
-                    <?php if($_SESSION['idRol']==1){
-                            echo '
                         <div class="box-header with-border">
                             <h1 class="box-title"><button class="btn btn-success" id="btnagregar"
                                     onclick="mostrarform(true)" ><i class="fa fa-plus-circle"></i> Agregar</button> 
@@ -67,32 +65,6 @@
                                 </tfoot>
                             </table>
                         </div>
-                        ';
-                        } ?>
-                    <?php if($_SESSION['idRol']==3){ echo '
-                        <div class="panel-body" id="listadoregistros">
-                            <table id="tbllistadoDA"
-                                class="table-striped table-bordered table-condensed table-hover">
-                                <thead>
-                                    <th>Tipo de Actividad</th>
-                                    <th>Nombre</th>
-                                    <th>Descripción</th>
-                                    <th>Grupo</th>
-                                    <th>Turno</th>
-                                    <th>Estado</th>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                                <tfoot>
-                                    <th>Tipo de Actividad</th>
-                                    <th>Nombre</th>
-                                    <th>Descripción</th>
-                                    <th>Grupo</th>
-                                    <th>Turno</th>
-                                    <th>Estado</th>
-                                </tfoot>
-                            </table>
-                        </div>'; } ?>
                     <div class="panel-body" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                             <div class="form-group">
@@ -103,16 +75,6 @@
                                     <option value="">SELECCIONAR TIPO DE ACTIVIDAD</option>
                                     <option value="ACTIVIDAD EXTRAESCOLAR">ACTIVIDAD EXTRAESCOLAR</option>
                                     <option value="FOMENTO A LA LECTURA">FOMENTO A LA LECTURA</option>
-                                    <option value="EVENTOS ACADÉMICOS">EVENTOS ACADÉMICOS</option>
-                                    <option value="CONSTRUCCIÓN DE PROTOTIPOS Y DESARROLLO TECNOLÓGICO">CONSTRUCCIÓN DE
-                                        PROTOTIPOS Y DESARROLLO TECNOLÓGICO</option>
-                                    <option value="PROYECTO DE INVESTIGACIÓN">PROYECTO DE INVESTIGACIÓN</option>
-                                    <option
-                                        value="COMITÉ ORGANIZADOR DE EVENTOS LOCALES, REGIONALES Y NACIONALES DEL TECNM">
-                                        COMITÉ ORGANIZADOR DE EVENTOS LOCALES, REGIONALES Y NACIONALES DEL TECNM
-                                    </option>
-                                    <option value="HABILIDADES SOCIOEMOCIONALES">HABILIDADES SOCIOEMOCIONALES</option>
-                                    <option value="PUEBLOS ORIGINARIOS">PUEBLOS ORIGINARIOS</option>
                                 </select>
                             </div>
                             <div class="form-group col-lg col-md col-sm col-xs" id="miinput" hidden>
@@ -172,6 +134,9 @@
 <script src="scripts/talleres.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/6.0.0/bootbox.js"></script>
+ 
+
+
 
 <script>
 $(document).ready(function() {

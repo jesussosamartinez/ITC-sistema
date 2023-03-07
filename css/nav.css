@@ -48,7 +48,7 @@ header{
 /*BARRA MENU*/
 
 .container__menu{
-    width: 100%;
+    width: auto;
     height: 60px;
     background: #1B396A;
     padding: 0px 10px;
@@ -168,6 +168,7 @@ nav ul li ul li a{
     text-transform: uppercase;
     transition: all 300ms ease;
     text-decoration: none;
+    z-index: 5;
 }
 nav ul li ul li a:hover{
     font-weight: 800;
@@ -278,17 +279,16 @@ nav ul li ul li a:hover{
     width: 30%;
     text-transform: uppercase;
     font-size: 15px;
-    
+    font-family: 'Montserrat';
   }
 
   form>.nombre> label {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
     position: fixed;
     top: 46%;
-    left: 15%;
+    left: 23%;
     color:#1B396A;
-    font-weight: bold;
-    
+    font-weight: 800;
   }
 
   form > .nombre > input {
@@ -296,58 +296,20 @@ nav ul li ul li a:hover{
     text-align: center;
     font-weight: bold;
     border-radius: 10px;
-    width: 18%;
-    height: 3rem;
+    width: 35%;
     top: 50%;
+    height: 3rem;
     left: 9%;
   }
-  form>.apellidoP> label {
-    font-family: 'Raleway';
-    position: fixed;
-    top: 46%;
-    left: 32%;
-    color:#1B396A;
-    font-weight: bold;
-  }
 
-  form > .apellidoP > input {
-    position: fixed;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 18%;
-    top: 50%;
-    height: 3rem;
-    left: 28%;
-  }
-
-  form>.apellidoM> label {
-    font-family: 'Raleway';
-    position: fixed;
-    top: 46%;
-    left: 50%;
-    color:#1B396A;
-    font-weight: bold;
-  }
-
-  form > .apellidoM > input {
-    position: fixed;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    width: 18%;
-    top: 50%;
-    height: 3rem;
-    left: 47%;
-  }
   form>.correoinstitucional> label {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
     position: fixed;
-    font-weight: bold;
+    font-weight: 800;
     top: 46%;
     left:69%;
     color:#1B396A;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   form > .correoinstitucional > input {
@@ -362,12 +324,12 @@ nav ul li ul li a:hover{
   }
 
   form>.numcontrol> label {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
     position: fixed;
-    top: 59%;
-    left:13.2%;
+    top: 46%;
+    left: 51%;
     color:#1B396A;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   form > .numcontrol > input {
@@ -377,17 +339,17 @@ nav ul li ul li a:hover{
     border-radius: 10px;
     width: 16%;
     height: 3rem;
-    left: 9%;
-    top: 63%;
+    left: 47%;
+    top: 50%;
   }
 
   form>.lic> label {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
     position: fixed;
     top: 59%;
-    left:33%;
+    left:25%;
     color:#1B396A;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   form > .lic > input {
@@ -395,19 +357,19 @@ nav ul li ul li a:hover{
     text-align: center;
     font-weight: bold;
     border-radius: 10px;
-    width: 23%;
+    width: 35%;
     height: 3rem;
-    left: 26%;
+    left: 10%;
     top: 63%;
   }
 
   form>.semestre> label {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
     position: fixed;
     top: 59%;
     left: 56%;
     color:#1B396A;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   form > .semestre > input {
@@ -421,12 +383,12 @@ nav ul li ul li a:hover{
     top: 63%;
   }
   form>.telefono> label {
-    font-family: 'Raleway';
+    font-family: 'Montserrat';
     position: fixed;
     top: 59%;
     left: 74%;
     color:#1B396A;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   form > .telefono > input {

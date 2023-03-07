@@ -22,5 +22,13 @@ public function alumnocomp($NumeroControl){
 	$sql="SELECT NumeroControl, ApellidoP, ApellidoM, Nombre, Correo, ClaveCarrera FROM alumnos WHERE NumeroControl='$NumeroControl'"; 
 	return ejecutarConsultaSimpleFila($sql);
 }
+ 
+public function mostraractividad(){
+	$sql = "SELECT nombre_actividad, tipo_actividad , departamento FROM alumnotaller WHERE correo_institucional='".$_SESSION['email']."'";
+	return ejecutarConsultaSimpleFila($sql);
+}
+
 
 }   
+
+?>

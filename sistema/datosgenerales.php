@@ -10,7 +10,7 @@ if (!isset($_SESSION["email"]))
 else
 {
 require 'header.php';
-if ($_SESSION['InfoEscolar DatosGen']==1)
+if ($_SESSION['Información_Escolar']==1)
 {
 ?>
 <body>
@@ -26,16 +26,8 @@ if ($_SESSION['InfoEscolar DatosGen']==1)
     <form class="custom-form" id="datosgenerales">
 
         <div class="formgroup nombre ">
-            <label for="">NOMBRE</label>
-            <input class="inputcenter" type="text" name="nombre" id="nombre" readonly>
-        </div>
-        <div class="formgroup apellidoP ">
-            <label for="">Apellido Paterno</label>
-            <input class="inputcenter" type="text" name="apellidoP" id="apellidop" readonly>
-        </div>
-        <div class="formgroup apellidoM ">
-            <label for="">Apellido Materno</label>
-            <input class="inputcenter" type="text" name="apellidoM" id="apellidom" readonly>
+            <label for="">NOMBRE DEL ALUMNO</label>
+            <input class="inputcenter" type="text" name="nombre" id="nombrecomp" readonly>
         </div>
         <div class="formgroup correoinstitucional">
             <label for="">CORREO INSTITUCIONAL</label>

@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
+<style>
+        .content {
+            position: fixed;
+            width: 80%;
+            top: 38%;
+            margin-top: 1rem;
+            margin-left: 7rem;
+            z-index: -5;
+                }
+       tbody{
+        text-align:center;
+       }
+    </style>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,8 +35,34 @@
     </div>
     <hr>
 
-
-
+    <section class="content">
+        <div class="table table-responsive">
+        <table class="table-light">
+            <thead>
+                <tr>
+                    <th scope="col">Opciones</th>
+                    <th scope="col">Nombre del Alumno</th>
+                    <th scope="col">Actividad Complementaria</th>
+                    <th scope="col">Departamento Responsable</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Desempeño</th>
+                    <th scope="col">Crédito Complementario</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td>FUTBOLL</td>
+                    <td>Actividades ExtraEscolares</td>
+                    <td> 1°</td>
+                    <td>BUENO</td>
+                    <td><button>PDF</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </section>
 
 
     <!-- jQuery library -->

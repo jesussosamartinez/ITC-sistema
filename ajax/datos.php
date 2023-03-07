@@ -30,7 +30,18 @@ if (strlen(session_id()) < 1){
             $rspta=$datos->alumnocomp($NumeroControl);
             echo json_encode($rspta);
             break; 
-         
+        
+        case 'mostraractividad':
+            $rspta=$datos->mostraractividad();
+            //Codificar el resultado utilizando json
+            echo json_encode($rspta);
+            break;
+        
+        case 'inscribir':
+            $rspta=$datos->inscribir($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno);
+            echo $rspta ? "Alumno Inscrito" : "Alumno No Inscrito";
+            break;
+                    
     }
 }
 ?>

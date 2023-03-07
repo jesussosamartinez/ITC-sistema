@@ -72,7 +72,7 @@ if (strlen(session_id()) < 1){
         break;
 
         case 'listarActividadesAlumnos':
-            $rspta=$talleres->listarActividadesA();
+            $rspta=$talleres->listarActividades();
              //Vamos a declarar un array
              $data= Array();
     

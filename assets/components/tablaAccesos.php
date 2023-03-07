@@ -26,9 +26,7 @@
         <thead>
                 <th>Opciones</th>
                 <th>No.Control</th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Nombre</th>
+                <th>Nombre del Alumno</th>
                 <th>Correo</th>
                 <th>Carrera</th>
                 <th>semestre</th>
@@ -51,9 +49,7 @@
                         <button class="btn btn-primary" onclick=""><i class="fa fa-check"></i></button>-->
                     </td>
                     <td><?php echo $ver[4]?></td>
-                    <td><?php echo $ver[1]?></td>
-                    <td><?php echo $ver[2]?></td>
-                    <td><?php echo $ver[3]?></td>
+                    <td><?php echo $ver[1].' '.$ver[2].' '.$ver[3]?></td>
                     <td><?php echo $ver[5]?></td>
                     <td><?php echo $ver[7]?></td>
                     <td><?php echo $ver[6]?></td>
@@ -68,9 +64,7 @@
             <tfoot>
                 <th>Opciones</th>
                 <th>No.Control</th>
-                <th>Apellido Paterno</th>
-                <th>Apellido Materno</th>
-                <th>Nombre</th>
+                <th>Nombre del Alumno</th>
                 <th>Correo</th>
                 <th>Carrera</th>
                 <th>semestre</th>

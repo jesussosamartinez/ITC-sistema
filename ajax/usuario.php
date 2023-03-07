@@ -63,16 +63,15 @@ switch ($_GET["op"]){
 
         //Determinamos los permisos del usuario
             in_array(1,$valores)?$_SESSION['Home']=1:$_SESSION['Home']=0;
-			in_array(2,$valores)?$_SESSION['InfoEscolar Historial']=1:$_SESSION['InfoEscolar Historial']=0;
-			in_array(3,$valores)?$_SESSION['InfoEscolar Horario']=1:$_SESSION['InfoEscolar Horario']=0;
-			in_array(4,$valores)?$_SESSION['InfoEscolar DatosGen']=1:$_SESSION['InfoEscolar DatosGen']=0;
-			in_array(5,$valores)?$_SESSION['control_acceso']=1:$_SESSION['control_acceso']=0;
-            in_array(6,$valores)?$_SESSION['Act Complementarias']=1:$_SESSION['Act Complementarias']=0;
-			in_array(7,$valores)?$_SESSION['ActividadesDisponibles']=1:$_SESSION['ActividadesDisponibles']=0;
-			in_array(8,$valores)?$_SESSION['Departamentos']=1:$_SESSION['Departamentos']=0;
-			in_array(9,$valores)?$_SESSION['Reporte']=1:$_SESSION['Reporte']=0;
-			in_array(10,$valores)?$_SESSION['Creditos']=1:$_SESSION['Creditos']=0;
-            in_array(11,$valores)?$_SESSION['Disponibilidad']=1:$_SESSION['Disponibilidad']=0;
+			in_array(2,$valores)?$_SESSION['Información_Escolar']=1:$_SESSION['Información_Escolar']=0;
+			in_array(3,$valores)?$_SESSION['Informacion']=1:$_SESSION['Informacion']=0;
+			in_array(4,$valores)?$_SESSION['control_acceso']=1:$_SESSION['control_acceso']=0;
+            in_array(5,$valores)?$_SESSION['Act Complementarias']=1:$_SESSION['Act Complementarias']=0;
+			in_array(6,$valores)?$_SESSION['ActividadesDisponibles']=1:$_SESSION['ActividadesDisponibles']=0;
+			in_array(7,$valores)?$_SESSION['Departamentos']=1:$_SESSION['Departamentos']=0;
+			in_array(8,$valores)?$_SESSION['Reporte']=1:$_SESSION['Reporte']=0;
+			in_array(9,$valores)?$_SESSION['Creditos']=1:$_SESSION['Creditos']=0;
+            in_array(10,$valores)?$_SESSION['Disponibilidad']=1:$_SESSION['Disponibilidad']=0;
     }
 
     echo json_encode($fetch);
