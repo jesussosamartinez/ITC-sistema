@@ -64,23 +64,36 @@ while($ver=mysqli_fetch_row($result)){
       <h6 class="card-text"><?php  echo $ver  [ '3']; ?></h6>
       <h6 class="card-text"> GRUPO <?php  echo $ver  [ '4']; ?></h6>
       <h6 class="card-text"> TURNO <?php echo $ver  [ '5']; ?></h6>
-      <h6 class="card-text"><?php  echo $ver  [ '6']; ?></h6>
+      <!-- <h6 class="card-text"><?php  echo $ver  [ '6']; ?></h6>-->
    <!----   <button type="button" class="btn btn-primary" onclick="return Confirmar()" > SELECCIONAR </button>-->
    <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   SELECCIONAR
 </button>
+      
+    </div>
+    
+  </div>
 
+<?php
+}
+ ?>
+    </section>
+
+
+
+
+    
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="position: fixed; z-index:1000;">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title" id="exampleModalLabel">Esta seguro de desea inscribirse</h1>
+        <h1 class="modal-title" id="exampleModalLabel"></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+      Esta seguro de desea inscribirse
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
@@ -89,22 +102,6 @@ while($ver=mysqli_fetch_row($result)){
     </div>
   </div>
 </div>
-      
-    </div>
-    
-  </div>
-
-<?php
-}
-                ?>
-<!------------------TC--------------------->
-
-
- 
-
-
-    </section>
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
