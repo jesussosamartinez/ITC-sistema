@@ -22,6 +22,34 @@ if (strlen(session_id()) < 1){
         echo $rspta ? "Alumno Inscrito" : "Alumno No Inscrito"; 
     }
         break;
+    
+    case 'mostrar':
+        $rspta=$alumnotaller->mostrar();
+        //Vamos a declarar un array
+        $data= Array();
+    
+        while ($reg=$rspta->fetch_object()){
+       
+            $data[]=array(
+                "opciones"=>'<button class="btn btn-warning" ><i class="fa fa-pencil"></i>
+                        </button>',
+                "folio"=>0,
+                "No"=>$reg->NumeroControl,
+                "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre,
+                 "actividad"=>$reg->nombre_actividad ."-". $reg->tipo_actividad,
+                 "carrera"=>$reg->nombre_carrera,
+                 "departamento"=>$reg->departamento,
+                 "estatus"=>$reg->condicion?'<span class="badge text-bg-success">Activado</span>':
+                 '<span class="badge text-bg-danger">Desactivado</span>',
+                 "credito"=>'pendiente'
+            );
+        }
+        $results = array(
+            "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+            "aaData"=>$data);
+        echo json_encode($results);
+
+        break;
    
     }
 }

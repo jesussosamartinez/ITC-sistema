@@ -135,14 +135,12 @@ function guardaryeditar(e)
 	    {                    
 	          bootbox.alert(datos);	          
 	          mostrarform(false);
-	          tabla.ajax.reload();
+	          $("#tbllistadoD").dataTable().api().ajax.reload();
 	    }
 
 	});
 	limpiar();
 }
-
-
 
 //Función para desactivar registros
 function desactivar(idTaller)
@@ -152,7 +150,7 @@ function desactivar(idTaller)
         {
         	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(e){
         		bootbox.alert(e);
-	            tabla.ajax.reload();
+	            $("#tbllistadoD").dataTable().api().ajax.reload();
         	});	
         }
 	})
@@ -167,6 +165,7 @@ function activar(idTaller)
         	$.post("../ajax/talleres.php?op=activar", {idTaller : idTaller}, function(e){
         		bootbox.alert(e);
 	            tabla.ajax.reload();
+				$("#tbllistadoD").dataTable().api().ajax.reload();
         	});	
         }
 	})

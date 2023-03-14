@@ -37,34 +37,24 @@
 
     <section class="content">
         <div class="table table-responsive">
-        <table class="table-light">
+        <table class="table-light" id="tbllistadoalumnos">
             <thead>
                 <tr>
-                    <th scope="col">Opciones</th>
+                    <th scope="col">Opciones</th> 
+                    <th scope="col">No. Control</th>
                     <th scope="col">Nombre del Alumno</th>
-                    <th scope="col">Actividad Complementaria</th>
-                    <th scope="col">Departamento Responsable</th>
-                    <th scope="col">Valor</th>
-                    <th scope="col">Desempeño</th>
-                    <th scope="col">Crédito Complementario</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>FUTBOLL</td>
-                    <td>Actividades ExtraEscolares</td>
-                    <td> 1°</td>
-                    <td>BUENO</td>
-                    <td><button>PDF</button></td>
-                </tr>
             </tbody>
         </table>
         </div>
     </section>
-
-
+<!--
+    <th scope="col">Departamento Responsable</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Desempeño</th>
+                    <th scope="col">Crédito Complementario</th>-->
     <!-- jQuery library -->
     <script src="js/jquery.min.js"></script>
 

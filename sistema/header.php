@@ -29,6 +29,9 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
+    
+
+    
 
 
 </head>
@@ -57,18 +60,18 @@ session_start();
                         {
                         echo '<li><a href="home.php" id="selected"><i class="fa-solid fa-house"></i></a></li>';
                         }?>
-                        <?php if($_SESSION['Informacion']==1){ echo
-                        '<li><a href="Informacion.php">Información Escolar</a>';
-                       } ?>
-                        <?php if($_SESSION['Información_Escolar']==1){
-                            echo '
+                        <li>
+                            <?php if($_SESSION['Informacion']==1){ 
+                                echo'<a href="Informacion.php">Información Escolar</a>';
+                            } ?>
                             <ul>
-                                <li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>
-                                <li><a href="#">Horario</a></li>
-                                <li><a href="datosgenerales.php">Datos Generales</a></li>
-
-                            </ul>';
+                            <?php if($_SESSION['Historial']==1){
+                               echo '<li><a href="InfoEscolar-HA.php">Historial de Actividades</a></li>';} ?>
+                          <?php if($_SESSION['Información_Escolar']==1){
+                            echo '
+                                <li><a href="datosgenerales.php">Datos Generales</a></li>';
                             }?>
+                            </ul>
                         </li>
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>

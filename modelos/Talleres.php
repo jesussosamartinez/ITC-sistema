@@ -44,6 +44,13 @@ Class Talleres
 		FROM talleres";
 		return ejecutarConsulta($sql);		
 	}
+
+	public function listarActividadesDisponibles()
+	{
+		$sql="SELECT idTaller,tipo_actividad,Tipo, Nombre, Grupo, Turno, Condicion
+		FROM talleres WHERE Condicion='1'";
+		return ejecutarConsulta($sql);		
+	}
 }
 
 ?>

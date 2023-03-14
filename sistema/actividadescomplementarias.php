@@ -33,16 +33,15 @@
             <div class="col-md-12">
                 <div class="box">
                         <div class="box-header with-border">
-                            <h1 class="box-title"><button class="btn btn-success" id="btnagregar"
-                                    onclick="mostrarform(true)" ><i class="fa fa-plus-circle"></i> Agregar</button> 
-                                    <a href="../reportes/rptarticulos.php" target="_blank"><button class="btn btn-info"><i
-                                    class="fa fa-clipboard"></i> Reporte</button></a></h1>
+                            <h1 class="box-title">
+                                <button class="btn btn-success" id="btnagregar" onclick="mostrarform(true)" ><i class="fa fa-plus-circle"></i> Agregar</button> 
+                                </h1>
                             <div class="box-tools pull-right">
                             </div>
                         </div>
                         <div class="panel-body" id="listadoregistros">
                             <table id="tbllistadoD"
-                                class="table  table-striped table-bordered table-condensed table-hover">
+                                class="table table-striped table-bordered table-condensed table-hover">
                                 <thead>
                                     <th>Opciones</th>
                                     <th>Tipo de Actividad</th>

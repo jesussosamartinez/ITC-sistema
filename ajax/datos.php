@@ -33,15 +33,34 @@ if (strlen(session_id()) < 1){
         
         case 'mostraractividad':
             $rspta=$datos->mostraractividad();
-            //Codificar el resultado utilizando json
-            echo json_encode($rspta);
+            //Vamos a declarar un array
+            $data= Array();
+    
+            while ($reg=$rspta->fetch_object()){
+           
+                $data[]=array(
+                    "folio"=>0,
+                     "actividad"=>$reg->nombre_actividad ."-".$reg->tipo_actividad,
+                     "departamento"=>$reg->departamento,
+                     "estatus"=>$reg->condicion?'<span class="badge text-bg-success">Activado</span>':
+                     '<span class="badge text-bg-danger">Desactivado</span>',
+                     "credito"=>'pendiente'
+                );
+            }
+            $results = array(
+                "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+                "aaData"=>$data);
+            echo json_encode($results);
+    
             break;
+            
         
         case 'inscribir':
             $rspta=$datos->inscribir($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno);
             echo $rspta ? "Alumno Inscrito" : "Alumno No Inscrito";
-            break;
-                    
+            break;        
     }
 }
+
+
 ?>

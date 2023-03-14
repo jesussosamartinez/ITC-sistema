@@ -68,7 +68,7 @@
       </div>
       <div class="modal-body">
         <input type="text" hidden="" id="idalumno" name="">
-      <label >No. Control</label>
+        <label >No. Control</label>
         <input type="text" name="" id="ncontrolu" class="form-control input-sm">
         <label >Apellido Paterno</label>
         <input type="text" name="" id="apellidoPu" class="form-control input-sm">

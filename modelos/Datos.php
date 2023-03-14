@@ -24,8 +24,8 @@ public function alumnocomp($NumeroControl){
 }
  
 public function mostraractividad(){
-	$sql = "SELECT nombre_actividad, tipo_actividad , departamento FROM alumnotaller WHERE correo_institucional='".$_SESSION['email']."'";
-	return ejecutarConsultaSimpleFila($sql);
+	$sql = "SELECT nombre_actividad, tipo_actividad , departamento, condicion FROM alumnotaller WHERE correo_institucional='".$_SESSION['email']."'";
+	return ejecutarConsulta($sql);	
 }
 
 
