@@ -1,3 +1,4 @@
+
 <?php 
 //Incluímos inicialmente la conexión a la base de datos
 require_once  "../config/Conexion.php";
@@ -48,7 +49,7 @@ function Confirmar()
   </h2>
   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
   <?php 
-     $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Grupo, Turno, area_responsable
+     $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Grupo, Turno, condicion
      FROM talleres WHERE Tipo='TALLER DEPORTIVO' ";
 
 $result=mysqli_query($conexion,$sql);
