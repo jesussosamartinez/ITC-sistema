@@ -1,4 +1,25 @@
 
+<style>
+.content {
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tbody {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+thead,
+th {
+    font-size: 11px;
+    height: 10px;
+    text-transform: uppercase;
+}
+</style>
 <?php 
 //Incluímos inicialmente la conexión a la base de datos
 require_once  "../config/Conexion.php";
@@ -36,51 +57,55 @@ function Confirmar()
 
         <!-- Table Seleccion de actividades -->
 
-    <section class="departamentos" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%;">
-  
-  <div class="accordion accordion-flush" id="accordionFlushExample">
-  
-<div class="accordion-item">
-<br><h5> DEPARTAMENTO DE ACTIVIDADES EXTRAESCOLARES </h5>
-  <h2 class="accordion-header" id="flush-headingOne">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-      TALLERES DEPORTIVOS
-    </button>
-  </h2>
-  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-  <?php 
+    <section class="STalleres" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box">
+                        <div class="panel-body" id="listadoregistros">
+                            <table id="tbllistadoDA"
+                                class="table table-striped table-bordered table-condensed table-hover">
+                                <thead>
+                                    <th>Tipo de Actividad</th>
+                                    <th>Nombre</th>
+                                    <th>Descripción</th>
+                                    <th>Grupo</th>
+                                    <th>Turno</th>
+                                    <th>Estado</th>
+                                </thead>
+                                <?php 
      $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Grupo, Turno, condicion
-     FROM talleres WHERE Tipo='TALLER DEPORTIVO' ";
-
+     FROM talleres ";
 $result=mysqli_query($conexion,$sql);
 while($ver=mysqli_fetch_row($result)){
     ?>
- 
-
-  <div class="card-group">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-text"><?php  echo $ver  [ '2']; ?></h5>
-      <h6 class="card-text"><?php  echo $ver  [ '3']; ?></h6>
-      <h6 class="card-text"> GRUPO <?php  echo $ver  [ '4']; ?></h6>
-      <h6 class="card-text"> TURNO <?php echo $ver  [ '5']; ?></h6>
-      <!-- <h6 class="card-text"><?php  echo $ver  [ '6']; ?></h6>-->
-   <!----   <button type="button" class="btn btn-primary" onclick="return Confirmar()" > SELECCIONAR </button>-->
-   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  SELECCIONAR
-</button>
-      
-    </div>
-    
-  </div>
-
-<?php
+                                <tbody>
+                                <th><?php  echo $ver  [ '1']; ?></th>
+                                    <th><?php  echo $ver  [ '2']; ?></th>
+                                    <th><?php  echo $ver  [ '3']; ?></th>
+                                    <th><?php  echo $ver  [ '4']; ?></th>
+                                    <th><?php  echo $ver  [ '5']; ?></th>
+                                    <th>
+                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" Onclick="Close">
+                                      SELECCIONAR
+                                      </button></th>     
+                                                   
+                                </tbody>
+                                <?php
 }
  ?>
-    </section>
+                            </table>
+                        </div>
+                    <!--Fin centro -->
+                </div><!-- /.box -->
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+        </div>
+    </section><!-- /.content -->
 
-
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="clic">
+  <span aria-hidden="true">&times;</span>
+</button>
 
 
     
@@ -112,5 +137,8 @@ while($ver=mysqli_fetch_row($result)){
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="../dist/script.js"></script>
+
+ 
 </body>
+
 </html>
