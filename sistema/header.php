@@ -97,8 +97,9 @@ session_start();
                         echo '<li><a href="constancias.php">Creditos Complementarios</a></li>'; }?>
                         <?php if($_SESSION['Reporte']==1)
                         {
-                            echo' <li><a href="#">Reporte</a> 
+                            echo' <li><a href="#">Consultas</a> 
                             <ul>
+                                <li><a href="">Listados</a></li>
                                 <li><a href="estadisticas.php">Estadisticas</a></li>
                             </ul>
                             </li>';

@@ -31,25 +31,46 @@ if (strlen(session_id()) < 1){
         while ($reg=$rspta->fetch_object()){
        
             $data[]=array(
-                "opciones"=>'<button class="btn btn-warning" ><i class="fa fa-pencil"></i>
-                        </button>',
-                "folio"=>0,
+                "btn"=> '<button class="btn btn-warning" onclick="" data-bs-toggle="modal" data-bs-target="#ModalEdicion"><i class="fa fa-pencil"></i></button>',
                 "No"=>$reg->NumeroControl,
                 "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre,
                  "actividad"=>$reg->nombre_actividad ."-". $reg->tipo_actividad,
                  "carrera"=>$reg->nombre_carrera,
                  "departamento"=>$reg->departamento,
-                 "estatus"=>$reg->condicion?'<span class="badge text-bg-success">Activado</span>':
-                 '<span class="badge text-bg-danger">Desactivado</span>',
-                 "credito"=>'pendiente'
+                 "estatus"=>$reg->Estatus,
+                 "credito"=>$reg->Credito
             );
         }
         $results = array(
-            "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+            "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar editar('.$reg->idAlumnoT.')
             "aaData"=>$data);
         echo json_encode($results);
 
         break;
+
+    case 'buscar':
+        $searchs = $_POST['searchs'];
+        
+        $rspta=$alumnotaller->buscar($searchs);
+        $alumno= [];
+        $errors=['data' => false];
+
+
+        if($rspta->num_rows > 0){
+        while ($data =$rspta->fetch_assoc()){
+            $alumno[] = $data;
+        }
+        echo json_encode($alumno);
+    } else {
+        echo json_encode($errors);
+    }
+
+        break;
+
+    case 'editar':
+        $rspta=$alumnotaller->editar($idAlumnoT,$estatus);
+        echo $rspta ? "Datos Actualizados" : "Datos no Actualizados";
+    break;
    
     }
 }
