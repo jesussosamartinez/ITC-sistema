@@ -101,7 +101,6 @@ session_start();
                             <ul>
                                 <li><a href="">Listados</a></li>
                                 <li><a href="estadisticas.php">Estadisticas</a></li>
-                                <li><a href="estadisticas.php">Listado</a></li>
                             </ul>
                             </li>';
                         }?>
