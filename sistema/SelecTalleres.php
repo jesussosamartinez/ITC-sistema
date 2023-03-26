@@ -57,7 +57,7 @@ function Confirmar()
 
         <!-- Table Seleccion de actividades -->
 
-    <section class="STalleres" style="top:45%; position:absolute; left:10%; z-index:-5; width: 70%;">
+    <section class="STalleres">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -66,30 +66,29 @@ function Confirmar()
                             <table id="tbllistadoDA"
                                 class="table table-striped table-bordered table-condensed table-hover">
                                 <thead>
+                                    <th>Seleccionar</th>
                                     <th>Tipo de Actividad</th>
                                     <th>Nombre</th>
                                     <th>Descripción</th>
-                                    <th>Grupo</th>
+                                    <th>Horario</th>
                                     <th>Turno</th>
-                                    <th>Estado</th>
                                 </thead>
                                 <?php 
-     $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Grupo, Turno, condicion
+     $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Turno, horario condicion
      FROM talleres ";
 $result=mysqli_query($conexion,$sql);
 while($ver=mysqli_fetch_row($result)){
     ?>
                                 <tbody>
+                                <th>
+                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInscribir" data-id="<?php echo $ver['0'] ?>" data-nombreact="<?php echo $ver['2'] ?>" data-tipo="<?php echo $ver['3'] ?>" data-horario="<?php echo $ver['5'] ?>" data-turno="<?php echo $ver['4'] ?>" >
+                                      SELECCIONAR
+                                      </button></th> 
                                 <th><?php  echo $ver  [ '1']; ?></th>
                                     <th><?php  echo $ver  [ '2']; ?></th>
                                     <th><?php  echo $ver  [ '3']; ?></th>
+                                    <th><?php  echo $ver  [ '5']; ?></th>   
                                     <th><?php  echo $ver  [ '4']; ?></th>
-                                    <th><?php  echo $ver  [ '5']; ?></th>
-                                    <th>
-                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" Onclick="Close">
-                                      SELECCIONAR
-                                      </button></th>     
-                                                   
                                 </tbody>
                                 <?php
 }
@@ -103,30 +102,62 @@ while($ver=mysqli_fetch_row($result)){
         </div>
     </section><!-- /.content -->
 
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="clic">
-  <span aria-hidden="true">&times;</span>
-</button>
 
-
-    
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<form id="inscribir" method="POST">
+<div class="modal fade" id="ModalInscribir" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content" style="height: 580px;">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Selección de Taller</h5>
+        <h5 class="modal-title" id="exampleModalLabel" >INCRIBIRSE A TALLER</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> 
+<div class="modal-body" >
+      <div class="form-group">
+          <label>No. Control:</label>
+          <input type="text" name="idTaller" class="form-control" id="idTaller" hidden>
+          <input type="text" name="no_control" class="form-control" id="no_control" maxlength="8">
       </div>
-      <div class="modal-body">
-      Esta seguro de desea inscribirse
+      <div class="form-group" id="miinput">
+          <label>Email(*):</label>
+          <input type="text" class="form-control" name="email" id="email">
       </div>
+      <div class="form-group col-lg col-md col-sm col-xs" >
+                        <label>CARRERA:</label>
+                            <select class="form-control select-picker" name="nombre_carrera" id="nombre_carrera" required>
+                <option value="">SELECCIONA CARRERA</option>
+                <option value="INGENIERÍA EN SISTEMAS COMPUTACIONALES">INGENIERÍA EN SISTEMAS COMPUTACIONALES</option>
+                <option value="INGENIERÍA ELECTRONICA">INGENIERÍA ELECTRONICA</option>
+                <option value="INGENIERÍA EN GESTIÓN EMPRESARIAL">INGENIERÍA EN GESTIÓN EMPRESARIAL</option>
+                <option value="INGENIERÍA INDUSTRIAL">INGENIERÍA INDUSTRIAL</option>
+                <option value="INGENIERÍA MECATRÓNICA">INGENIERÍA MECATRÓNICA</option>
+                <option value="CONTADOR PÚBLICO">CONTADOR PÚBLICO</option>
+            </select>     
+                    </div>
+      <div class="form-group">
+          <label>ACTIVIDAD COMPLEMENTARIA / TALLER :</label>
+         <input type="text" class="form-control" name="actividadcomplementaria" id="actividadcomplementaria" readonly> 
+      </div>
+      <div class="form-group col-lg col-md">
+          <label>TIPO DE TALLER:</label>
+          <input type="text" class="form-control" name="tipo_taller" id="tipo_taller" readonly>
+      </div>
+      <div class="form-group col-lg col-md" >
+          <label>HORARIO:</label>
+          <input type="text" class="form-control" name="horario" id="horario" readonly>
+      </div>
+      <div class="form-group col-lg col-md col-sm col-xs" >
+          <label>TURNO:</label>
+          <input type="text" class="form-control" name="turno" id="turno" readonly >      
+      </div>  
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
-        <button type="button" class="btn btn-primary">INSCRIBIR</button>
-      </div>
+      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" >INSCRIBIR</button>
+     </div>
+     </div>
     </div>
   </div>
 </div>
+<form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -138,7 +169,48 @@ while($ver=mysqli_fetch_row($result)){
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src="../dist/script.js"></script>
 
- 
+    <script type="text/javascript">
+    $('#ModalInscribir').on('show.bs.modal', function (event) {
+	var button = $(event.relatedTarget) // Botón que activó el modal
+	var id = button.data('id') // Extraer la información de atributos de datos
+	var nombreact = button.data('nombreact') // Extraer la información de atributos de datos
+	var tipo = button.data('tipo') // Extraer la información de atributos de datos
+	var horario = button.data('horario') // Extraer la información de atributos de datos
+	var turno = button.data('turno') // Extraer la información de atributos de datos
+	
+	
+	
+	var modal = $(this)
+	modal.find('.modal-body #idTaller').val(id)
+  modal.find('.modal-body #no_control').val()
+  modal.find('.modal-body #email').val()
+  modal.find('.modal-body #nombre_carrera').val()
+	modal.find('.modal-body #actividadcomplementaria').val(nombreact)
+	modal.find('.modal-body #tipo_taller').val(tipo)
+	modal.find('.modal-body #horario').val(horario)
+	modal.find('.modal-body #turno').val(turno)
+	$('.alert').hide();//Oculto alert
+  })
+
+  $("#inscribir").submit(function( event ) {
+	 event.preventDefault();
+	 var parametros = $(this).serialize();
+		 $.ajax({
+				type: "POST",
+				url: "../ajax/alumnotaller.php?op=insertarAlumno",
+				data: parametros,
+				success: function(datos){
+				
+				alertify.confirm(datos, function(){ 
+					alertify.success('Ok')
+							 });
+				
+			  }
+		});
+	 
+	});
+
+    </script>
 </body>
 
 </html>

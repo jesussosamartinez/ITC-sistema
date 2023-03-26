@@ -31,7 +31,7 @@ if (strlen(session_id()) < 1){
         while ($reg=$rspta->fetch_object()){
        
             $data[]=array(
-                "btn"=> '<button class="btn btn-warning" onclick="" data-bs-toggle="modal" data-bs-target="#ModalEdicion"><i class="fa fa-pencil"></i></button>',
+                "btn"=> '<button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEdicion" data-id="'.$reg->idAlumnoT.'" data-no="'.$reg->NumeroControl.'" data-nombre="'.$reg->ApellidoP.' '.$reg->ApellidoM.' '.$reg->Nombre.'" data-actividad="'.$reg->nombre_actividad ."-". $reg->tipo_actividad.'" data-ncarrera="'.$reg->nombre_carrera.'" data-departamento="'.$reg->departamento.'" data-estatus="'.$reg->Estatus.'" data-credito="'.$reg->Credito.'" ><i class="fa fa-pencil"></i></button>',
                 "No"=>$reg->NumeroControl,
                 "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre,
                  "actividad"=>$reg->nombre_actividad ."-". $reg->tipo_actividad,
@@ -68,11 +68,30 @@ if (strlen(session_id()) < 1){
         break;
 
     case 'editar':
+		$estatus=$_POST["estatus_"];
+		$idAlumnoT=$_POST['idAlumnoT'];
+
         $rspta=$alumnotaller->editar($idAlumnoT,$estatus);
-        echo $rspta ? "Datos Actualizados" : "Datos no Actualizados";
+        echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
+     
     break;
-   
+
+    case 'insertarAlumno':
+        $no_control = _POST["no_control"];
+        $email = _POST["email"];
+        $carrera = _POST["nombre_carrera"];
+        $nombreactividad = $_POST["actividadcomplementaria"];
+        $tipo_taller = $_POST["tipo_taller"];
+        $horario = $_POST["horario"];
+
+        $rspta=$alumnotaller->insertarAlumno($nombre_actividad,$tipo_actividad,$no_control,$email,$nombre_carrera,$horario);
+        echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
+     
+    break;
+
+
     }
+    
 }
 
-?>    
+?>

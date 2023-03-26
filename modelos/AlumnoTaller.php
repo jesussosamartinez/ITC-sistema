@@ -11,8 +11,8 @@ Class AlumnoTaller
 	}
 
 	public function inscribir($nombre_actividad,$tipo_actividad,$NumeroControl,$correo_institucional,$departamento,$nombre_carrera){
-	$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito)
-		VALUES ('$nombre_actividad','$tipo_actividad','$NumeroControl','$correo_institucional','$departamento','$nombre_carrera','CURSANDO', 'PENDIENTE')";
+	$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito,horario,periodo)
+		VALUES ('$nombre_actividad','$tipo_actividad','$NumeroControl','$correo_institucional','$departamento','$nombre_carrera','CURSANDO', 'PENDIENTE','n/a', 'PENDIENTE')";
 		return ejecutarConsulta($sql);
 }
 
@@ -35,8 +35,14 @@ Class AlumnoTaller
 	}
 
 	public function estadisticas(){
-		$sql = "SELECT a.departamento, a.nombre_carrera, count(Sexo)  FROM alumnotaller a INNER JOIN alumnos al ON a.NumeroControl= al.NumeroControl WHERE Sexo = 'H'";
+		$sql = "SELECT a.nombre_carrera, count(Sexo)  FROM alumnotaller a INNER JOIN alumnos al ON a.NumeroControl= al.NumeroControl WHERE Sexo = 'H'";
 		return ejecutarConsulta($sql);
+	}
+
+	public function insertarAlumno($nombre_actividad,$tipo_actividad,$NumeroControl,$correo_institucional,$nombre_carrera,$horario){
+		$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito,horario,periodo)
+		VALUES ('$nombre_actividad','$tipo_actividad','$NumeroControl','$correo_institucional','Departamento de Actividades Extraescolares','$nombre_carrera','CURSANDO', 'PENDIENTE',$horario,' ')";
+		return ejecutatConsulta($sql);
 	}
 	   
 }

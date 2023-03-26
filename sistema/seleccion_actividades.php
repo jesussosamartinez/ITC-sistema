@@ -180,8 +180,6 @@ table {
                     </div>
                     <div class="form-group col-lg col-md col-sm col-xs">
                         <label>DEPARTAMENTO RESPONSABLE</label>
-                       <!-- <input type="text" class="form-control" name="departamento" id="departamento"
-                            placeholder="DEPARTAMENTO" required>-->
                         <select class="form-control select-picker" name="departamento" id="departamento" required>
                 <option value="">SELECCIONAR DEPARTAMENTO</option>
                 <option value="Departamento de Sistemas y Computación">Departamento de Sistemas y Computación</option>

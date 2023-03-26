@@ -32,7 +32,7 @@ th {
         <thead>
             <tr>
                 <th></th>
-                <th colspan="2">Departamento</th>
+                <th colspan="2">SEXO</th>
                 <th></th>
             </tr>
             <tr>
@@ -40,6 +40,24 @@ th {
                 <th>H</th>
                 <th>M</th>
                 <th>Total</th>
+            </tr>
+            <tr>
+                <th>INGENIERÍA EN SISTEMAS COMPUTACIONALES</th>
+            </tr>
+            <tr>
+                <th>INGENIERÍA EN GESTIÓN EMPRESARIAL</th>
+            </tr>
+            <tr>
+                <th>INGENIERÍA INDUSTRIAL</th>
+            </tr>
+            <tr>
+                <th>INGENIERÍA ELECTRONICA</th>
+            </tr>
+            <tr>
+                <th>CONTADOR PÚBLICO</th>
+            </tr>
+            <tr>
+                <th>INGENIERÍA MECATRÓNICA</th>
             </tr>
         </thead>
         <tbody>

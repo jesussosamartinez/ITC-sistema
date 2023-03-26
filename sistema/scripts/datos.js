@@ -1,3 +1,5 @@
+
+
 $.post("../ajax/datos.php?op=mostrar", function (data, status) {
   data = JSON.parse(data);
 
@@ -8,7 +10,6 @@ $.post("../ajax/datos.php?op=mostrar", function (data, status) {
   $("#numerocontrol").val(data.NumeroControl);
   $("#licenciatura").val(data.ClaveCarrera);
 });
-
 
 $.post("../ajax/datos.php?op=mostraractividad", function(data, status){
   var data = JSON.parse(data);
@@ -99,26 +100,3 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
 })
-
-function editar()
-{
-	//No se activará la acción predeterminada del evento
-	var formData = new FormData($("#form")[0]);
-
-  console.log(formData)
-
-	$.ajax({
-		url: "../ajax/alumnotaller.php?op=editar",
-	    type: "POST",
-	    data: formData,
-	    contentType: false,
-	    processData: false,
-
-	    success: function(datos)
-	    {                    
-	          alert(datos);	          
-	          $("#tableContainer").ajax.reload();
-	    }
-
-	});
-}

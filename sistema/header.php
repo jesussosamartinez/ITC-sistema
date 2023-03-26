@@ -99,7 +99,7 @@ session_start();
                         {
                             echo' <li><a href="#">Consultas</a> 
                             <ul>
-                                <li><a href="">Listados</a></li>
+                                <li><a href="TalleresCiv.php">Listados</a></li>
                                 <li><a href="estadisticas.php">Estadisticas</a></li>
                             </ul>
                             </li>';

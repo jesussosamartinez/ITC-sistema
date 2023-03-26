@@ -1,5 +1,4 @@
 <style>
-
 tbody {
     text-align: center;
     text-transform: uppercase;
@@ -15,32 +14,31 @@ th {
 }
 
 
-.input-container{
+.input-container {
     margin-left: 100px;
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
 }
 
-.input-container input[type="search"]{
+.input-container input[type="search"] {
     padding: 12px 20px;
     border-radius: 5px;
     border: none;
-    background-color: rgb(221,221,221);
-    width:150px;
+    background-color: rgb(221, 221, 221);
+    width: 150px;
 }
 
-.bold{
+.bold {
     font-weight: bold;
     color: #1B396A;
 }
 
-.form-group{
-    width: 26rem; 
-    text-align: center; 
+.form-group {
+    width: 26rem;
+    text-align: center;
     margin-left: 2em;
 }
-
 </style>
 
 <!-- Aqui va hacer informacion de las actividades del alumno-->
@@ -101,19 +99,20 @@ echo '
         </div>
     </section>
 </main>
-
 <!-- Modal -->
+<form id="actualizardatos" method="POST">
 <div class="modal fade" id="ModalEdicion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content" style="height: 600px;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel" >HISTORIAL DE ACTIVIDADES</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body translate">
-      <form name="formularioact" id="form" method="POST">
+      </div> 
+<div class="modal-body" >
+<div id="datos_ajax"></div>
       <div class="form-group">
           <label>No. Control:</label>
+          <input type="text" name="idAlumnoT" class="form-control" id="idAlumnoT" hidden>
           <input type="text" name="no_control" class="form-control" id="no_control" readonly>
       </div>
       <div class="form-group" id="miinput">
@@ -136,25 +135,26 @@ echo '
       </div>
       <div class="form-group col-lg col-md col-sm col-xs" >
           <label>Estatus:</label>
-              <select class="form-control select-picker" name="estatus" id="estatus" required>
-  <option value=""></option>
+              <select class="form-control select-picker" name="estatus_" id="estatus" required>
   <option value="CURSANDO">CURSANDO</option>
-  <option value="FINALIZADO">TERMINADO</option>
+  <option value="FINALIZADO">FINALIZADO</option>
   <option value="ACREDITADO">ACREDITADO</option>
 </select>     
       </div>
       <div class="form-group col-lg col-md col-sm col-xs" >
           <label>Crédito Complementario:</label>
           <input type="text" class="form-control" name="credito" id="credito"
-              maxlength="256" placeholder="" required>
+              maxlength="256" placeholder="">
       </div>
+      
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="updateData">Actualizar</button>
-        
-      </div>
+      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" >Actualizar</button>
+     </div>
+     </div>
     </div>
   </div>
 </div>
+<form>
 ';} ?>
 
 
@@ -162,31 +162,6 @@ echo '
 <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="scripts/datos.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-    const table = document.getElementById('tableContainer')
-    const modal = document.getElementById('ModalEdicion')
-    const inputs = modal.querySelectorAll('input')
-    let count = 0;
-
-    table.addEventListener('click', (e)=>{
-        
-       
-        let data = e.target.parentElement.parentElement.parentElement.children;
-        fillData(data);
-        modal.classList.toggle('translate');
-        console.log(data);
-        count=0;
-    })
-
-    const fillData = (data)=>{
-        for(let index of inputs ){
-            count+=1
-            index.value = data[count].textContent
-        }
-    }
-
-</script>
-
+<script src="scripts/historial.js" type="text/javascript"></script>
 </body>
 </html>
