@@ -1,7 +1,6 @@
 
 <style>
 .content {
-    z-index: 1;
     margin-left: auto;
     margin-right: auto;
 }
@@ -27,21 +26,6 @@ require_once  "../config/Conexion.php";
 
 <!DOCTYPE html>
 <html lang="es">
-<!-- funcion ventana emergente
-<script type="text/javascript">
-function Confirmar()
-{
-  var respuesta = conf ("Esta seguro que desea INSCRIBIRSE");
-  if(respuesta == true)
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  }
-}
-</script> -->
 
 <body>
     <header>
@@ -74,15 +58,15 @@ function Confirmar()
                                     <th>Turno</th>
                                 </thead>
                                 <?php 
-     $sql="SELECT idTaller, tipo_actividad, Nombre, Tipo, Turno, horario condicion
-     FROM talleres ";
+     $sql="SELECT t.idTaller, t.tipo_actividad, t.Nombre, t.Tipo, t.Turno, t.horario, t.condicion, a.NumeroControl, a.Correo, a.ClaveCarrera  
+     FROM talleres t INNER JOIN alumnos a  WHERE Correo = '".$_SESSION['email']."'";
 $result=mysqli_query($conexion,$sql);
 while($ver=mysqli_fetch_row($result)){
     ?>
                                 <tbody>
                                 <th>
-                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInscribir" data-id="<?php echo $ver['0'] ?>" data-nombreact="<?php echo $ver['2'] ?>" data-tipo="<?php echo $ver['3'] ?>" data-horario="<?php echo $ver['5'] ?>" data-turno="<?php echo $ver['4'] ?>" >
-                                      SELECCIONAR
+                                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalInscribir" data-id="<?php echo $ver['0'] ?>" data-nocontrol="<?php echo $ver['7'] ?>" data-email="<?php echo $ver['8'] ?>" data-carrera="<?php echo $ver['9'] ?>" data-nombreact="<?php echo $ver['2'] ?>" data-tipo="<?php echo $ver['3'] ?>" data-horario="<?php echo $ver['5'] ?>" data-turno="<?php echo $ver['4'] ?>" >
+                                      <i class="fa-solid fa-pen-to-square"></i>
                                       </button></th> 
                                 <th><?php  echo $ver  [ '1']; ?></th>
                                     <th><?php  echo $ver  [ '2']; ?></th>
@@ -112,27 +96,19 @@ while($ver=mysqli_fetch_row($result)){
         <h5 class="modal-title" id="exampleModalLabel" >INCRIBIRSE A TALLER</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div> 
-<div class="modal-body" >
+<div class="modal-body">
       <div class="form-group">
           <label>No. Control:</label>
-          <input type="text" name="idTaller" class="form-control" id="idTaller" hidden>
-          <input type="text" name="no_control" class="form-control" id="no_control" maxlength="8">
+          <input type="text" name="idTaller" class="form-control" id="idTaller" hidden readonly>
+          <input type="text" name="no_control" class="form-control" id="no_control" maxlength="8" readonly>
       </div>
       <div class="form-group" id="miinput">
           <label>Email(*):</label>
-          <input type="text" class="form-control" name="email" id="email">
+          <input type="text" class="form-control" name="email" id="email" readonly>
       </div>
       <div class="form-group col-lg col-md col-sm col-xs" >
                         <label>CARRERA:</label>
-                            <select class="form-control select-picker" name="nombre_carrera" id="nombre_carrera" required>
-                <option value="">SELECCIONA CARRERA</option>
-                <option value="INGENIERÍA EN SISTEMAS COMPUTACIONALES">INGENIERÍA EN SISTEMAS COMPUTACIONALES</option>
-                <option value="INGENIERÍA ELECTRONICA">INGENIERÍA ELECTRONICA</option>
-                <option value="INGENIERÍA EN GESTIÓN EMPRESARIAL">INGENIERÍA EN GESTIÓN EMPRESARIAL</option>
-                <option value="INGENIERÍA INDUSTRIAL">INGENIERÍA INDUSTRIAL</option>
-                <option value="INGENIERÍA MECATRÓNICA">INGENIERÍA MECATRÓNICA</option>
-                <option value="CONTADOR PÚBLICO">CONTADOR PÚBLICO</option>
-            </select>     
+                        <input class="form-control" name="nombre_carrera" id="nombre_carrera" readonly>     
                     </div>
       <div class="form-group">
           <label>ACTIVIDAD COMPLEMENTARIA / TALLER :</label>
@@ -151,7 +127,12 @@ while($ver=mysqli_fetch_row($result)){
           <input type="text" class="form-control" name="turno" id="turno" readonly >      
       </div>  
       <div class="modal-footer">
+        <div>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
+        </div>
+        <div>
       <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" >INSCRIBIR</button>
+    </div>
      </div>
      </div>
     </div>
@@ -173,6 +154,9 @@ while($ver=mysqli_fetch_row($result)){
     $('#ModalInscribir').on('show.bs.modal', function (event) {
 	var button = $(event.relatedTarget) // Botón que activó el modal
 	var id = button.data('id') // Extraer la información de atributos de datos
+  var nocontrol = button.data('nocontrol') // Extraer la información de atributos de datos
+  var email = button.data('email') // Extraer la información de atributos de datos
+  var carrera = button.data('carrera') // Extraer la información de atributos de datos
 	var nombreact = button.data('nombreact') // Extraer la información de atributos de datos
 	var tipo = button.data('tipo') // Extraer la información de atributos de datos
 	var horario = button.data('horario') // Extraer la información de atributos de datos
@@ -182,9 +166,9 @@ while($ver=mysqli_fetch_row($result)){
 	
 	var modal = $(this)
 	modal.find('.modal-body #idTaller').val(id)
-  modal.find('.modal-body #no_control').val()
-  modal.find('.modal-body #email').val()
-  modal.find('.modal-body #nombre_carrera').val()
+  modal.find('.modal-body #no_control').val(nocontrol)
+  modal.find('.modal-body #email').val(email)
+  modal.find('.modal-body #nombre_carrera').val(carrera)
 	modal.find('.modal-body #actividadcomplementaria').val(nombreact)
 	modal.find('.modal-body #tipo_taller').val(tipo)
 	modal.find('.modal-body #horario').val(horario)

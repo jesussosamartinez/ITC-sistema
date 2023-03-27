@@ -77,15 +77,15 @@ if (strlen(session_id()) < 1){
     break;
 
     case 'insertarAlumno':
-        $no_control = _POST["no_control"];
-        $email = _POST["email"];
-        $carrera = _POST["nombre_carrera"];
-        $nombreactividad = $_POST["actividadcomplementaria"];
+        $no_control = $_POST["no_control"];
+        $email = $_POST["email"];
+        $carrera = $_POST["nombre_carrera"];
+        $nombre_actividad = $_POST["actividadcomplementaria"];
         $tipo_taller = $_POST["tipo_taller"];
         $horario = $_POST["horario"];
 
-        $rspta=$alumnotaller->insertarAlumno($nombre_actividad,$tipo_actividad,$no_control,$email,$nombre_carrera,$horario);
-        echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
+        $rspta=$alumnotaller->insertarAlumno($nombre_actividad,$tipo_taller,$no_control,$email,$nombre_carrera,$horario);
+        echo $rspta ? "Alumno Registrado " : "Alumno No Registrado";
      
     break;
 

@@ -76,8 +76,8 @@ session_start();
                         <li><a href="#">Actividades Complementarias</a>
                             <ul>
                                 <?php if($_SESSION['Act Complementarias']==1){ echo '<li><a href="actividadescomplementarias.php">Actividades Disponibles</a></li>';}?>
-                                <?php if($_SESSION['idRol']==3){ echo'<li><a href="actividadesdisponibles.php">Actividades Disponibles</a></li>';}?>
-                                <li><a href="SelecTalleres.php">Selección de Talleres</a></li>
+                                <?php if($_SESSION['idRol']==3){ echo'<li><a href="actividadesdisponibles.php">Actividades Disponibles</a></li>
+                                <li><a href="SelecTalleres.php">Selección de Talleres</a></li>';}?>
                                 <?php  if($_SESSION['Act Complementarias']==1) {  echo'
                                 <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>';
                           }
@@ -99,7 +99,7 @@ session_start();
                         {
                             echo' <li><a href="#">Consultas</a> 
                             <ul>
-                                <li><a href="TalleresCiv.php">Listados</a></li>
+                                <li><a href="Listados.php">Listados</a></li>
                                 <li><a href="estadisticas.php">Estadisticas</a></li>
                             </ul>
                             </li>';

@@ -39,10 +39,10 @@ Class AlumnoTaller
 		return ejecutarConsulta($sql);
 	}
 
-	public function insertarAlumno($nombre_actividad,$tipo_actividad,$NumeroControl,$correo_institucional,$nombre_carrera,$horario){
-		$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito,horario,periodo)
-		VALUES ('$nombre_actividad','$tipo_actividad','$NumeroControl','$correo_institucional','Departamento de Actividades Extraescolares','$nombre_carrera','CURSANDO', 'PENDIENTE',$horario,' ')";
-		return ejecutatConsulta($sql);
+	public function insertarAlumno($nombre_actividad,$tipo_taller,$no_control,$email,$nombre_carrera,$horario){
+		$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito,horario)
+		VALUES ('$nombre_actividad','$tipo_taller','$no_control','$email','Departamento de Actividades Extraescolares','$nombre_carrera','CURSANDO', 'PENDIENTE','$horario')";
+		return ejecutarConsulta($sql);
 	}
 	   
 }
