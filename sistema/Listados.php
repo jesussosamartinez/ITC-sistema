@@ -6,12 +6,16 @@
     text-align: center;
     padding-left: 3rem;
     padding-top: 3rem;
+    padding-bottom: 1rem; 
     font-size: 25px;
 }
 
 .form-select {
     position: relative;
 
+}
+th{
+    font-size: 12px;
 }
 </style>
 <header>
@@ -52,10 +56,11 @@
                 </tr>
             </thead>
 
-            <tbody id="cuerpo">
-            </tbody>
         </table>
     </div>
+    <div align="center" style=" position:relative" >
+            <button class="btn" type="submit" style="background-color:  #1B396A; color: white; font-weight: 700;"> BUSCAR </button>
+        </div>
 </section>
 
 
