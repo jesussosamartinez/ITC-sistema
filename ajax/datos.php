@@ -42,7 +42,7 @@ if (strlen(session_id()) < 1){
                      "actividad"=>$reg->nombre_actividad ."-".$reg->tipo_actividad,
                      "departamento"=>$reg->departamento,
                      "estatus"=>$reg->Estatus,
-                     "credito"=>$reg->Credito
+                     "credito"=>'<a href="'.$reg->Credito.'" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i><br> DESCARGAR</a>' 
                 );
             }
             $results = array(

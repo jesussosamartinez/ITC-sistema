@@ -24,7 +24,7 @@ $.post("../ajax/datos.php?op=mostraractividad", function(data, status){
 $.post("../ajax/alumnotaller.php?op=mostrar", function(data, status){
   var data = JSON.parse(data);
   for (var i = 0; i < data.aaData.length; i++) {
-    var $tr = '<tr><td>'+data.aaData[i].btn+'</td><td>'+data.aaData[i].No+'</td> <td>'+data.aaData[i].alumno+'</td> <td>'+data.aaData[i].actividad+'</td> <td>'+data.aaData[i].carrera+'</td> <td>'+data.aaData[i].departamento+'</td> <td>'+data.aaData[i].estatus+'</td> <td>'+data.aaData[i].credito+'</td> </tr>'; 
+    var $tr = '<tr><td>'+data.aaData[i].btn+'</td><td>'+data.aaData[i].No+'</td> <td>'+data.aaData[i].alumno+'</td> <td>'+data.aaData[i].actividad+'</td> <td>'+data.aaData[i].carrera+'</td> <td>'+data.aaData[i].departamento+'</td> <td>'+data.aaData[i].estatus+'</td> </tr>'; 
     $("#tblhistorial").append($tr);
     // agrego la columna tr a la tabla
   }
@@ -83,14 +83,13 @@ window.addEventListener('DOMContentLoaded', () => {
         for(const alumnos of dataResults){
           const row = document.createElement('tr')
           row.innerHTML = `
-          <td><button class="btn btn-warning" onclick="" data-bs-toggle="modal" data-bs-target="#ModalEdicion"><i class="fa fa-pencil"></i></button></td>
+          <td><button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEdicion" data-id="${alumnos.idAlumnoT}" data-no="${alumnos.NumeroControl}" data-nombre="${alumnos.ApellidoP+" "+alumnos.ApellidoM+" "+alumnos.Nombre}" data-actividad="${alumnos.nombre_actividad+"-"+alumnos.tipo_actividad}" data-ncarrera="${alumnos.nombre_carrera}" data-departamento="${alumnos.departamento}" data-estatus="${alumnos.Estatus}" data-credito="${alumnos.Credito}" ><i class="fa fa-pencil"></i></button></td>
           <td>${alumnos.NumeroControl.toUpperCase().replace(searchs, '<span class="bold">$&</span>')}</td>
           <td>${alumnos.ApellidoP+" "+alumnos.ApellidoM+" "+alumnos.Nombre}</td>
-          <td>${alumnos.nombre_actividad+" "+alumnos.tipo_actividad}</td>
+          <td>${alumnos.nombre_actividad+"-"+alumnos.tipo_actividad}</td>
           <td>${alumnos.nombre_carrera}</td>
           <td>${alumnos.departamento}</td>
-          <td>${alumnos.Estatus}</td>
-          <td>${alumnos.Credito}</td>`
+          <td>${alumnos.Estatus}</td>`
 
           tableContainer.appendChild(row)
         }
@@ -100,3 +99,6 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
 })
+
+
+

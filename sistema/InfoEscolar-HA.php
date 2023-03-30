@@ -39,6 +39,8 @@ th {
     text-align: center;
     margin-left: 2em;
 }
+
+
 </style>
 
 <!-- Aqui va hacer informacion de las actividades del alumno-->
@@ -90,7 +92,6 @@ echo '
                     <th>Carrera</th>
                     <th>Departamento</th>
                     <th>Estatus</th>
-                    <th>Crédito Complementario</th>
                 </thead>
                 <tbody id="tblhistorial">
            
@@ -103,7 +104,7 @@ echo '
 <form id="actualizardatos" method="POST">
 <div class="modal fade" id="ModalEdicion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content" style="height: 600px;">
+    <div class="modal-content" style="height: 520px;">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel" >HISTORIAL DE ACTIVIDADES</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -141,14 +142,9 @@ echo '
   <option value="ACREDITADO">ACREDITADO</option>
 </select>     
       </div>
-      <div class="form-group col-lg col-md col-sm col-xs" >
-          <label>Crédito Complementario:</label>
-          <input type="text" class="form-control" name="credito" id="credito"
-              maxlength="256" placeholder="">
-      </div>
-      
+
       <div class="modal-footer">
-      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" >Actualizar</button>
+      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Actualizar</button>
      </div>
      </div>
     </div>

@@ -58,7 +58,8 @@ if (strlen(session_id()) < 1){
                      "3"=>$reg->Nombre,
                      "4"=>$reg->Grupo,
                      "5"=>$reg->Turno,
-                     "6"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
+                     "6"=>$reg->horario,
+                     "7"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
                      '<span class="badge text-bg-danger">Desactivado</span>'
                  );
              }
@@ -84,7 +85,8 @@ if (strlen(session_id()) < 1){
                      "2"=>$reg->Nombre,
                      "3"=>$reg->Grupo,
                      "4"=>$reg->Turno,
-                     "5"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
+                     "5"=>$reg->horario,
+                     "6"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
                      '<span class="badge text-bg-danger">No Disponible</span>'
                  );
              }
@@ -95,6 +97,27 @@ if (strlen(session_id()) < 1){
                  "aaData"=>$data);
              echo json_encode($results);
      
+        break;
+
+        case 'listar':
+            $rspta=$talleres->listarActividades();
+            //Vamos a declarar un array
+            $data= Array();
+
+            while ($reg=$rspta->fetch_object()){
+                $data[]=array(
+                    "Nombre"=>$reg->Nombre,
+                    "Horario"=>$reg->horario
+                );
+            } 
+            
+            $results = array(
+                "sEcho"=>1, //Información para el datatables
+                "iTotalRecords"=>count($data), //enviamos el total registros al datatable
+                "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+                "aaData"=>$data);
+            echo json_encode($results); 
+
         break;
     
     }

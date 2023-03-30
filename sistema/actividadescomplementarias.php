@@ -49,6 +49,7 @@
                                     <th>Descripción</th>
                                     <th>Grupo</th>
                                     <th>Turno</th>
+                                    <th>Horario</th>
                                     <th>Estado</th>
                                 </thead>
                                 <tbody>
@@ -60,6 +61,7 @@
                                     <th>Descripción</th>
                                     <th>Grupo</th>
                                     <th>Turno</th>
+                                    <th>Horario</th>
                                     <th>Estado</th>
                                 </tfoot>
                             </table>

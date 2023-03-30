@@ -42,3 +42,4 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 	 
 	});
 
+	

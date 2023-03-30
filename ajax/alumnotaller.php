@@ -38,7 +38,7 @@ if (strlen(session_id()) < 1){
                  "carrera"=>$reg->nombre_carrera,
                  "departamento"=>$reg->departamento,
                  "estatus"=>$reg->Estatus,
-                 "credito"=>$reg->Credito
+                 "credito"=>'<a href="'.$reg->Credito.'" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i><br> DESCARGAR</a>'
             );
         }
         $results = array(
@@ -71,7 +71,7 @@ if (strlen(session_id()) < 1){
 		$estatus=$_POST["estatus_"];
 		$idAlumnoT=$_POST['idAlumnoT'];
 
-        $rspta=$alumnotaller->editar($idAlumnoT,$estatus);
+        $rspta=$alumnotaller->editar($idAlumnoT,$estatus,$credito);
         echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
      
     break;
@@ -89,6 +89,42 @@ if (strlen(session_id()) < 1){
      
     break;
 
+    case 'visualizar':
+        $rspta=$alumnotaller->visualizar();
+        //Vamos a declarar un array
+        $data= Array();
+    
+        while ($reg=$rspta->fetch_object()){
+       
+            $data[]=array(
+                "btn"=> '<button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="'.$reg->idAlumnoT.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'" data-id="'.$reg->idAlumnoT.'" data-actividad="'.$reg->nombre_actividad ."-". $reg->tipo_actividad.'" data-periodo="'.$reg->periodo.'" data-credito="'.$reg->Credito.'" data-valorn ="'.$reg->valor_numerico.'" data-desempeño="'.$reg->desempeno.'" ><i class="fa fa-pencil"></i></button>',
+                "no"=> $reg->NumeroControl,
+                "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre,
+                 "actividad"=>$reg->nombre_actividad ."-". $reg->tipo_actividad,
+                 "periodo"=>$reg->periodo,
+                 "valor_numerico"=>$reg->valor_numerico,
+                 "desempeno"=>$reg->desempeno,
+                 "credito"=>'<a href="'.$reg->Credito.'" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i><br> PDF</a>'
+            );
+        }
+        $results = array(
+            "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar editar('.$reg->idAlumnoT.')
+            "aaData"=>$data);
+        echo json_encode($results);
+
+        break;
+
+        case 'editarcon':
+            $credito = $_POST["credito"];
+            $periodo=$_POST["periodo"];
+            $valornum = $_POST["valor_numerico"];
+            $desempeño = $_POST["desempeno"];
+            $idAlumnoT=$_POST['idAlumnoT'];
+    
+            $rspta=$alumnotaller->editarcon($idAlumnoT,$periodo,$valornum, $desempeño, $credito);
+            echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
+         
+        break;
 
     }
     
