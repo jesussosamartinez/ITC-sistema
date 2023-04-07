@@ -51,6 +51,8 @@ Class Talleres
 		FROM talleres WHERE Condicion='1'";
 		return ejecutarConsulta($sql);		
 	}
+
+	
 }
 
 ?>

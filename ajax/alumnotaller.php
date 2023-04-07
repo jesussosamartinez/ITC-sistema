@@ -126,6 +126,29 @@ if (strlen(session_id()) < 1){
          
         break;
 
+
+        case 'listadosAE':
+            $nombre_actividad = $_POST['nombre_actividad'];
+            $periodo = $_POST['periodo'];
+            $horario = $_POST['horario'];
+
+            $rspta = $alumnotaller->listadoAE($nombre_actividad,$horario,$periodo);
+            $data= Array();
+    
+        while ($reg=$rspta->fetch_object()){
+       
+            $data[]=array(
+                "no"=> $reg->NumeroControl,
+                "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre
+            );
+        }
+        $results = array(
+            "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar editar('.$reg->idAlumnoT.')
+            "aaData"=>$data);
+        echo json_encode($results);
+        
+        break;
+
     }
     
 }

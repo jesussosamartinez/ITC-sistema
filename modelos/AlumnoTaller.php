@@ -11,8 +11,8 @@ Class AlumnoTaller
 	}
 
 	public function inscribir($nombre_actividad,$tipo_actividad,$NumeroControl,$correo_institucional,$departamento,$nombre_carrera){
-	$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito,horario,periodo)
-		VALUES ('$nombre_actividad','$tipo_actividad','$NumeroControl','$correo_institucional','$departamento','$nombre_carrera','CURSANDO', 'PENDIENTE','n/a', 'PENDIENTE')";
+	$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,horario,periodo)
+		VALUES ('$nombre_actividad','$tipo_actividad','$NumeroControl','$correo_institucional','$departamento','$nombre_carrera','CURSANDO','n/a', 'PENDIENTE')";
 		return ejecutarConsulta($sql);
 }
 
@@ -40,8 +40,8 @@ Class AlumnoTaller
 	}
 
 	public function insertarAlumno($nombre_actividad,$tipo_taller,$no_control,$email,$nombre_carrera,$horario){
-		$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,Credito,horario)
-		VALUES ('$nombre_actividad','$tipo_taller','$no_control','$email','Departamento de Actividades Extraescolares','$nombre_carrera','CURSANDO', 'PENDIENTE','$horario')";
+		$sql="INSERT INTO alumnotaller (nombre_actividad,tipo_actividad,NumeroControl,correo_institucional,departamento,nombre_carrera,Estatus,horario)
+		VALUES ('$nombre_actividad','$tipo_taller','$no_control','$email','Departamento de Actividades Extraescolares','$nombre_carrera','CURSANDO','$horario')";
 		return ejecutarConsulta($sql);
 	}
 
@@ -56,7 +56,13 @@ Class AlumnoTaller
 	$sql="UPDATE alumnotaller SET periodo='$periodo', valor_numerico = '$valornum', desempeno = '$desempeño', Credito = '$credito' WHERE idAlumnoT='$idAlumnoT'";
 	ejecutarConsulta($sql);
 	}
-	   
+	
+	
+	public function listadoAE($nombre_actividad, $horario , $periodo)
+	{
+		$sql= "SELECT a1.NumeroControl, a2.ApellidoP ,a2.ApellidoM, a2.Nombre FROM alumnotaller a1 JOIN alumnos a2 ON a1.NumeroControl = a2.NumeroControl  WHERE a1.nombre_actividad= '$nombre_actividad' AND a1.horario='$horario' AND a1.periodo = '$periodo'";
+		return ejecutarConsulta($sql);
+	}
 }
 
 ?>
