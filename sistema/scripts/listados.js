@@ -29,18 +29,18 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
       function (data) {
         data = JSON.parse(data);
   
-       
+        $('#tbllistas > tbody').empty();
        
        for (var i = 0; i < data.aaData.length; i++) {
         var $tr =
-          '<tr style="text-transform:uppercase;"> <td>' +
+          '<tr style="text-transform:uppercase; font-size: 10px;"> <td>' +
           (i+1)+
-          "</td> <td>" +
+          '</td> <td>' +
           data.aaData[i].no +
-          "</td> <td >" +
+          '</td> <td>' +
           data.aaData[i].alumno +
-          "</td> </tr>";
-          $("#tbllistas").append($tr);
+          '</td> </tr>';
+          $("#tbllistas").html($tr);
           }
         
   

@@ -45,13 +45,13 @@ th {
                     <tr align="center">
                         <th> Actividad Extraescolar </th>
                         <td colspan="2"><select class="form-select select-picker" aria-label="Default select example"
-                                name="actividadlistas" id="actividadlistas">
+                                name="actividadlistas" id="actividadlistas" required>
                                 <option value="">SELECCIONA ACTIVIDAD</option>
                             </select></td>
                     </tr>
                     <tr>
                         <th> PERIODO </th>
-                        <td><select class="form-select select-picker" name="periodo" id="periodo">
+                        <td><select class="form-select select-picker" name="periodo" id="periodo" required>
                                 <option value="">SELECCIONA PERIODO</option>
                                 <script>
                                 var d = new Date();
@@ -78,7 +78,7 @@ th {
         <div class="modal-dialog modal-lg">
             <div class="modal-content" style="height: 720px;">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">EVALUACIÓN DE DESEMPEÑO</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">LISTAS DE ASISTENCIA</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body table-responsive">
@@ -86,7 +86,7 @@ th {
                         <thead style="text-transform: uppercase; ">
                             <th>#</th>
                             <th>No. Control</th>
-                            <th style="width: 9rem; font-size: 5px;" >Alumno</th>
+                            <th style="width: 20px;" >Alumno</th>
                             <script>
                             for (var i = 1; i <= 32; i++) {
                                 document.write('<th>' + i + '</th>');
@@ -100,8 +100,8 @@ th {
                         <tfoot></tfoot>
                     </table>
                     <div class="modal-footer">
-                        <a href="#" id="test" onClick="fnExcelReport();" type="button">excel</a>
-                        <button type="submit" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <a href="#" id="test" class="btn btn-success" onClick="fnExcelReport();" type="button">excel</a>
+                        <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
                 </div>
             </div>
