@@ -97,7 +97,7 @@ if (strlen(session_id()) < 1){
         while ($reg=$rspta->fetch_object()){
        
             $data[]=array(
-                "btn"=> '<button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="'.$reg->idAlumnoT.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'" data-id="'.$reg->idAlumnoT.'" data-actividad="'.$reg->nombre_actividad ."-". $reg->tipo_actividad.'" data-periodo="'.$reg->periodo.'" data-credito="'.$reg->Credito.'" data-valorn ="'.$reg->valor_numerico.'" data-desempeño="'.$reg->desempeno.'" ><i class="fa fa-pencil"></i></button>',
+                "btn"=> '<button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="'.$reg->idAlumnoT.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'"  data-actividad="'.$reg->nombre_actividad ."-". $reg->tipo_actividad.'" data-periodo="'.$reg->periodo.'" data-credito="'.$reg->Credito.'" data-valorn ="'.$reg->valor_numerico.'" data-desempeño="'.$reg->desempeno.'" ><i class="fa fa-pencil"></i></button>',
                 "no"=> $reg->NumeroControl,
                 "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre,
                  "actividad"=>$reg->nombre_actividad ."-". $reg->tipo_actividad,

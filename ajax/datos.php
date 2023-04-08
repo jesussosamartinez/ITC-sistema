@@ -58,7 +58,28 @@ if (strlen(session_id()) < 1){
             echo $rspta ? "Alumno Inscrito" : "Alumno No Inscrito";
             break;   
             
-       
+       case 'acceso':
+            $rspta=$datos->acceso();
+            //Vamos a declarar un array
+            $data = Array();
+
+            while($reg=$rspta->fetch_object()){
+
+                $data[] = array(
+                    "btn"=>'<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModalEdicion" data-id="'.$reg->idAlumno.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'" data-no="'.$reg->NumeroControl.'" data-ncarrera="'.$reg->ClaveCarrera.'" data-email="'.$reg->Correo.'" data-semestre="'.$reg->Semestre.'" data-password="'.$reg->Password.'"><i class="fa fa-pencil"></i></button>',
+                    "no"=>$reg->NumeroControl,
+                    "alumno"=>$reg->ApellidoP." ".$reg->ApellidoM." ".$reg->Nombre,
+                    "email"=>$reg->Correo,
+                    "carrera"=>$reg->ClaveCarrera,
+                    "semestre"=>$reg->Semestre,
+                    "password"=>$reg->Password,
+                );
+            }
+            $results = array(
+                "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar
+                "aaData"=>$data);
+            echo json_encode($results);
+        break;
     }
 }
 

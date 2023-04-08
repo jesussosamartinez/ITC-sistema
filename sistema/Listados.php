@@ -86,7 +86,7 @@ th {
                         <thead style="text-transform: uppercase; ">
                             <th>#</th>
                             <th>No. Control</th>
-                            <th style="width: 20px;" >Alumno</th>
+                            <th>Alumno</th>
                             <script>
                             for (var i = 1; i <= 32; i++) {
                                 document.write('<th>' + i + '</th>');

@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITC - SIC</title>
-    
-</head>
-<body>
+<style>
+  table{
+    text-transform: uppercase;
+    font-family: 'Montserrat';
+    font-size: 13px;
+    text-align: center;
+  }
+
+  input, label {
+    text-align: center;
+  }
+
+  label, .modal-title {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+</style>
     <header>
         <?php 
     require 'header.php'
@@ -19,10 +27,37 @@
     </div>
     <hr>
 
-    <div class="table">
-
+<section class="container">
+    <div class="panel-body table-responsive" id="listadoregistros">
+        <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
+           <div class="btn box">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><i class="fa-solid fa-plus"></i>
+            </button>
+            </div>
+        <thead>
+                <th>Opciones</th>
+                <th>No.Control</th>
+                <th>Nombre del Alumno</th>
+                <th>Correo</th>
+                <th>Carrera</th>
+                <th>semestre</th>
+                <th>Contraseña</th>
+            </thead>
+            <tbody id="tblaccesos">
+                
+            </tbody>
+            <tfoot>
+                <th>Opciones</th>
+                <th>No.Control</th>
+                <th>Nombre del Alumno</th>
+                <th>Correo</th>
+                <th>Carrera</th>
+                <th>semestre</th>
+                <th>Contraseña</th>
+            </tfoot>
+        </table>
     </div>
-
+</section>
 
 
 <!-- Modal -->
@@ -34,7 +69,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <label >No. Control</label>
+        <label >No. Control: </label>
         <input type="text" name="" id="ncontrol" class="form-control input-sm">
         <label >Apellido Paterno</label>
         <input type="text" name="" id="apellidoP" class="form-control input-sm">
@@ -60,30 +95,26 @@
 
 <!-- Modal -->
 <div class="modal fade" id="ModalEdicion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+  <div class="modal-dialog modal-g">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Actualizar Usuario</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <input type="text" hidden="" id="idalumno" name="">
-        <label >No. Control</label>
+      <div class="modal-body" style="text-align: center;">
+        <input type="text" hidden id="idalumno" name="idalumno">
+        <label >No. Control: </label>
         <input type="text" name="" id="ncontrolu" class="form-control input-sm">
-        <label >Apellido Paterno</label>
-        <input type="text" name="" id="apellidoPu" class="form-control input-sm">
-        <label >Apellido Materno</label>
-        <input type="text" name="" id="apellidoMu" class="form-control input-sm">
-        <label >Nombre</label>
+        <label >Nombre del Alumno: </label>
         <input type="text"  name="" id="nombreu" class="form-control input-sm">
-        <label >Correo</label>
+        <label >Correo Institucional: </label>
         <input type="text"  name="" id="correou" class="form-control input-sm">
-        <label >Carrera</label>
+        <label >Carrera: </label>
         <input type="text"  name="" id="carrerau" class="form-control input-sm">
-        <label >Semestre</label>
+        <label >Semestre: </label>
         <input type="text"  name="" id="semestreu" class="form-control input-sm">
-        <label >Estado</label>
-        <input type="text"  name="" id="estadou" class="form-control input-sm">
+        <label >Contraseña: </label>
+        <input type="text"  name="" id="password" class="form-control input-sm">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-bs-dismiss="modal" id="updateData">Actualizar</button>
@@ -97,13 +128,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    
+    <script src="scripts/acceso.js" type="text/javascript"></script>
 </body>
 </html>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        $('.table').load('../assets/components/tablaAccesos.php');
-    });
-
-</script>

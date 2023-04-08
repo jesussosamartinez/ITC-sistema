@@ -22,6 +22,6 @@ navigator.msSaveBlob(blob, 'Listas Asistencia.xls');
 //for Chrome and Firefox 
 else {
 $('#test').attr('href', data_type + ', ' + encodeURIComponent(tab_text));
-$('#test').attr('download', 'Listas Asistencia.xlsx');
+$('#test').attr('download', 'Listas Asistencia.xls');
 }
 }

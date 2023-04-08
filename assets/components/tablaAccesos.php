@@ -6,8 +6,6 @@
 #listadoregistros {
     /*width: 90%;*/
     position: absolute;
-    top: 45%;
-    left: 6%;
     font-family: 'Raleway';
     font-size: 15px;
     z-index: -3;
