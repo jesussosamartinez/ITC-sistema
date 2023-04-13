@@ -31,7 +31,7 @@
     <div class="panel-body table-responsive" id="listadoregistros">
         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
            <div class="btn box">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><i class="fa-solid fa-plus"></i>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><i class="fa-solid fa-plus"></i>
             </button>
             </div>
         <thead>
@@ -81,7 +81,7 @@
         <label >Correo Institucional:</label>
         <input type="text"  name="correo" id="correo" class="form-control input-sm" placeholder="numerocontrol@cuautla.tecnm.mx">
         <label >Carrera:</label>
-        <select class="form-control input-sm" name="nombre_carrera" id="nombre_carrera" required>
+        <select class="form-control input-sm form-select select-picker" name="nombre_carrera" id="nombre_carrera" required>
                 <option value="">SELECCIONA CARRERA</option>
                 <option value="INGENIERÍA EN SISTEMAS COMPUTACIONALES">INGENIERÍA EN SISTEMAS COMPUTACIONALES</option>
                 <option value="INGENIERÍA ELECTRONICA">INGENIERÍA ELECTRONICA</option>
@@ -95,7 +95,7 @@
         <label >Telefono</label>
         <input type="tel" name="telefonoal" id="telefonoal" class="form-control input-sm" maxlength="13" placeholder="000-000-00-00">
         <label >Sexo</label>
-        <select name="sexo" id="sexo" class="form-control input-sm">
+        <select name="sexo" id="sexo" class="form-control input-sm form-select select-picker">
           <option value="">SELECIONA UNA OPCIÓN</option>
           <option value="H">HOMBRE</option>
           <option value="M">MUJER</option>

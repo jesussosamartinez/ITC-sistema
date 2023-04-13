@@ -4,11 +4,8 @@
     width: 35%;
     height: 37%;
     position: fixed;
-    background-color: #ddd;
-    top: 43%;
-    left: 30%;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
-    border-radius: 5px;
+    top: 42%;
+    left: 58%;
     z-index: -5;
   }
   
