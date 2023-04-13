@@ -109,7 +109,7 @@ session_start();
                         echo '
                         <li><a href="accesos.php">Control de Accesos</a> 
                             <ul>
-                                <li><a href="#">Accesos Disponibles</a></li>
+                                <li><a href="accesos.php">Accesos Disponibles - Alumnos</a></li>
                                 <li><a href="#">Solicitudes de Accesos</a></li>
                             </ul>
                         </li> ';

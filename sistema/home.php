@@ -7,6 +7,7 @@ require "header.php";
 if($_SESSION['Home']==1)
 {
  ?>
+ 
  <div class="navegacion">
         <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-slash-back"></i> Inicio</a>
     </div>
