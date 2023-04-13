@@ -34,7 +34,7 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 				success: function(datos){
 				
 				alertify.confirm(datos, function(){ 
-					alertify.success('Ok')
+					location.reload();
 							 });
 				
 			  }

@@ -16,12 +16,12 @@ var msie = ua.indexOf("MSIE ");
 if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
 if (window.navigator.msSaveBlob) {
 var blob = new Blob([tab_text], {type: "application/csv;charset=utf-8;"});
-navigator.msSaveBlob(blob, 'Listas Asistencia.xls');
+navigator.msSaveBlob(blob, 'Listas Asistencia.xlsx');
 }
 } 
 //for Chrome and Firefox 
 else {
 $('#test').attr('href', data_type + ', ' + encodeURIComponent(tab_text));
-$('#test').attr('download', 'Listas Asistencia.xls');
+$('#test').attr('download', 'Listas Asistencia.xlsx');
 }
 }

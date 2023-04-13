@@ -71,7 +71,7 @@ if (strlen(session_id()) < 1){
 		$estatus=$_POST["estatus_"];
 		$idAlumnoT=$_POST['idAlumnoT'];
 
-        $rspta=$alumnotaller->editar($idAlumnoT,$estatus,$credito);
+        $rspta=$alumnotaller->editar($idAlumnoT,$estatus);
         echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
      
     break;

@@ -29,10 +29,25 @@ public function mostraractividad(){
 }
 
 public function acceso(){
-	$sql = "SELECT a.idAlumno, a.ApellidoP, a.ApellidoM, a.Nombre, a.NumeroControl, a.Correo, a.Semestre, a.ClaveCarrera, u.Password FROM alumnos a INNER JOIN usuarios u ON a.Correo = u.email";
+	$sql = "SELECT a.idAlumno, a.ApellidoP, a.ApellidoM, a.Nombre, a.NumeroControl, a.Correo, a.Semestre, a.ClaveCarrera, u.Password, a.Telefono FROM alumnos a INNER JOIN usuarios u ON a.Correo = u.email";
 	return ejecutarConsulta($sql);
 }
 
+public function editaracceso($Semestre, $Telefono, $carrera, $idAlumno){
+	$sql = "UPDATE alumnos SET Semestre = '$Semestre', Telefono = '$Telefono', ClaveCarrera = '$carrera' WHERE idAlumno='$idAlumno' ";
+	return ejecutarConsulta($sql); 
 }   
 
+public function añadir_alumno($nocontrol, $ApellidoP, $ApellidoM, $nombre, $email, $semestre, $carrera, $Telefono, $sexo){
+	$sql = "INSERT INTO alumnos (NumeroControl, ApellidoP, ApellidoM, Nombre, Correo, Semestre, ClaveCarrera, Telefono, Sexo, idRol )
+	VALUES ('$nocontrol','$ApellidoP','$ApellidoM','$nombre','$email','$semestre','$carrera','$Telefono','$sexo','3')";
+	return ejecutarConsulta($sql);
+}
+
+public function añadir_user($email, $password){
+	$sql = "INSERT INTO usuarios (email , Password, idRol) VALUES ('$email','$password', '3')";
+	return ejecutarConsulta($sql);
+}
+
+}
 ?>

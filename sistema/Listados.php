@@ -10,6 +10,10 @@
     font-size: 18px;
 }
 
+#test{
+    font-size: 1.5rem;
+}
+
 .form-select {
     position: relative;
 
@@ -76,7 +80,7 @@ th {
 
     <div class="modal fade" id="ModalListas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
-            <div class="modal-content" style="height: 720px;">
+            <div class="modal-content" style="height: 620px;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">LISTAS DE ASISTENCIA</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -100,7 +104,7 @@ th {
                         <tfoot></tfoot>
                     </table>
                     <div class="modal-footer">
-                        <a href="#" id="test" class="btn btn-success" onClick="fnExcelReport();" type="button">excel</a>
+                        <a href="#" id="test" class="btn btn-success" onClick="fnExcelReport();" type="button"><i class="fa-regular fa-file-excel"></i></a>
                         <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
                 </div>
