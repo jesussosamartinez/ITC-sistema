@@ -19,6 +19,11 @@
 
 }
 
+.container{
+    display: flex;
+  justify-content: center;
+}
+
 th {
     font-size: 12px;
 }
