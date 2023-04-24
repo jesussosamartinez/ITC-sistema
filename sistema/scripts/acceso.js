@@ -45,7 +45,7 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 				data: parametros,
 				success: function(datos){
 					
-				alertify.confirm(datos, function(){  
+				alertify.alert('ACTUALIZACION DE DATOS',datos, function(){  
 					location.reload();
 							 });
 							 
@@ -66,7 +66,7 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 				   data: parametros,
 				   success: function(datos){
 				   
-				   alertify.confirm(datos, function(){ 
+				   alertify.alert('REGISTRO DE ALUMNO',datos, function(){ 
 					   location.reload();
 								});
 				   

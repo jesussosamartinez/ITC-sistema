@@ -2,6 +2,10 @@
 
 #formularioregistros{
     align-items: center;
+    margin-top: 7rem;
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
 }
 
 #fomulario{
@@ -12,6 +16,10 @@
             width:auto;
            
         }
+
+        
+            
+    
 </style>
 
 <?php 
