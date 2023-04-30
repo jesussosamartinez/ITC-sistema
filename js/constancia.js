@@ -1,14 +1,9 @@
-const { default: jsPDF } = require("jspdf");
 
+function fnPDF(){
 
-$("#generar")("click", function(){
+var doc = new jsPDF();
 
-var pdf = new jsPDF();
+doc.text(20, 20, 'CONSTANCIA DE CUMPLIMIENTO');
 
-pdf.text(20, 20, "Mostrando una Tabla con Jspdf y el plugin Autotbale");
-var columns = ["Id", "Nombre", "Domicilio", "Telefono", "Email"];
-
-
-  pdf.save('mipdf.pdf');
-
-});
+doc.save('constancia.pdf');
+}
