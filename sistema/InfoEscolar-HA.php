@@ -136,7 +136,7 @@ echo '
       </div>
       <div class="form-group col-lg col-md col-sm col-xs" >
           <label>Estatus:</label>
-              <select class="form-control select-picker" name="estatus_" id="estatus" required>
+              <select class="form-select select-picker" name="estatus_" id="estatus" required>
   <option value="CURSANDO">CURSANDO</option>
   <option value="FINALIZADO">FINALIZADO</option>
   <option value="ACREDITADO">ACREDITADO</option>

@@ -29,10 +29,6 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
-    
-
-    
-
 
 </head>
 <body>

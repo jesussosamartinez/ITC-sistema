@@ -121,3 +121,18 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 		}
 		  
 	  });
+
+	  var valor = 0;
+                function mostrar() {
+                    var r1 = $("#result1").val();
+                    var r2 = $("#result2").val();
+                    var r3 = $("#result3").val();
+                    var r4 = $("#result4").val();
+                    var r5 = $("#result5").val();
+                    var r6 = $("#result6").val();
+                    var r7 = $("#result7").val();    
+
+                    valor = parseInt(r1) + parseInt(r2) + parseInt(r3) + parseInt(r4) + parseInt(r5) + parseInt(r6) + parseInt(r7);
+					desempeño = valor/7;
+					 $("#valor_numerico").val(desempeño.toFixed(2));
+}

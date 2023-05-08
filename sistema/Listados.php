@@ -5,34 +5,31 @@
     color: #916F09;
     text-align: center;
 
+
     padding-top: 6rem;
     padding-bottom: 1rem;
     font-size: 18px;
+    align-items: center;
 }
 
 #test{
     font-size: 1.5rem;
 }
 
-.form-select {
-    position: relative;
-
-}
-
 .container{
     display: flex;
-  justify-content: center;
+    justify-content: center;
+    
+}
+
+h6 {
+    margin-left: 1em;
 }
 
 th {
     font-size: 12px;
 }
 
-#left {
-    display: flex;
-    float: right;
-    padding: 0 auto;
-}
 </style>
 <header>
     <?php 
@@ -49,18 +46,18 @@ th {
     <form class="row" id="formslistas" method="POST">
         <div class="table">
             <h6 class="selec" style="font-weight: 700;">LISTAS POR ACTIVIDAD EXTRAESCOLAR</h6>
-            <table class="table-light table-bordered" align="center" id="listas" style=" font-size: 10px;">
+            <table class="table-light table-bordered table-striped table-condensed table-hover" align="center" id="listas" style=" font-size: 10px; width: 500px;">
                 <thead style="text-transform: uppercase;">
                     <tr align="center">
-                        <th> Actividad Extraescolar </th>
-                        <td colspan="2"><select class="form-select select-picker" aria-label="Default select example"
+                        <th style="width: 150px;"> Actividad Extraescolar </th>
+                        <td colspan="1" style="width: 350px;"><select class="form-select select-picker" aria-label="Default select example"
                                 name="actividadlistas" id="actividadlistas" required>
                                 <option value="">SELECCIONA ACTIVIDAD</option>
                             </select></td>
                     </tr>
                     <tr>
-                        <th> PERIODO </th>
-                        <td><select class="form-select select-picker" name="periodo" id="periodo" required>
+                        <th style="width: 150px;"> PERIODO </th>
+                        <td colspan="1" style="width: 350px;"><select class="form-select select-picker" name="periodo" id="periodo" required>
                                 <option value="">SELECCIONA PERIODO</option>
                                 <script>
                                 var d = new Date();
@@ -77,7 +74,7 @@ th {
                 </thead>
             </table>
         </div>
-        <div align="right" style=" position:relative">
+        <div align="right" style=" position:relative" >
             <button class="btn" type="submit" style="background-color:  #1B396A; color: white; font-weight: 700;" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalListas"><i
                     class="fa-solid fa-magnifying-glass"></i> BUSCAR </button>
         </div>
@@ -90,17 +87,13 @@ th {
                     <h5 class="modal-title" id="exampleModalLabel">LISTAS DE ASISTENCIA</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body table-responsive">
+                <div class="modal-body table-responsive" id="tbl">
                     <table class="table" id="tbllist">
                         <thead style="text-transform: uppercase; ">
                             <th>#</th>
                             <th>No. Control</th>
                             <th>Alumno</th>
-                            <script>
-                            for (var i = 1; i <= 32; i++) {
-                                document.write('<th>' + i + '</th>');
-                            }
-                            </script>
+                            
 
                         </thead>
                         <tbody id="tbllistas">
@@ -109,7 +102,7 @@ th {
                         <tfoot></tfoot>
                     </table>
                     <div class="modal-footer">
-                    <a href="#" id="test" class="btn btn-success" onClick="fnPDF();" type="button"><i class="fa-solid fa-file-pdf"></i></a>
+                    <a href="#" id="pdfout" class="btn btn-success" onClick="fnPDF();" type="button"><i class="fa-solid fa-file-pdf"></i></a>
                         <a href="#" id="test" class="btn btn-success" onClick="fnExcelReport();" type="button"><i class="fa-regular fa-file-excel"></i></a>
                         <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
@@ -120,11 +113,17 @@ th {
 </section>
 
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
 
-<script type="text/javascript" src="../assets/js/jspdf.min.js"></script>
 <script src="scripts/listados.js" type="text/javascript"></script>
 <script src="../js/excel.js" type="text/javascript"></script>
 <script src="../js/constancia.js" type="text/javascript"></script>
+
+<script>
+    
+
+</script>
 
 </body>
 </html>

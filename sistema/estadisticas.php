@@ -1,4 +1,47 @@
 <style>
+
+#buscadoractividades {
+    padding-top: 5rem;
+    align-items: center;
+}
+
+#formsalum {
+    display: row;
+    position: relative;
+    justify-content: center;
+    margin: auto auto auto auto;
+    width: auto;
+
+}
+.selec {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    color: #916F09;
+    text-align: center;
+    padding-left: 3rem;
+    font-size: 25px;
+}
+
+label {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    color: #916F09;
+    padding-top: 5px;
+}
+
+input::placeholder {
+    text-transform: uppercase;
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.inputcenter {
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+
 tbody {
     text-align: center;
     text-transform: uppercase;
@@ -25,9 +68,37 @@ th {
 </div>
 <hr>
 
+<h1 class="selec">REPORTE DE ESTADISTICAS</h1>
 
-
-<div class="container" id="">
+    <div class="panel-body" id="buscadoractividades" style="display: block;">
+        <form class="row g-3" name="formulario" id="formsalum" method="POST">
+            <div class="form-group col-auto">
+                <label for="numcontrol">PERIODO:</label>
+            </div>
+            <div class="form-group col-auto">
+            <select class="form-select select-picker" name="periodo" id="periodo" required>
+                                <option value="">SELECCIONA PERIODO</option>
+                                <script>
+                                var d = new Date();
+                                var n = d.getFullYear();
+                                for (var i = n; i >= 2020; i--) {
+                                    document.write('<option value="AGOSTO - DICIEMBRE ' + i + '">AGOSTO - DICIEMBRE ' +
+                                        i + '</option>');
+                                    document.write('<option value="ENERO - JUNIO ' + i + '">ENERO - JUNIO ' + i +
+                                        '</option>');
+                                }
+                                </script>
+                            </select>
+            </div>
+            <div class="form-group col-auto">
+                <button class="btn btn-primary mb-3 position-relative n-1 " type="submit" value="Buscar"
+                    id="btnBuscar"><i class="fa fa-search"></i>
+                    Buscar</button>
+            </div>
+        </form>
+    </div>
+<!-- 
+<div class="container" id="" >
     <table id="" class="table-striped table-bordered table-condensed table-hover">
         <thead>
             <tr>
@@ -72,7 +143,7 @@ th {
         </tfoot>
     </table>
 </div>
-
+                            -->
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="../assets/js/jspdf.min.js"></script>
