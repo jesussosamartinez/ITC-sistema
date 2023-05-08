@@ -5,9 +5,7 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
       var $option = '<option value='+data.aaData[i].Nombre+'>'+data.aaData[i].Nombre+" ["+data.aaData[i].Horario+']</option>'; 
       $("#actividadlistas").append($option);
       // agrego los options al select
-    }
-      
-    
+    }   
   });
 
 

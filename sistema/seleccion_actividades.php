@@ -243,7 +243,7 @@ table {
                 alertify.confirm('ACTIVIDAD SELECCIONADA', celda.html(), function() { 
                 
                 if(celda.html() == "Ciclo de conferencias del cambio climático." ){
-                    $("#tipo_actividad").val("EVENTO ACADÉMICO").prop("disabed", false);
+                    $("#tipo_actividad").val("EVENTO ACADÉMICO").prop("disabled", false);
                     $("#nombre_actividad").val(celda.html()).prop("disabled", false);
                     $("#departamento").val("Departamento de Ciencias Básicas").prop("disabled", false);
                 }

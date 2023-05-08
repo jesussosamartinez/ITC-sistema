@@ -7,9 +7,6 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	var valorn = button.data('valorn') // Extraer la información de atributos de datos
 	var desempeño = button.data('desempeño') // Extraer la información de atributos de datos
 	var credito = button.data('credito') // Extraer la información de atributos de datos
-
-    
-	
 	
 	var modal = $(this)
 	modal.find('.modal-body #idAlumnoT').val(id)
@@ -20,8 +17,6 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	modal.find('.modal-body #desempeno').val(desempeño)
 	modal.find('.modal-body #credito').val(credito)
 	$('.alert').hide();//Oculto alert
-
-
   })
 
   $("#evaluacion").submit(function( event ) {

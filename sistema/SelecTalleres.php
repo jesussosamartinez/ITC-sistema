@@ -161,9 +161,8 @@ while($ver=mysqli_fetch_row($result)){
 	var tipo = button.data('tipo') // Extraer la información de atributos de datos
 	var horario = button.data('horario') // Extraer la información de atributos de datos
 	var turno = button.data('turno') // Extraer la información de atributos de datos
-	
-	
-	
+
+    
 	var modal = $(this)
 	modal.find('.modal-body #idTaller').val(id)
   modal.find('.modal-body #no_control').val(nocontrol)
