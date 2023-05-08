@@ -241,6 +241,7 @@ input , select {
             <script src="scripts/evaluacion.js" type="text/javascript"></script>
 
             <script type="text/javascript">
+                
             $(document).ready(function() {
 
                 $("input[name=desempeñouno]").change(function() {

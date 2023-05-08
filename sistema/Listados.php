@@ -109,6 +109,7 @@ th {
                         <tfoot></tfoot>
                     </table>
                     <div class="modal-footer">
+                    <a href="#" id="test" class="btn btn-success" onClick="fnPDF();" type="button"><i class="fa-solid fa-file-pdf"></i></a>
                         <a href="#" id="test" class="btn btn-success" onClick="fnExcelReport();" type="button"><i class="fa-regular fa-file-excel"></i></a>
                         <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
@@ -120,11 +121,10 @@ th {
 
 
 
-
-
-
+<script type="text/javascript" src="../assets/js/jspdf.min.js"></script>
 <script src="scripts/listados.js" type="text/javascript"></script>
 <script src="../js/excel.js" type="text/javascript"></script>
+<script src="../js/constancia.js" type="text/javascript"></script>
 
 </body>
 </html>

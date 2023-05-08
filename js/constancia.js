@@ -1,14 +1,26 @@
-const { default: jsPDF } = require("jspdf");
 
 
-$("#generar")("click", function(){
+function fnPDF(){
 
-var pdf = new jsPDF();
-
-pdf.text(20, 20, "Mostrando una Tabla con Jspdf y el plugin Autotbale");
-var columns = ["Id", "Nombre", "Domicilio", "Telefono", "Email"];
+var doc = new                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        jsPDF();
 
 
-  pdf.save('mipdf.pdf');
 
-});
+doc.setFontSize(14);
+doc.setTextColor(100);
+doc.setFontType("bold");
+doc.setFont("montserrat");
+doc.text(35, 30, 'LISTA DE ASISTENCIA DE ACTIVIDAD COMPLEMENTARIA');
+
+doc.html(document.querySelector('#tbllist'));
+
+
+
+doc.save('constancia.pdf');
+}
+
+function fnEvaluacionDesempeño(){
+    var formato = new jsPDF();
+
+    formato.text(20, 20, 'FORMATO DE EVALUACIÓN AL DESEMPEÑO DE LA ACTIVIDAD COMPLEMENTARIA')
+}

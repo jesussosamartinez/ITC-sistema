@@ -91,7 +91,7 @@ if (strlen(session_id()) < 1){
 
             
             $rspta=$datos->editaracceso($Semestre, $Telefono, $ClaveCarrera, $idAlumno);
-            echo $rspta ? "Datos Actualizados" : "Datos No Actualizados";
+            echo $rspta ? "Datos Actualizados Satisfactoriamente" : "Datos No Actualizados";
 
         break;
 
@@ -108,7 +108,7 @@ if (strlen(session_id()) < 1){
             $Password = $_POST["pass"];
 
             $rspta = $datos->añadir_alumno($NumeroControl,$ApellidoP,$ApellidoM,$Nombre,$Correo,$Semestre,$ClaveCarrera,$Telefono,$Sexo) ." ". $datos->añadir_user($Correo, $Password) ;
-            echo $rspta ? "Almuno Reistrado" : "Alumno no se registro";
+            echo $rspta ? "Alumno Registrado Satifactoriamente" : "Alumno no se registro";
 
         break;
     }

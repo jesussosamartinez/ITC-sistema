@@ -25,7 +25,7 @@ th {
 </div>
 <hr>
 
-<!--TE--------------------------------------------------------------------------------------------------------->
+
 
 <div class="container" id="">
     <table id="" class="table-striped table-bordered table-condensed table-hover">
@@ -72,3 +72,8 @@ th {
         </tfoot>
     </table>
 </div>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/jspdf.min.js"></script>
+<script src="../js/constancia.js" type="text/javascript"></script>

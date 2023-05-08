@@ -62,7 +62,7 @@ session_start();
                         }?>
                         <li>
                             <?php if($_SESSION['Informacion']==1){ 
-                                echo'<a href="Informacion.php">Información Escolar</a>';
+                                echo'<a href="#">Información Escolar</a>';
                             } ?>
                             <ul>
                             <?php if($_SESSION['Historial']==1){

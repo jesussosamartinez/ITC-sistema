@@ -91,7 +91,22 @@
                 <option value="CONTADOR PÚBLICO">CONTADOR PÚBLICO</option>
             </select> 
         <label >Semestre:</label>
-        <input type="text"  name="semestre" id="semestre" class="form-control input-sm">
+        <select class="form-control input-sm form-select select-picker" name="semestre" id="semestre" required>
+                <option value="">SELECCIONA EL SEMESTRE</option>
+                <option value="PRIMERO">PRIMER SEMESTRE</option>
+                <option value="SEGUNDO">SEGUNDO SEMESTRE</option>
+                <option value="TERCERO">TERCER SEMESTRE</option>
+                <option value="CUARTO">CUARTO SEMESTRE</option>
+                <option value="QUINTO">QUINTO SEMESTRE</option>
+                <option value="SEXTO">SEXTO SEMESTRE</option>
+                <option value="SEPTIMO">SEPTIMO SEMESTRE</option>
+                <option value="OCTAVO">OCTAVO SEMESTRE</option>
+                <option value="NOVENO">NOVENO SEMESTRE</option>
+                <option value="DECIMO">DECIMO SEMESTRE</option>
+                <option value="ONCEAVO">ONCEAVO SEMESTRE</option>
+                <option value="DOCEAVO">DOCEAVO SEMESTRE</option>
+                <option value="TRECEAVO">TRECEAVO SEMESTRE</option>
+            </select> 
         <label >Telefono</label>
         <input type="tel" name="telefonoal" id="telefonoal" class="form-control input-sm" maxlength="13" placeholder="000-000-00-00">
         <label >Sexo</label>
@@ -100,8 +115,8 @@
           <option value="H">HOMBRE</option>
           <option value="M">MUJER</option>
         </select>
-        <label >Password:</label>
-        <input type="text"  name="pass" id="pass" class="form-control input-sm">
+        <label >Contraseña:</label>
+        <input type="text"  name="pass" id="pass" class="form-control input-sm" readonly>
         <button type="button" class="btn btn-success" onclick="generarcontraseña()">GENERAR CONTRASEÑA</button>
       </div>
       <div class="modal-footer">
@@ -124,17 +139,40 @@
       <div class="modal-body" style="text-align: center;">
         <input type="text" hidden id="idalumno" name="idalumno">
         <label >No. Control: </label>
-        <input type="text" name="ncontrolu" id="ncontrolu" class="form-control input-sm">
+        <input type="text" name="ncontrolu" id="ncontrolu" class="form-control input-sm" readonly>
         <label >Nombre del Alumno: </label>
-        <input type="text"  name="nombreu" id="nombreu" class="form-control input-sm">
+        <input type="text"  name="nombreu" id="nombreu" class="form-control input-sm" readonly>
         <label >Correo Institucional: </label>
         <input type="text"  name="correou" id="correou" class="form-control input-sm">
         <label >Telefono</label>
         <input type="tel" name="telefono" id="telefono" class="form-control input-sm" maxlength="13">
         <label >Carrera: </label>
-        <input type="text"  name="carrerau" id="carrerau" class="form-control input-sm">
+        <select class="form-control input-sm form-select select-picker" name="carrerau" id="carrerau" required>
+                <option value="">SELECCIONA CARRERA</option>
+                <option value="INGENIERÍA EN SISTEMAS COMPUTACIONALES">INGENIERÍA EN SISTEMAS COMPUTACIONALES</option>
+                <option value="INGENIERÍA ELECTRONICA">INGENIERÍA ELECTRONICA</option>
+                <option value="INGENIERÍA EN GESTIÓN EMPRESARIAL">INGENIERÍA EN GESTIÓN EMPRESARIAL</option>
+                <option value="INGENIERÍA INDUSTRIAL">INGENIERÍA INDUSTRIAL</option>
+                <option value="INGENIERÍA MECATRÓNICA">INGENIERÍA MECATRÓNICA</option>
+                <option value="CONTADOR PÚBLICO">CONTADOR PÚBLICO</option>
+            </select> 
         <label >Semestre: </label>
-        <input type="text"  name="semestreu" id="semestreu" class="form-control input-sm">
+        <select class="form-control input-sm form-select select-picker" name="semestreu" id="semestreu" required>
+                <option value="">SELECCIONA EL SEMESTRE</option>
+                <option value="PRIMERO">PRIMER SEMESTRE</option>
+                <option value="SEGUNDO">SEGUNDO SEMESTRE</option>
+                <option value="TERCERO">TERCER SEMESTRE</option>
+                <option value="CUARTO">CUARTO SEMESTRE</option>
+                <option value="QUINTO">QUINTO SEMESTRE</option>
+                <option value="SEXTO">SEXTO SEMESTRE</option>
+                <option value="SEPTIMO">SEPTIMO SEMESTRE</option>
+                <option value="OCTAVO">OCTAVO SEMESTRE</option>
+                <option value="NOVENO">NOVENO SEMESTRE</option>
+                <option value="DECIMO">DECIMO SEMESTRE</option>
+                <option value="ONCEAVO">ONCEAVO SEMESTRE</option>
+                <option value="DOCEAVO">DOCEAVO SEMESTRE</option>
+                <option value="TRECEAVO">TRECEAVO SEMESTRE</option>
+            </select> 
         <label >Contraseña: </label>
         <input type="text"  name="password" id="password" class="form-control input-sm">
       </div>
@@ -151,6 +189,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="scripts/acceso.js" type="text/javascript"></script>
 
     <script>
