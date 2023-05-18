@@ -30,6 +30,8 @@ session_start();
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+
 </head>
 <body>
     <header>

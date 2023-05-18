@@ -2,7 +2,7 @@
 
 function fnPDF(){
 
-var maintable  = document.getElementById('tbllist');
+var maintable  = document.getElementById('tbl');
 
         var doc = new jsPDF('p', 'pt', 'letter');
         margin = 20;
@@ -24,7 +24,7 @@ var maintable  = document.getElementById('tbllist');
             })
         } else{
             //PC
-            doc.html(maintable,{
+            doc.fromHTML(maintable,{
                 x: margin,
                 y: margin,
                 html2canvas: {
@@ -35,4 +35,34 @@ var maintable  = document.getElementById('tbllist');
                 }
             })
         }
+    }
+
+    function pruebaDivAPdf() {
+        var pdf = new jsPDF('p', 'pt', 'letter');
+        source = $('#tbl')[0];
+
+        specialElementHandlers = {
+            '#bypassme': function (element, renderer) {
+                return true
+            }
+        };
+        margins = {
+            top: 60,
+            bottom: 40,
+            left: 20,
+            width: 822
+        };
+
+        pdf.fromHTML(
+            source, 
+            margins.left, // x coord
+            margins.top, { // y coord
+                'width': margins.width, 
+                'elementHandlers': specialElementHandlers
+            },
+
+            function (dispose) {
+                pdf.save('Prueba.pdf');
+            }, margins
+        );
     }

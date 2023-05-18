@@ -43,6 +43,18 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
         
   
       })
+ $.post(
+  "../estadisticas/listadosaextra.php",
+  { "nombre_actividad" : nombre_actividad, "horario" : horario, "periodo" : periodo },
+  function pdf(){
 
+  }
+
+ )     
   });
 
+
+
+
+    
+  
