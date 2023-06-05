@@ -149,6 +149,27 @@ if (strlen(session_id()) < 1){
         
         break;
 
+        case 'estadisticas':
+           $periodo = $_POST['periodo'];
+
+            $rspta = $alumnotaller->estadisticas($periodo);
+            $data= Array();
+            while ($reg=$rspta->fetch_object()){
+       
+                $data[]=array(
+                    "carrera"=> $reg->nombre_carrera,
+                    "sexo"=>$reg->sexo,
+                    "cont"=>$reg->num
+                );
+            }
+           
+            $results = array(
+                "iTotalDisplayRecords"=>count($data),
+                "aaData"=>$data
+            );
+            echo json_encode($results);
+            break;
+
     }
     
 }

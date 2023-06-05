@@ -1,11 +1,11 @@
 <style>
 
-#buscadoractividades {
+#buscador{
     padding-top: 5rem;
     align-items: center;
 }
 
-#formsalum {
+#formsestadisticas {
     display: row;
     position: relative;
     justify-content: center;
@@ -68,12 +68,13 @@ th {
 </div>
 <hr>
 
+<div class="container" id="" >
 <h1 class="selec">REPORTE DE ESTADISTICAS</h1>
 
-    <div class="panel-body" id="buscadoractividades" style="display: block;">
-        <form class="row g-3" name="formulario" id="formsalum" method="POST">
+    <div class="panel-body" id="buscador" style="display: block;">
+        <form class="row g-3" name="formulario" id="formsestadisticas" method="POST">
             <div class="form-group col-auto">
-                <label for="numcontrol">PERIODO:</label>
+                <label >PERIODO:</label>
             </div>
             <div class="form-group col-auto">
             <select class="form-select select-picker" name="periodo" id="periodo" required>
@@ -97,9 +98,8 @@ th {
             </div>
         </form>
     </div>
-<!-- 
-<div class="container" id="" >
-    <table id="" class="table-striped table-bordered table-condensed table-hover">
+<div>
+    <table  class="table-striped table-bordered table-condensed table-hover">
         <thead>
             <tr>
                 <th></th>
@@ -112,26 +112,8 @@ th {
                 <th>M</th>
                 <th>Total</th>
             </tr>
-            <tr>
-                <th>INGENIERÍA EN SISTEMAS COMPUTACIONALES</th>
-            </tr>
-            <tr>
-                <th>INGENIERÍA EN GESTIÓN EMPRESARIAL</th>
-            </tr>
-            <tr>
-                <th>INGENIERÍA INDUSTRIAL</th>
-            </tr>
-            <tr>
-                <th>INGENIERÍA ELECTRONICA</th>
-            </tr>
-            <tr>
-                <th>CONTADOR PÚBLICO</th>
-            </tr>
-            <tr>
-                <th>INGENIERÍA MECATRÓNICA</th>
-            </tr>
         </thead>
-        <tbody>
+        <tbody id="tbllestadisticas">
         </tbody>
         <tfoot>
             <tr>
@@ -142,9 +124,10 @@ th {
             </tr>
         </tfoot>
     </table>
+    </div>
 </div>
-                            -->
+                            
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript" src="../assets/js/jspdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="../js/constancia.js" type="text/javascript"></script>
+<script src="scripts/listados.js" type="text/javascript"></script>

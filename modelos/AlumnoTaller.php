@@ -34,8 +34,8 @@ Class AlumnoTaller
 		return ejecutarConsulta($sql);
 	}
 
-	public function estadisticas(){
-		$sql = "SELECT a.nombre_carrera, count(Sexo)  FROM alumnotaller a INNER JOIN alumnos al ON a.NumeroControl= al.NumeroControl WHERE Sexo = 'H'";
+	public function estadisticas($periodo){
+		$sql = "SELECT sexo, COUNT(sexo) num, a1.nombre_carrera, a1.periodo, a1.Estatus from alumnos a INNER JOIN alumnotaller a1 ON a.NumeroControl = a1.NumeroControl WHERE a1.periodo = '$periodo' group by sexo, a1.nombre_carrera, a1.periodo";
 		return ejecutarConsulta($sql);
 	}
 
@@ -63,6 +63,8 @@ Class AlumnoTaller
 		$sql= "SELECT a1.NumeroControl, a2.ApellidoP ,a2.ApellidoM, a2.Nombre FROM alumnotaller a1 JOIN alumnos a2 ON a1.NumeroControl = a2.NumeroControl  WHERE a1.nombre_actividad= '$nombre_actividad' AND a1.horario='$horario' AND a1.periodo = '$periodo'";
 		return ejecutarConsulta($sql);
 	}
+
+	
 }
 
 ?>

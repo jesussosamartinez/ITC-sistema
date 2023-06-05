@@ -255,6 +255,8 @@ input , select {
     $(this).closest('tr').find('input[type="text"]').val($(this).val());
     mostrar();
 });
+
+
             </script>
          
 

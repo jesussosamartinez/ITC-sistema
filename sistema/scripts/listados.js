@@ -43,18 +43,34 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
         
   
       })
- $.post(
-  "../estadisticas/listadosaextra.php",
-  { "nombre_actividad" : nombre_actividad, "horario" : horario, "periodo" : periodo },
-  function pdf(){
-
-  }
-
- )     
+     
   });
 
-
-
-
     
-  
+  $('#formsestadisticas').on('submit', function(e){
+    e.preventDefault();
+
+    var periodos = document.getElementById("periodo");
+
+    periodo = periodos.options[periodos.selectedIndex].text;
+
+    $.post("../ajax/alumnotaller.php?op=estadisticas",{
+      "periodo" : periodo }, function(data){
+        data = JSON.parse(data);
+        
+
+        for (var i = 0; i < data.aaData.length; i++) {
+          var $tr =
+            '<tr style="text-transform:uppercase; font-size: 10px;"> <td>' +
+            data.aaData[i].carrera +
+            '</td> <td>' +
+            data.aaData[i].sexo +
+            '</td> <td>'+
+            data.aaData[i].cont +
+            '</td> </tr>';
+            $("#tbllestadisticas").append($tr);
+            }
+      }
+      )
+
+  });
