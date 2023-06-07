@@ -102,14 +102,9 @@ th {
     <table  class="table-striped table-bordered table-condensed table-hover">
         <thead>
             <tr>
-                <th></th>
-                <th colspan="2">SEXO</th>
-                <th></th>
-            </tr>
-            <tr>
                 <th>Carrera</th>
-                <th>H</th>
-                <th>M</th>
+                <th >SEXO</th>
+                <th>#</th>
                 <th>Total</th>
             </tr>
         </thead>
@@ -118,8 +113,6 @@ th {
         <tfoot>
             <tr>
                 <th>Carrera</th>
-                <th>H</th>
-                <th>M</th>
                 <th>Total</th>
             </tr>
         </tfoot>

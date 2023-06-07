@@ -74,3 +74,5 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
       )
 
   });
+
+
