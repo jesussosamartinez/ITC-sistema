@@ -113,6 +113,8 @@ th {
         <tfoot>
             <tr>
                 <th>Carrera</th>
+                <th >SEXO</th>
+                <th>#</th>
                 <th>Total</th>
             </tr>
         </tfoot>

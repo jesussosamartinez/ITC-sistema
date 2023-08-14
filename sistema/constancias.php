@@ -12,6 +12,11 @@ th {
     height: 10px;
     text-transform: uppercase;
 }
+
+#tblContainer{
+    height: 390px;
+    position: relative;
+}
 .input-container {
     margin-left: 100px;
     background-color: #fff;
@@ -40,6 +45,7 @@ th {
 input , select {
     text-align: center;
 }
+
 </style>
     <header>
         <?php 
@@ -59,7 +65,7 @@ input , select {
     <p></p>
     </div>
     <section class="container">
-        <div class="table table-responsive" id="tblContainer">
+        <div class="table table-responsive table-wrapper" id="tblContainer" >
             <table class="table table-bordered table-hover" id="tableContainer">
                 <thead>
                     <th>Opciones</th>
@@ -82,7 +88,7 @@ input , select {
         <div class="modal fade" id="ModalEvaluacion" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content" style="height: 1070px;">
+                <div class="modal-content" style="height: 1150px;">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">EVALUACIÓN DE DESEMPEÑO</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -220,11 +226,11 @@ input , select {
                             <label>NIVEL DE DESEMPEÑO:</label>
                             <select type="text" class="form-control" name="desempeno" id="desempeno">
                                 <option value="">SELECCIONA EL NIVEL DE DESEMPEÑO</option>
-                                <option value="INSUFICIENTE">INSUFICIENTE</option>
-                                <option value="SUFICIENTE">SUFICIENTE</option>
-                                <option value="BUENO">BUENO</option>
-                                <option value="NOTABLE">NOTABLE</option>
-                                <option value="EXCELENTE">EXCELENTE</option>
+                                <option value="INSUFICIENTE">INSUFICIENTE (0.00 - 0.99)</option>
+                                <option value="SUFICIENTE">SUFICIENTE (1.00 - 1.49)</option>
+                                <option value="BUENO">BUENO (1.50 - 2.49)</option>
+                                <option value="NOTABLE">NOTABLE (2.50 - 3.49)</option>
+                                <option value="EXCELENTE">EXCELENTE (3.50 - 4.00)</option>
                             </select>
                         </div>
                         <div class="form-group col-lg col-md col-sm col-xs">

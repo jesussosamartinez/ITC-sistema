@@ -58,6 +58,7 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
       "periodo" : periodo }, function(data){
         data = JSON.parse(data);
         
+        $('#tbllestadisticas > tbody').empty();
 
         for (var i = 0; i < data.aaData.length; i++) {
           var $tr =

@@ -28,7 +28,7 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 				data: parametros,
 				success: function(datos){
 				
-				alertify.confirm(datos, function(){ 
+				alertify.alert('ACTUALIZACION DE DATOS',datos, function(){ 
 					location.reload();
 							 });
 				
@@ -95,7 +95,7 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 				<td>${alumnos.periodo}</td>
 				<td>${alumnos.valor_numerico}</td>
 				<td>${alumnos.desempeno}</td>
-				<td><a href="${alumnos.Credito}" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i><br> PDF</a></td>`
+				<td><a href="${alumnos.Credito}" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="bi bi-download"></i><br> PDF</a></td>`
 	  
 				tableContainer.appendChild(row)
 			  }

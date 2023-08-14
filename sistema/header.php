@@ -19,6 +19,7 @@ session_start();
     <!-- Librerias -->
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="../assets/librerias/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Alertify -->
     <link rel="stylesheet" type="text/css" href="../assets/librerias/alertifyjs/css/alertify.css">
@@ -30,9 +31,15 @@ session_start();
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
+<script type="javascript">
+    function openNav(){
+    document.getElementsByClassName('.container__menu').style.width == "250px"
+    document.getElementsByClassName('.container__menu').style.height == "800px"
+
+}
+</script>
 <body>
     <header>
         <div class="header__superior">
@@ -44,7 +51,8 @@ session_start();
             </div>
 
             <div class="dropdowns">
-                <a href="../ajax/usuario.php?op=salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
+                <a href="" onclick="openNav()" id="bars"><i class="fa-solid fa-bars"></i></a>
+                <a href="../ajax/usuario.php?op=salir" id="salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
             </div>
         </div>
 
@@ -60,7 +68,7 @@ session_start();
                         }?>
                         <li>
                             <?php if($_SESSION['Informacion']==1){ 
-                                echo'<a href="#">Información Escolar</a>';
+                                echo'<a href="#"><i class="bi bi-file-earmark-person"></i>Información Escolar</a>';
                             } ?>
                             <ul>
                             <?php if($_SESSION['Historial']==1){
@@ -80,7 +88,7 @@ session_start();
                                 <li><a href="seleccion_actividades.php">Selección de Actividad</a></li>';
                           }
                            ?>
-                            </ul>
+                            </ul> 
                         </li>
                         <?php if($_SESSION['Departamentos']==1)
                         {

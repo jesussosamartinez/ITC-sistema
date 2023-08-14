@@ -11,11 +11,11 @@ body {
 
 table {
   display: block;
- 
 }
 
 tr, td, tbody, tfoot {
   display: block;
+  
 }
 
 thead {
@@ -84,6 +84,8 @@ tfoot th {
   tbody {
     display: table-row-group;
     cursor: pointer;
+    height: 500px;
+    overflow-y: scroll;
   }
 
   thead {
@@ -96,6 +98,7 @@ tfoot th {
 
   td {
     border: 1px solid #0d233a;
+    cursor: pointer;
   }
   td:before {
     display: none;

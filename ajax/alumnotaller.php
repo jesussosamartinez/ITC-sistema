@@ -104,7 +104,7 @@ if (strlen(session_id()) < 1){
                  "periodo"=>$reg->periodo,
                  "valor_numerico"=>$reg->valor_numerico,
                  "desempeno"=>$reg->desempeno,
-                 "credito"=>'<a href="'.$reg->Credito.'" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="fa-solid fa-arrow-right-to-bracket fa-rotate-90"></i><br> PDF</a>'
+                 "credito"=>'<span><a href="'.$reg->Credito.'" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="bi bi-download"></i><br> PDF </a></span>'
             );
         }
         $results = array(
