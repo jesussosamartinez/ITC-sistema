@@ -51,8 +51,9 @@ if (strlen(session_id()) < 1){
              while ($reg=$rspta->fetch_object()){
             
                  $data[]=array(
-                     "0"=>($reg->Condicion)?'<button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>':
-                         '<button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
+                     "0"=>($reg->Condicion)?'<button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>'.
+                     ' <button class="btn btn-warning" onclick="desactivar('.$reg->idTaller.')"><i class="bi bi-trash"></i></button>':
+                     '<button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
                      "1"=>$reg->tipo_actividad,
                      "2"=>$reg->Tipo,
                      "3"=>$reg->Nombre,

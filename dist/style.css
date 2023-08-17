@@ -84,7 +84,6 @@ tfoot th {
   tbody {
     display: table-row-group;
     cursor: pointer;
-    height: 500px;
     overflow-y: scroll;
   }
 
