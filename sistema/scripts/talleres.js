@@ -171,6 +171,18 @@ function activar(idTaller)
 	})
 }
 
+function eliminar(idTaller)
+{
+	bootbox.confirm("¿Está Seguro de eliminar el Taller?", function(result){
+		if(result)
+        {
+        	$.post("../ajax/talleres.php?op=eliminar", {idTaller : idTaller}, function(e){
+        		bootbox.alert("Taller Eliminado");
+	            $("#tbllistadoD").dataTable().api().ajax.reload();
+        	});	
+        }
+	})
+}
 
 
 init();

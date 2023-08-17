@@ -43,6 +43,12 @@ if (strlen(session_id()) < 1){
              echo json_encode($rspta);
         break;
 
+        case 'eliminar':
+            $rspta=$talleres->eliminar($idTaller);
+             //Codificar el resultado utilizando json
+             echo json_encode($rspta);
+        break;
+
         case 'listarActividades':
             $rspta=$talleres->listarActividades();
              //Vamos a declarar un array
@@ -52,8 +58,9 @@ if (strlen(session_id()) < 1){
             
                  $data[]=array(
                      "0"=>($reg->Condicion)?'<button class="btn btn-danger" onclick="desactivar('.$reg->idTaller.')"><i class="fa fa-close"></i></button>'.
-                     ' <button class="btn btn-warning" onclick="desactivar('.$reg->idTaller.')"><i class="bi bi-trash"></i></button>':
-                     '<button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>',
+                     ' <button class="btn btn-warning" onclick="eliminar('.$reg->idTaller.')"><i class="bi bi-trash"></i></button>':
+                     '<button class="btn btn-primary" onclick="activar('.$reg->idTaller.')"><i class="fa fa-check"></i></button>'. 
+                     ' <button class="btn btn-warning" onclick="eliminar('.$reg->idTaller.')"><i class="bi bi-trash"></i></button>',
                      "1"=>$reg->tipo_actividad,
                      "2"=>$reg->Tipo,
                      "3"=>$reg->Nombre,

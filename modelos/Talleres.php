@@ -52,6 +52,11 @@ Class Talleres
 		return ejecutarConsulta($sql);		
 	}
 
+	public function eliminar($idTaller)
+	{
+		$sql="DELETE FROM talleres WHERE idTaller='$idTaller'";
+		return ejecutarConsulta($sql);		
+	}
 	
 }
 

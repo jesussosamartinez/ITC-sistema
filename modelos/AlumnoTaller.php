@@ -29,6 +29,7 @@ Class AlumnoTaller
 		return ejecutarConsulta($sql);
 	}
 
+	//funcion para busqueda en las listas
 	public function buscar($searchs){
 		$sql = "SELECT t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito, t.periodo, t.valor_numerico, t.desempeno FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE a.NumeroControl LIKE '%$searchs%'";
 		return ejecutarConsulta($sql);
@@ -45,12 +46,13 @@ Class AlumnoTaller
 		return ejecutarConsulta($sql);
 	}
 
+	//modal de evaluación
 	public function visualizar(){
 		$sql = "SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.valor_numerico, ae.desempeno,ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre FROM alumnotaller ae INNER JOIN alumnos a ON a.NumeroControl=ae.NumeroControl";
 		return ejecutarConsulta($sql);
 	}
 
-	//Implementamos un método para editar el periodo, el desemepeño, el valor numerico de la actividad 
+	//Implementamos un método para editar el periodo, el desempeño, el valor numerico de la actividad 
 	public function editarcon($idAlumnoT,$periodo, $valornum, $desempeño, $credito)
     {
 	$sql="UPDATE alumnotaller SET periodo='$periodo', valor_numerico = '$valornum', desempeno = '$desempeño', Credito = '$credito' WHERE idAlumnoT='$idAlumnoT'";

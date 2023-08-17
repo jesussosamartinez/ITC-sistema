@@ -122,7 +122,7 @@ input , select {
                             </select>
                         </div>
                         <section style="padding-top: 1rem;">
-                            <div class="table table-responsive">
+                            <div class="table table-responsive tblevacriterio">
                                 <table class="table">
                                     <thead>
                                         <tr>
