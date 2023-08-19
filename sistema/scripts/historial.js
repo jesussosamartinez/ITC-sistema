@@ -33,7 +33,7 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 				data: parametros,
 				success: function(datos){
 				
-				alertify.confirm(datos, function(){ 
+				alertify.alert("HISTORIAL DE ACTIVIDADES",datos, function(){ 
 					location.reload();
 							 });
 				

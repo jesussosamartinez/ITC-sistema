@@ -73,7 +73,7 @@
       </div>
       <div class="modal-body" style="text-align: center;">
         <label >No. Control: </label>
-        <input type="text" name="ncontrol" id="ncontrol" class="form-control input-sm" maxlength="8">
+        <input type="text" name="ncontrol" id="ncontrol" class="form-control input-sm" maxlength="8" onkeypress="return event.charCode>=48 && event.charCode<=57">
         <label >Nombre del Alumno:</label>
         <input type="text"  name="apellidop" id="apellidop" class="form-control input-sm" placeholder="APELLIDO PATERNO">
         <input type="text"  name="apellidom" id="apellidom" class="form-control input-sm" placeholder="APELLIDO MATERNO">

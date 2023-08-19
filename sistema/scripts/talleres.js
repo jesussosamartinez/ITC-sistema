@@ -68,6 +68,7 @@ function listarD()
 				},
 		"language": {
             "lengthMenu": "Mostrar : _MENU_ registros",
+			"url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json",
             "buttons": {
             "copyTitle": "Tabla Copiada",
             "copySuccess": {
@@ -102,6 +103,7 @@ function listarDA()
 				},
 		"language": {
             "lengthMenu": "Mostrar : _MENU_ registros",
+			"url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json",
             "buttons": {
             "copyTitle": "Tabla Copiada",
             "copySuccess": {
@@ -145,42 +147,46 @@ function guardaryeditar(e)
 //Función para desactivar registros
 function desactivar(idTaller)
 {
-	bootbox.confirm("¿Está Seguro de desactivar el Taller?", function(result){
-		if(result)
-        {
-        	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(e){
-        		bootbox.alert(e);
+	alertify.confirm('ACTIVIDAD EXTRAESCOLAR','¿Está Seguro de desactivar el Taller?', function(){
+		
+        
+        	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(){
+        		//bootbox.alert(e);
+				alertify.alert('ACTIVIDAD EXTRESCOLAR',"Taller Desactivado");
 	            $("#tbllistadoD").dataTable().api().ajax.reload();
-        	});	
-        }
+        	});        
+	}, function(e){
+		alertify.alert('ACTIVIDAD EXTRESCOLAR', 'Taller No Desactivado');
 	})
 }
 
 //Función para activar registros
 function activar(idTaller)
 {
-	bootbox.confirm("¿Está Seguro de activar el Taller?", function(result){
-		if(result)
-        {
-        	$.post("../ajax/talleres.php?op=activar", {idTaller : idTaller}, function(e){
-        		bootbox.alert(e);
+	alertify.confirm('ACTIVIDAD EXTRAESCOLAR',"¿Está Seguro de activar el Taller?", function(){
+		
+        	$.post("../ajax/talleres.php?op=activar", {idTaller : idTaller}, function(){
+        		//bootbox.alert(e);
+				alertify.alert('ACTIVIDAD EXTRESCOLAR', 'Taller Activado');
 	            tabla.ajax.reload();
 				$("#tbllistadoD").dataTable().api().ajax.reload();
         	});	
-        }
+        
+	},function(){
+		alertify.alert('ACTIVIDAD EXTRESCOLAR', 'Taller No Activado');
 	})
 }
 
 function eliminar(idTaller)
 {
-	bootbox.confirm("¿Está Seguro de eliminar el Taller?", function(result){
-		if(result)
-        {
-        	$.post("../ajax/talleres.php?op=eliminar", {idTaller : idTaller}, function(e){
-        		bootbox.alert("Taller Eliminado");
+	alertify.confirm('ACTIVIDAD EXTRAESCOLAR',"¿Está Seguro de eliminar el Taller?", function(){
+        	$.post("../ajax/talleres.php?op=eliminar", {idTaller : idTaller}, function(){
+        		alertify.sucess("TALLER ELIMINADO");
 	            $("#tbllistadoD").dataTable().api().ajax.reload();
         	});	
-        }
+        
+	},function(){
+		alertify.error("TALLER NO ELIMINADO");
 	})
 }
 

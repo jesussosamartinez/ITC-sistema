@@ -39,6 +39,9 @@ th {
     text-align: center;
     margin-left: 2em;
 }
+.errors-container{
+    text-align: center;
+}
 
 
 </style>
@@ -76,9 +79,9 @@ th {
 echo '
 <main>
     <div class="input-container">
-        <input type="search" name="" id="search" placeholder="Buscar">
+        <input type="search" name="" id="search" placeholder="Buscar #" onkeypress="return event.charCode>=48 && event.charCode<=57">
     </div>
-    <div class="errors-container" style="display: none; margin: auto, auto;  " >
+    <div class="errors-container" style="display: none; margin: auto, auto;" >
     <p></p>
     </div>
     <section class="container">

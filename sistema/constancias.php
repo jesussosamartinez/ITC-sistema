@@ -14,7 +14,7 @@ th {
 }
 
 #tblContainer{
-    height: 390px;
+    height: 330px;
     position: relative;
 }
 .input-container {
@@ -46,6 +46,10 @@ input , select {
     text-align: center;
 }
 
+.errors-container{
+    text-align: center;
+}
+
 </style>
     <header>
         <?php 
@@ -59,7 +63,7 @@ input , select {
     <hr>
     <main>
     <div class="input-container">
-        <input type="search" name="" id="search" placeholder="Buscar">
+        <input type="search" name="" id="search" placeholder="Buscar" onkeypress="return event.charCode>=48 && event.charCode<=57">
     </div>
     <div class="errors-container" style="display: none; margin: auto, auto;  " >
     <p></p>
@@ -88,7 +92,7 @@ input , select {
         <div class="modal fade" id="ModalEvaluacion" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-lg">
-                <div class="modal-content" style="height: 1150px;">
+                <div class="modal-content" style="height: 1050px;">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">EVALUACIÓN DE DESEMPEÑO</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
