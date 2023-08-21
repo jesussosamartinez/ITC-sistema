@@ -57,6 +57,7 @@ input , select {
     ?>
     </header>
 
+
     <div class="navegacion">
         <a><i class="fa-solid fa-house"></i> <i class="fa-solid fa-chevron-right"></i> Constancias </a>
     </div>

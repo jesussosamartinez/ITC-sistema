@@ -9,8 +9,7 @@ tbody {
     text-align: center;
     text-transform: uppercase;
     font-size: 12px;
-    font-weight: 700;
-}
+    font-weight: 700;}
 
 thead,
 th {
@@ -69,7 +68,7 @@ while($ver=mysqli_fetch_row($result)){
                                       <i class="fa-solid fa-pen-to-square"></i>
                                       </button></th> 
                                 <th><?php  echo $ver  [ '1']; ?></th>
-                                    <th><?php  echo $ver  [ '2']; ?></th>
+                                    <th><?php  echo $ver  ['2']; ?></th>
                                     <th><?php  echo $ver  [ '3']; ?></th>
                                     <th><?php  echo $ver  [ '5']; ?></th>   
                                     <th><?php  echo $ver  [ '4']; ?></th>
