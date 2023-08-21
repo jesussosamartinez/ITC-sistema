@@ -152,11 +152,11 @@ function desactivar(idTaller)
         
         	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(){
         		//bootbox.alert(e);
-				alertify.alert('ACTIVIDAD EXTRESCOLAR',"Taller Desactivado");
+				alertify.success('TALLER DESACTIVADO');
 	            $("#tbllistadoD").dataTable().api().ajax.reload();
         	});        
 	}, function(e){
-		alertify.alert('ACTIVIDAD EXTRESCOLAR', 'Taller No Desactivado');
+		alertify.error('TALLER NO DESACTIVADO');
 	})
 }
 
@@ -167,13 +167,13 @@ function activar(idTaller)
 		
         	$.post("../ajax/talleres.php?op=activar", {idTaller : idTaller}, function(){
         		//bootbox.alert(e);
-				alertify.alert('ACTIVIDAD EXTRESCOLAR', 'Taller Activado');
-	            tabla.ajax.reload();
+				alertify.success('TALLER ACTIVADO');
+	            //tabla.ajax.reload();
 				$("#tbllistadoD").dataTable().api().ajax.reload();
         	});	
         
 	},function(){
-		alertify.alert('ACTIVIDAD EXTRESCOLAR', 'Taller No Activado');
+		alertify.error('TALLER NO ACTIVADO');
 	})
 }
 

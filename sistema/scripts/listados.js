@@ -41,9 +41,10 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
           $("#tbllistas").html($tr);
           }
         
-  
       })
-     
+
+      
+
   });
 
     
@@ -73,7 +74,25 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
             }
       }
       )
-
   });
 
 
+  $("#excel").click(function (e) {
+    e.preventDefault();
+    var combo = document.getElementById("actividadlistas");
+    var per = document.getElementById("periodo");
+    actividad = combo.options[combo.selectedIndex].text;
+    nombre_actividad = (actividad.split(" [")[0]);
+
+    horario = (actividad.split("[")[1].split("]")[0]);
+
+    periodo = per.options[per.selectedIndex].text;
+
+    datos = {"nombre_actividad":nombre_actividad, "horario":horario, "periodo": periodo};
+      $.ajax({
+        url: "../js/listastalleres.php",
+        type: "POST",
+        data: datos
+
+      })
+  })

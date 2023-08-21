@@ -53,14 +53,14 @@ function listarD()
 //Función para Seleccionar taller
 function Inscribirse (idTaller)
 {
-	bootbox.confirm("¿Está Seguro de Inscribirse al Taller?", function(result){
-		if(result)
-        {
+	alertify.confirm('SELECCION DE TALLERES',"¿Está Seguro de Inscribirse al Taller?", function(){
+		
         	$.post("../ajax/talleres.php?op=desactivar", {idTaller : idTaller}, function(e){
-        		bootbox.alert(e);
+        		alert.sucess("INSCRITO EN EL TALLER")
 	            tabla.ajax.reload();
         	});	
-        }
+	}, function(){
+		alertify.error("NO SE PUDO INSCRIBIR EN EL TALLER");
 	})
 }
 

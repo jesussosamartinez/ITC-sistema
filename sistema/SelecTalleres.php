@@ -58,8 +58,8 @@ require_once  "../config/Conexion.php";
                                     <th>Turno</th>
                                 </thead>
                                 <?php 
-     $sql="SELECT t.idTaller, t.tipo_actividad, t.Nombre, t.Tipo, t.Turno, t.horario, t.condicion, a.NumeroControl, a.Correo, a.ClaveCarrera  
-     FROM talleres t INNER JOIN alumnos a  WHERE Correo = '".$_SESSION['email']."'";
+     $sql="SELECT t.idTaller, t.tipo_actividad, t.Nombre, t.Tipo, t.Turno, t.horario, t.Condicion, a.NumeroControl, a.Correo, a.ClaveCarrera  
+     FROM talleres t INNER JOIN alumnos a  WHERE Correo = '".$_SESSION['email']."' and t.Condicion= 1";
 $result=mysqli_query($conexion,$sql);
 while($ver=mysqli_fetch_row($result)){
     ?>
