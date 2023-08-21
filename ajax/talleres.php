@@ -13,12 +13,13 @@ if (strlen(session_id()) < 1){
     $Tipo = isset($_POST["Tipo"])? limpiarCadena($_POST["Tipo"]): "";
     $Grupo = isset($_POST["Grupo"])? limpiarCadena($_POST["Grupo"]): "";
     $Turno = isset($_POST["Turno"])? limpiarCadena($_POST["Turno"]): "";
+    $Horario = isset($_POST["Horario"])? limpiarCadena($_POST["Horario"]): "";
 
     switch ($_GET["op"]){
         case 'guardaryeditar':
 
             if (empty($idTaller)){
-                $rspta=$talleres->insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno);
+                $rspta=$talleres->insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno,$Horario);
                 echo $rspta ? "Actividad Registrada" : "Actividad no registrada";
             }
             else {

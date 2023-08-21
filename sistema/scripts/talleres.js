@@ -20,6 +20,7 @@ function limpiar()
 	$("#Nombre").val("");
 	$("#Grupo").val("");
 	$("#Turno").val("");
+	$("#Horario").val("");
 	$("#idTaller").val("");
 }
 //Función mostrar formulario
@@ -135,7 +136,7 @@ function guardaryeditar(e)
 
 	    success: function(datos)
 	    {                    
-	          bootbox.alert(datos);	          
+	          alertify.alert('REGISTRO DE ACTIVIDAD',datos);	          
 	          mostrarform(false);
 	          $("#tbllistadoD").dataTable().api().ajax.reload();
 	    }
@@ -181,7 +182,7 @@ function eliminar(idTaller)
 {
 	alertify.confirm('ACTIVIDAD EXTRAESCOLAR',"¿Está Seguro de eliminar el Taller?", function(){
         	$.post("../ajax/talleres.php?op=eliminar", {idTaller : idTaller}, function(){
-        		alertify.sucess("TALLER ELIMINADO");
+        		alertify.success("TALLER ELIMINADO");
 	            $("#tbllistadoD").dataTable().api().ajax.reload();
         	});	
         

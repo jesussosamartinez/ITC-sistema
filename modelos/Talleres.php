@@ -11,10 +11,10 @@ Class Talleres
 
 	}
 	//Implementamos un método para insertar registros
-	public function insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno,)
+	public function insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno,$Horario)
 	{
-		$sql="INSERT INTO talleres (tipo_actividad,Nombre,Tipo,Grupo,Turno,Condicion)
-		VALUES ('$tipo_actividad','$Nombre','$Tipo','$Grupo','$Turno','1')";
+		$sql="INSERT INTO talleres (tipo_actividad,Nombre,Tipo,Grupo,Turno,horario,Condicion)
+		VALUES ('$tipo_actividad','$Nombre','$Tipo','$Grupo','$Turno','$Horario','1')";
 		return ejecutarConsulta($sql);
 	}
 

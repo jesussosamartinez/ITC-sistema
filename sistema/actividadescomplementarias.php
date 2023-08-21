@@ -87,7 +87,7 @@
                                 </select>
                             </div>
                             <div class="form-group col-lg col-md col-sm col-xs" id="miinput" hidden>
-                                <label>NOMBRE DEL TALLER(*):</label>
+                                <label>TIPO DE TALLER(*):</label>
                                     <select class="form-control select-picker" name="Tipo" id="Tipo"
                                     required >
                                     <option value="">SELECCIONAR TIPO DE TALLER</option>
@@ -100,7 +100,7 @@
                                 </select>    
                             </div>
                             <div class="form-group col-lg col-md col-sm col-xs">
-                                <label>Descripción:</label>
+                                <label>Nombre del Taller:</label>
                                 <input type="text" class="form-control" name="Nombre" id="Nombre" maxlength="50"
                                     placeholder="DESCRIPCIÓN">
                             </div>
@@ -113,6 +113,11 @@
                                 <label>Turno:</label>
                                 <input type="text" class="form-control" name="Turno" id="Turno" maxlength="256"
                                     placeholder="Turno">
+                            </div>
+                            <div class="form-group col-lg col-md col-sm col-xs">
+                                <label>Horario:</label>
+                                <input type="text" class="form-control" name="Horario" id="Horario" maxlength="256"
+                                    placeholder="Horario">
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                 <button class="btn btn-primary" type="submit" id="btnGuardar" data-bs-dismiss="modal"><i class="fa fa-save"></i>
