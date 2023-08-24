@@ -56,7 +56,7 @@ if($_SESSION['Home']==1)
     </section><!-- /.content -->
 
 
-    <script src="../assets/js/nav.js" type="text/javascript"></script>
+    <!-- /.content <script src="../assets/js/nav.js" type="text/javascript"></script>-->
 
     </body>
     <?php 

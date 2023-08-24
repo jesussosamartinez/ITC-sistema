@@ -457,14 +457,15 @@ nav ul li ul li a:hover{
 /*BARRA MENU*/
 
 .container__menu{
-  width: 0px;
-  height: 0px;
-  position:fixed; /* Stay in place */
+  width: 300px;
+  height: 800px;
+  position:absolute; /* Stay in place */
   z-index:1; /* Stay on top */
   overflow-x: hidden; /* Disable horizontal scroll */
   background-color: #1B396A; /* Blue*/
   padding: 0px 10px;
   transition: 0.5ms;
+  visibility: hidden;
 }
 
 .menu{
