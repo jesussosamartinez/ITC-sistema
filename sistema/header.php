@@ -33,13 +33,7 @@ session_start();
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<script type="javascript">
-    function openNav(){
-    document.getElementsByClassName('.container__menu').style.width == "250px"
-    document.getElementsByClassName('.container__menu').style.height == "800px"
 
-}
-</script>
 <body>
     <header>
         <div class="header__superior">
@@ -51,7 +45,7 @@ session_start();
             </div>
 
             <div class="dropdowns">
-                <a href="" onclick="openNav()" id="bars"><i class="fa-solid fa-bars"></i></a>
+                <a href="" onclick="openNav();" id="bars"><i class="fa-solid fa-bars"></i></a>
                 <a href="../ajax/usuario.php?op=salir" id="salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
             </div>
         </div>

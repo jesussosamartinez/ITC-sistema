@@ -452,12 +452,13 @@ nav ul li ul li a:hover{
 .dropdowns #bars{
   color:#1B396A;
   font-size: 23px;
+  cursor: pointer;
 }
 /*BARRA MENU*/
 
 .container__menu{
-  width: 300px;
-  height: 800px;
+  width: 0px;
+  height: 0px;
   position:fixed; /* Stay in place */
   z-index:1; /* Stay on top */
   overflow-x: hidden; /* Disable horizontal scroll */

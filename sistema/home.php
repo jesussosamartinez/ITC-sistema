@@ -10,38 +10,8 @@ if($_SESSION['Home']==1)
 
 
 <style>
-.informacion {
-    position: absolute;
-    top: 33%;
-    left: 20%;
-    color: #916F09;
-    font-family: 'Raleway';
-    font-weight: 800;
-    text-transform: uppercase;
-    z-index: -2;
-    font-size: 17px;
-}
 
-#hr {
-    position: absolute;
-    width: 28%;
-    top: 35%;
-    left: 17%;
-    color: #000000;
-    z-index: -3;
-}
 
-#texto {
-    color: black;
-    font-family: 'Montserrat';
-    text-align: justify;
-    width: 40%;
-    position: absolute;
-    z-index: -3;
-    padding-top: 5rem;
-    padding-left: 5rem;
-    font-weight: 500;
-}
 
 </style>
 
