@@ -34,6 +34,11 @@
             <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><i class="fa-solid fa-plus"></i>
             </button>
             </div>
+
+            <div class="btn box">
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#Modalagregarm" style="background-color: #474747;"><i class="fa-solid fa-file-csv" style="color:FFFFFF"></i>
+            </button>
+            </div>
         <thead>
                 <th><i class="fa-solid fa-file-lines"></i></th>
                 <th>No.Control</th>
@@ -184,6 +189,27 @@
   </div>
 </div>
 </form>
+
+<form id="añadir" method="POST">
+<div class="modal fade" id="Modalagregarm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-g" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Añadir Archivo CSV</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" style="text-align: center;">
+        <label>Archivo CSV: </label>
+        <input type="file" name="file" class="form-control input-sm" />
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="guardarnuevos">Agregar Datos</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+
 
    
 

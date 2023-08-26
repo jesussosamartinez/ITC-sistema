@@ -49,5 +49,7 @@ public function añadir_user($email, $password){
 	return ejecutarConsulta($sql);
 }
 
+
+
 }
 ?>
