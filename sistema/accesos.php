@@ -121,6 +121,7 @@
           <option value="M">MUJER</option>
         </select>
         <label >Contraseña:</label>
+        
         <input type="text"  name="pass" id="pass" class="form-control input-sm" readonly>
         <button type="button" class="btn btn-success" onclick="generarcontraseña()">GENERAR CONTRASEÑA</button>
       </div>
