@@ -30,6 +30,7 @@ session_start();
     <script src="../assets/librerias/jquery-3.6.3.min.js"></script>
     <script src="../assets/librerias/bootstrap/js/bootstrap.js"></script>
     <script src="../assets/librerias/alertifyjs/alertify.js"></script>
+    <script src="scripts/navresponsive.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
@@ -45,7 +46,7 @@ session_start();
             </div>
 
             <div class="dropdowns">
-                <a href="" onclick="openNav();" id="bars"><i class="fa-solid fa-bars"></i></a>
+               <a href="" onclick="openNav()" id="bars" class="btn"><i class="fa-solid fa-bars"></i></a>
                 <a href="../ajax/usuario.php?op=salir" id="salir"><i class="fa-solid fa-right-from-bracket"> </i>Salir</a>
             </div>
         </div>

@@ -1,5 +1,8 @@
 
 function openNav(){
-    document.getElementsByClassName('container__menu').style.width == "250px";
-    document.getElementsByClassName('container__menu').style.height == "800px";
+    const boton = document.querySelector("#bars");
+    const nav = document.querySelector(".containes__menu");
+    boton.addEventListener("click", function(evento){
+        nav.style.display = "block";
+    });
 }
