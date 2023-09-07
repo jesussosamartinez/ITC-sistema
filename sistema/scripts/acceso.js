@@ -115,7 +115,7 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 		  searchData()
 		  .then(dataResults => {
 			console.log(dataResults)
-			tbllistado.innerHTML = ''
+			tableContainer.innerHTML = ''
 			if(typeof dataResults.data !== 'undefined' && !dataResults.data){
 			  errorsContainer.style.display = 'block'
 			  errorsContainer.querySelector('p').innerHTML = `No hay resultados para el criterio búsqueda: <span class="bold">${searchs}</span>`
@@ -133,9 +133,9 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 				<td>${alumnos.ClaveCarrera}</td>
 				<td>${alumnos.Semestre}</td>
 				<td>${alumnos.Telefono}</td>
-				<td>${alumnos.Password}</td>`
+				<td>*********</td>`
 	  
-				tbllistado.appendChild(row)
+				tableContainer.appendChild(row)
 			  }
 			 
 			}

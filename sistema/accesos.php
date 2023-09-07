@@ -14,7 +14,37 @@
     text-transform: uppercase;
     font-weight: 700;
   }
+  .input-container {
+    margin-left: 100px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+}
 
+.input-container input[type="search"] {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(221, 221, 221);
+    width: 150px;
+}
+
+.bold {
+    font-weight: bold;
+    color: #1B396A;
+}
+
+.form-group {
+    width: 26rem;
+    text-align: center;
+    margin-left: 2em;
+}
+.errors-container{
+    text-align: center;
+}
+
+
+</style>
 </style>
     <header>
         <?php 
@@ -46,6 +76,7 @@
             <button class="btn" data-bs-toggle="modal" data-bs-target="#Modalagregarm" style="background-color: #474747;"><i class="fa-solid fa-file-csv" style="color:FFFFFF"></i>
             </button>
             </div>
+
         <thead>
                 <th><i class="fa-solid fa-file-lines"></i></th>
                 <th>No.Control</th>

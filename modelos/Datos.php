@@ -50,7 +50,7 @@ public function añadir_user($email, $password){
 }
 
 public function buscar($searchs){
-	$sql = "SELECT a.idAlumno, a.ApellidoP, a.ApellidoM, a.Nombre, a.NumeroControl, a.Correo, a.Semestre, a.ClaveCarrera, u.Password, a.Telefono FROM alumnos a INNER JOIN usuarios u ON a.Correo = u.email";
+	$sql = "SELECT a.idAlumno, a.ApellidoP, a.ApellidoM, a.Nombre, a.NumeroControl, a.Correo, a.Semestre, a.ClaveCarrera, u.Password, a.Telefono FROM alumnos a INNER JOIN usuarios u ON a.Correo = u.email WHERE a.NumeroControl LIKE '%$searchs%'";
 	return ejecutarConsulta($sql);
 }
 
