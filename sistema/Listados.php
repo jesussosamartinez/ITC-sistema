@@ -77,7 +77,6 @@ th {
         <div align="right" style=" position:relative" >
             <button class="btn" type="submit" style="background-color:  #1B396A; color: white; font-weight: 700;" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalListas"><i
                     class="fa-solid fa-magnifying-glass"></i> BUSCAR </button>
-                    <a href="" id="pdfout" class="btn btn-success" onClick="pdf();" type="button"><i class="fa-solid fa-file-pdf"></i></a>
         </div>
     </form>
 
@@ -91,15 +90,9 @@ th {
                 <div class="modal-body table-responsive" id="tbl">
                     <table class="table" id="tbllist">
                         <thead style="text-transform: uppercase; ">
-                           
-                $objPHPExcel->setActiveSheetIndex(0)->mergeCells("c2:h2");
-
                             <th>#</th>
                             <th>No. Control</th>
                             <th>Alumno</th>
-                            
-                            
-
                         </thead>
                         <tbody id="tbllistas">
 
@@ -107,8 +100,7 @@ th {
                         <tfoot></tfoot>
                     </table>
                     <div class="modal-footer">
-                    <a href="../estadisticas/listadosaextra.php" id="pdfout" onClick="pdf();" class="btn btn-success" type="button"><i class="fa-solid fa-file-pdf"></i></a>
-                        <a href="#" id="test" class="btn btn-success" onClick="fnExcelReport();" type="button"><i class="fa-regular fa-file-excel"></i></a>
+                    <a href="../js/listastalleres.php" id="excel" class="btn btn-success" type="button"><i class="fa-regular fa-file-excel"></i></a>
                         <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
                 </div>

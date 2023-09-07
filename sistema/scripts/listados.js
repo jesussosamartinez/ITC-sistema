@@ -70,7 +70,7 @@ $.post("../ajax/talleres.php?op=listar", function(data, status){
             '</td> <td>'+
             data.aaData[i].cont +
             '</td> </tr>';
-            $("#tbllestadisticas").append($tr);
+            $("#tbllestadisticas").html($tr);
             }
       }
       )
