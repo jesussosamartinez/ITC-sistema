@@ -112,34 +112,24 @@ if (strlen(session_id()) < 1){
 
         break;
 
-        case 'accesos':
-            $NumeroControl = $_POST["ncontrol"];
-            $ApellidoP = $_POST["apellidop"];
-            $ApellidoM = $_POST["apellidom"];
-            $Nombre = $_POST["nombrealumno"];
-            $Sexo = $_POST["sexo"];
-            $Correo = $_POST["correo"];
-            $Telefono = $_POST["telefonoal"];
-            $Semestre = $_POST["semestre"];
-            $ClaveCarrera = $_POST["nombre_carrera"];
-            $Password = $_POST["pass"];
-
-            $file_mimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
-            if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'],$file_mimes)){
-            if(is_uploaded_file($_FILES['file']['tmp_name'])){
-            $csv_file = fopen($_FILES['file']['tmp_name'], 'r');
-            //fgetcsv($csv_file);
-            //get data records from csv file
-            while(($emp_record = fgetcsv($csv_file)) !== FALSE){
-            // if employee already exist then update details otherwise insert new record
-            if(mysqli_num_rows($resultset)) {
+        case 'buscar':
+            $searchs = $_POST['searchs'];
             
-            $rspta = $datos->añadir_alumno($NumeroControl,$ApellidoP,$ApellidoM,$Nombre,$Correo,$Semestre,$ClaveCarrera,$Telefono,$Sexo) ." ". $datos->añadir_user($Correo, $Password) ;
-        }
-                }
+            $rspta=$datos->buscar($searchs);
+            $alumno= [];
+            $errors=['data' => false];
+    
+    
+            if($rspta->num_rows > 0){
+            while ($data =$rspta->fetch_assoc()){
+                $alumno[] = $data;
             }
+            echo json_encode($alumno);
+        } else {
+            echo json_encode($errors);
         }
-        break;
+    
+            break;
             
             }
         }

@@ -20,7 +20,6 @@ function limpiar()
 	$("#Nombre").val("");
 	$("#Grupo").val("");
 	$("#Turno").val("");
-	$("#Horario").val("");
 	$("#idTaller").val("");
 }
 //Función mostrar formulario
@@ -60,7 +59,7 @@ function listarD()
 	    dom: '<Bl<f>rtip>',//Definimos los elementos del control de tabla
 		"ajax":
 				{
-					url: '../../ajax/talleres.php?op=listarActividades',
+					url: '../ajax/talleres.php?op=listarActividades',
 					type : "get",
 					dataType : "json",						
 					error: function(e){

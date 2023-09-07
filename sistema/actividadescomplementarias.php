@@ -57,7 +57,6 @@
                                     <th>Descripción</th>
                                     <th>Grupo</th>
                                     <th>Turno</th>
-                                    <th>Horario</th>
                                     <th>Estado</th>
                                 </thead>
                                 <tbody>
@@ -69,7 +68,6 @@
                                     <th>Descripción</th>
                                     <th>Grupo</th>
                                     <th>Turno</th>
-                                    <th>Horario</th>
                                     <th>Estado</th>
                                 </tfoot>
                             </table>
@@ -113,11 +111,6 @@
                                 <label>Turno:</label>
                                 <input type="text" class="form-control" name="Turno" id="Turno" maxlength="256"
                                     placeholder="Turno">
-                            </div>
-                            <div class="form-group col-lg col-md col-sm col-xs">
-                                <label>Horario:</label>
-                                <input type="text" class="form-control" name="Horario" id="Horario" maxlength="256"
-                                    placeholder="Horario">
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
                                 <button class="btn btn-primary" type="submit" id="btnGuardar" data-bs-dismiss="modal"><i class="fa fa-save"></i>

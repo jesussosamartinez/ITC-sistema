@@ -88,8 +88,8 @@ session_start();
                         {
                         echo' <li> <a href="departamento.php"> Departamentos</a> 
                             <ul>
-                                <li><a
-                                        href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing">PROGRAMA
+                                <li><a 
+                                        href="https://drive.google.com/file/d/1th22vLXjkuCLp1E9T95BFMsQf69oxcCL/view?usp=sharing" target:"_blank">PROGRAMA
                                         DE ACT COMPLEMENTARIAS 2022-2023 BORRADOR</a></li>
                             </ul>
                         </li>'; }?>

@@ -27,6 +27,13 @@
     </div>
     <hr>
 
+    <div class="input-container">
+        <input type="search" name="" id="search" placeholder="Buscar #" onkeypress="return event.charCode>=48 && event.charCode<=57">
+    </div>
+    <div class="errors-container" style="display: none; margin: auto, auto;" >
+    <p></p>
+    </div>
+    
 <section class="container">
     <div class="panel-body table-responsive" id="listadoregistros">
         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
@@ -202,9 +209,10 @@
       <div class="modal-body" style="text-align: center;">
         <label>Archivo CSV: </label>
         <input type="file" name="file" class="form-control input-sm" />
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="guardarnuevos">Agregar Datos</button>
       </div>
       <div class="modal-footer">
-        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="guardarnuevos">Agregar Datos</button>
+        
       </div>
     </div>
   </div>

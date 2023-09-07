@@ -49,7 +49,10 @@ public function añadir_user($email, $password){
 	return ejecutarConsulta($sql);
 }
 
-
+public function buscar($searchs){
+	$sql = "SELECT a.idAlumno, a.ApellidoP, a.ApellidoM, a.Nombre, a.NumeroControl, a.Correo, a.Semestre, a.ClaveCarrera, u.Password, a.Telefono FROM alumnos a INNER JOIN usuarios u ON a.Correo = u.email";
+	return ejecutarConsulta($sql);
+}
 
 }
 ?>

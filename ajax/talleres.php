@@ -13,13 +13,12 @@ if (strlen(session_id()) < 1){
     $Tipo = isset($_POST["Tipo"])? limpiarCadena($_POST["Tipo"]): "";
     $Grupo = isset($_POST["Grupo"])? limpiarCadena($_POST["Grupo"]): "";
     $Turno = isset($_POST["Turno"])? limpiarCadena($_POST["Turno"]): "";
-    $Horario = isset($_POST["Horario"])? limpiarCadena($_POST["Horario"]): "";
 
     switch ($_GET["op"]){
         case 'guardaryeditar':
 
             if (empty($idTaller)){
-                $rspta=$talleres->insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno,$Horario);
+                $rspta=$talleres->insertar($tipo_actividad,$Nombre,$Tipo,$Grupo,$Turno);
                 echo $rspta ? "Actividad Registrada" : "Actividad no registrada";
             }
             else {
@@ -67,8 +66,7 @@ if (strlen(session_id()) < 1){
                      "3"=>$reg->Nombre,
                      "4"=>$reg->Grupo,
                      "5"=>$reg->Turno,
-                     "6"=>$reg->horario,
-                     "7"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
+                     "6"=>($reg->Condicion)?'<span class="badge text-bg-success">Activado</span>':
                      '<span class="badge text-bg-danger">Desactivado</span>'
                  );
              }
@@ -94,8 +92,7 @@ if (strlen(session_id()) < 1){
                      "2"=>$reg->Nombre,
                      "3"=>$reg->Grupo,
                      "4"=>$reg->Turno,
-                     "5"=>$reg->horario,
-                     "6"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
+                     "5"=>($reg->Condicion)?'<span class="badge text-bg-success">Disponible</span>':
                      '<span class="badge text-bg-danger">No Disponible</span>'
                  );
              }
