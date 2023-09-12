@@ -102,21 +102,19 @@ th {
     <table  class="table-striped table-bordered table-condensed table-hover">
         <thead>
             <tr>
-                <th>Carrera</th>
-                <th >SEXO</th>
-                <th>#</th>
-                <th>Total</th>
+                <th rowspan="2">Carrera</th>
+                <th colspan="2">Sexo</th>
+                <th rowspan="2">Total</th>
+            </tr>
+            <tr>
+                    <th>H</th>
+                    <th>M</th>
             </tr>
         </thead>
         <tbody id="tbllestadisticas">
         </tbody>
         <tfoot>
-            <tr>
-                <th>Carrera</th>
-                <th >SEXO</th>
-                <th>#</th>
-                <th>Total</th>
-            </tr>
+            
         </tfoot>
     </table>
     </div>

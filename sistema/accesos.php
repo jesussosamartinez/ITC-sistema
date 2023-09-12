@@ -58,7 +58,7 @@
     <hr>
 
     <div class="input-container">
-        <input type="search" name="" id="search" placeholder="Buscar #" onkeypress="return event.charCode>=48 && event.charCode<=57">
+        <input type="search" name="" id="search" placeholder="Buscar #" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57">
     </div>
     <div class="errors-container" style="display: none; margin: auto, auto;" >
     <p></p>
@@ -199,6 +199,7 @@
                 <option value="INGENIERÍA INDUSTRIAL">INGENIERÍA INDUSTRIAL</option>
                 <option value="INGENIERÍA MECATRÓNICA">INGENIERÍA MECATRÓNICA</option>
                 <option value="CONTADOR PÚBLICO">CONTADOR PÚBLICO</option>
+                <option value="INGENIERÍA CIVIL">INGENIERÍA CIVIL</option>
             </select> 
         <label >Semestre: </label>
         <select class="form-control input-sm form-select select-picker" name="semestreu" id="semestreu" required>
