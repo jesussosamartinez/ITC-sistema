@@ -123,6 +123,7 @@ table {
                     <th class="medium_negrita_center">DEPTO. DE ELÉCTRICA Y ELECTRÓNICA</th>
                     <th class="medium_negrita_center" colspan="3">DEPARTAMENTO CORRESPONDIENTE</th>
                     <th class="medium_negrita_center" colspan="2">SUBDIRECCIÓN ACADÉMICA</th>
+                    <th class="medium_negrita_center" colspan="2">DESARROLLO ACADÉMICO</th>
                 </thead>
                 <tbody>
                     <tr>
@@ -154,6 +155,7 @@ table {
                         <td height="80" width="90" class="small_center">PRODUCTIVIDAD LABORAL</td>
                         <td height="80" width="90" class="small_center">HABILIDADES SOCIOEMOCIONALES</td>
                         <td height="80" width="90" class="small_center">PUEBLOS ORIGINARIOS</td>
+                        <td height="80" width="90" class="small_center">TUTORÍAS</td>
                     </tr>
                 </tbody>
             </table>
@@ -215,6 +217,7 @@ table {
                 <option value="INGENIERÍA INDUSTRIAL">INGENIERÍA INDUSTRIAL</option>
                 <option value="INGENIERÍA MECATRÓNICA">INGENIERÍA MECATRÓNICA</option>
                 <option value="CONTADOR PÚBLICO">CONTADOR PÚBLICO</option>
+                <option value="INGENIERÍA CIVIL">INGENIRÍA CIVIL</option>
             </select>     
                     </div>
                     <div class="modal-footer form-group">

@@ -170,7 +170,8 @@ if (strlen(session_id()) < 1){
             echo json_encode($results);
             break;
 
-    }
+        }
+ 
     
 }
 

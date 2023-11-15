@@ -94,7 +94,7 @@ function listarDA()
 	    dom: '<Bl<f>rtip>',//Definimos los elementos del control de tabla
 		"ajax":
 				{
-					url: '../../ajax/talleres.php?op=listarActividadesAlumnos',
+					url: '../ajax/talleres.php?op=listarActividadesAlumnos',
 					type : "get",
 					dataType : "json",						
 					error: function(e){

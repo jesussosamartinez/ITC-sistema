@@ -77,6 +77,7 @@ th {
         <div align="right" style=" position:relative" >
             <button class="btn" type="submit" style="background-color:  #1B396A; color: white; font-weight: 700;" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalListas"><i
                     class="fa-solid fa-magnifying-glass"></i> BUSCAR </button>
+            
         </div>
     </form>
 
@@ -100,7 +101,7 @@ th {
                         <tfoot></tfoot>
                     </table>
                     <div class="modal-footer">
-                    <a href="../js/listastalleres.php" id="excel" class="btn btn-success" type="button"><i class="fa-regular fa-file-excel"></i></a>
+                        <a id="excel" class="btn btn-success" type="button"><i class="fa-regular fa-file-excel"></i></a>
                         <button type="button"  class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">Cancelar</button>
                     </div>
                 </div>
@@ -109,19 +110,9 @@ th {
     </div>
 </section>
 
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-
 <script src="scripts/listados.js" type="text/javascript"></script>
 <script src="../js/excel.js" type="text/javascript"></script>
 <script src="../js/constancia.js" type="text/javascript"></script>
-<script src="../js/prueba.js" type="text/javascript"></script>
-
-<script>
-    
-
-</script>
 
 </body>
 </html>

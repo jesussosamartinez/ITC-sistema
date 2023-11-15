@@ -230,7 +230,7 @@
 </div>
 </form>
 
-<form id="añadir" method="POST">
+<form enctype="multipart/form-data" id="filesForm" method="POST" />
 <div class="modal fade" id="Modalagregarm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-g" >
     <div class="modal-content">
@@ -240,11 +240,10 @@
       </div>
       <div class="modal-body" style="text-align: center;">
         <label>Archivo CSV: </label>
-        <input type="file" name="file" class="form-control input-sm" />
-        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="guardarnuevos">Agregar Datos</button>
+        <input type="file" name="fileUsers" class="form-control input-sm" />
       </div>
       <div class="modal-footer">
-        
+      <button type="submit" class="btn btn-primary" onclick="cargaraccesos()" data-bs-dismiss="modal" id="guardarnuevos">Agregar Datos</button>
       </div>
     </div>
   </div>
@@ -288,6 +287,7 @@ for (var i = 1; i <= 8; i++) {
 
 $('#pass').val(contraseña);
     }
+    
     </script>
 </body>
 </html>

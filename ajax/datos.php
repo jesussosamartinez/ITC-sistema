@@ -66,7 +66,7 @@ if (strlen(session_id()) < 1){
             while($reg=$rspta->fetch_object()){
 
                 $data[] = array(
-                    "btn"=>'<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModalEdicion" data-id="'.$reg->idAlumno.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'" data-no="'.$reg->NumeroControl.'" data-ncarrera="'.$reg->ClaveCarrera.'" data-email="'.$reg->Correo.'" data-semestre="'.$reg->Semestre.'" data-password="'.$reg->Password.'" data-telefono="'.$reg->Telefono.'"><i class="fa fa-pencil"></i></button>',
+                    "btn"=>'<button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModalEdicion" data-id="'.$reg->idAlumno.'" data-nombre="'.$reg->ApellidoP." ".$reg->ApellidoM." ".$reg->Nombre.'" data-no="'.$reg->NumeroControl.'" data-ncarrera="'.$reg->ClaveCarrera.'" data-email="'.$reg->Correo.'" data-semestre="'.$reg->Semestre.'" data-password="'.$reg->Password.'" data-telefono="'.$reg->Telefono.'"><i class="fa fa-pencil"></i></button>',
                     "no"=>$reg->NumeroControl,
                     "alumno"=>$reg->ApellidoP." ".$reg->ApellidoM." ".$reg->Nombre,
                     "email"=>$reg->Correo,
@@ -129,6 +129,38 @@ if (strlen(session_id()) < 1){
             echo json_encode($errors);
         }
     
+        break;
+
+        case 'accesos_nuevos':
+            $fileUsers = $_FILES['fileUsers']; 
+            $fileUsers = file_get_contents($fileUsers['tmp_name']); 
+
+            $fileUsers = explode("\n", $fileUsers);
+            $fileUsers = array_filter($fileUsers); 
+
+        // preparar contactos (convertirlos en array)
+        foreach ($fileUsers as $user) 
+        {
+        	$userList[] = explode(",", $user);
+        }
+
+        // insertar alumnos al sistema
+        foreach ($userList as $userData) 
+        {
+            $NumeroControl = $userData[0];
+            $ApellidoP = $userData[1];
+            $ApellidoM = $userData[2];
+            $Nombre = $userData[3];
+            $Sexo = $userData[4];
+            $Correo = $userData[5];
+            $Telefono = $userData[6];
+            $Semestre = $userData[7];
+            $ClaveCarrera = $userData[8];
+            $Password = $userData[9];
+
+            $rspta = $datos->añadir_alumno($NumeroControl,$ApellidoP,$ApellidoM,$Nombre,$Correo,$Semestre,$ClaveCarrera,$Telefono,$Sexo) ." ". $datos->añadir_user($Correo, $Password) ;
+            echo $rspta ? "Alumno Registrado Satifactoriamente" : "Alumno no se registro";
+        }
             break;
             
             }

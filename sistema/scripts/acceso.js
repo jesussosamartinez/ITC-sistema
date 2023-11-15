@@ -114,7 +114,6 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 		 const showResults = () => {
 		  searchData()
 		  .then(dataResults => {
-			console.log(dataResults)
 			tableContainer.innerHTML = ''
 			if(typeof dataResults.data !== 'undefined' && !dataResults.data){
 			  errorsContainer.style.display = 'block'
@@ -144,6 +143,18 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 	  
 	  })
 	
-	
-	
-	  
+	  function cargaraccesos(){
+		Form = new FormData($('#filesForm')[0]);
+		console.log(Form);
+		$.ajax({
+			url: "../ajax/datos.php?op=accesos_nuevos",
+			type: "post",
+			data: Form,
+			processData: false,
+			contentType: false,
+			success: function(datos){
+				alert(datos);	
+		}
+		
+		})
+	  }

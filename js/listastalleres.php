@@ -1,5 +1,8 @@
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 <?php
+ob_start();
+if (strlen(session_id()) < 1) 
+  session_start();
+
 
     require "../vendor/autoload.php";
 
@@ -7,10 +10,6 @@
     use PhpOffice\PhpSpreadsheet\IOFactory;
     use PhpOffice\PhpSpreadsheet\Reader\Xls;
     use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
-
-ob_start();
-if (strlen(session_id()) < 1) 
-  session_start();
 
 if (!isset($_SESSION["email"]))
 {
@@ -21,11 +20,12 @@ else
 if ($_SESSION['Reporte']==1)
 {
 
-    $nombre_actividad = $_POST['nombre_actividad'];
+    $nombre_actividad = $_POST["nombre_actividad"];
     $periodo = $_POST["periodo"];
     $horario = $_POST["horario"];
 
     $fila = 14;
+
 
     //Comenzamos a crear las filas de los registros según la consulta mysql
     require_once "../modelos/AlumnoTaller.php";
@@ -56,24 +56,19 @@ if ($_SESSION['Reporte']==1)
           $fila++;
           $num++;
         }
-
       
+      
+      $writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xlsx');
       header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
       header('Content-Disposition: attachment; filename="'. urlencode("Listas $nombre_actividad.xlsx").'"');
-      header('Cache-Control: max-age=0');
-
-        $writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
-        //$sheet->setCellValue("B6", "Nombre de estudiante");
-        $writer->save("php://output");
-        $writer->save("Listas $nombre_actividad.xlsx");
-        exit();
+      ob_clean();
+      return $writer->save("php://output");
+        
   
     } catch (\Exception $e){
         echo 'Ocurrió un error al intentar abrir el archivo '. $e;
     }
 
-    
-    
 ?>
 
 <?php

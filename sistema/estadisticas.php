@@ -98,7 +98,7 @@ th {
             </div>
         </form>
     </div>
-<div>
+<div id="tblestadisticas" style="display: none; margin-top: 2rem;" class="table-responsive">
     <table  class="table-striped table-bordered table-condensed table-hover">
         <thead>
             <tr>

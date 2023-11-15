@@ -36,7 +36,7 @@ Class AlumnoTaller
 	}
 
 	public function estadisticas($periodo){
-		$sql = "SELECT sexo, COUNT(sexo) num, a1.nombre_carrera, a1.periodo, a1.Estatus from alumnos a INNER JOIN alumnotaller a1 ON a.NumeroControl = a1.NumeroControl WHERE a1.periodo = '$periodo' group by sexo, a1.nombre_carrera, a1.periodo";
+		$sql = "SELECT sexo, COUNT(sexo) num, a1.nombre_carrera, a1.periodo, a1.Estatus from alumnos a INNER JOIN alumnotaller a1 ON a.NumeroControl = a1.NumeroControl WHERE a1.periodo = '$periodo' && a1.Estatus = 'ACREDITADO' group by sexo, a1.nombre_carrera order by a1.nombre_carrera ASC";
 		return ejecutarConsulta($sql);
 	}
 

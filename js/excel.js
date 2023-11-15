@@ -1,30 +1,25 @@
-function fnExcelReport() {
-    var tab_text = '<html xmlns:x="urn:schemas-microsoft-com:office:excel">';
-    tab_text = tab_text + '<head><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>';
-    tab_text = tab_text + '<x:Name>Listas Asistencia</x:Name>';
-    tab_text = tab_text + '<x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions></x:ExcelWorksheet>';
-    tab_text = tab_text + '</x:ExcelWorksheets></x:ExcelWorkbook></xml></head><body>';
-    tab_text = tab_text + "<table border='1px'>";
-    //get table HTML code
-    tab_text = tab_text + $('#tbllist').html();
-    tab_text = tab_text + '</table></body></html>';
+$("#excel").click(function(e){
+  e.preventDefault();
+  var combo = document.getElementById("actividadlistas");
+  var per = document.getElementById("periodo");
+  actividad = combo.options[combo.selectedIndex].text;
+  nombre_actividad = actividad.split(" [")[0];
 
-    var data_type = 'data:application/vnd.ms-excel';
-var ua = window.navigator.userAgent;
-var msie = ua.indexOf("MSIE ");
-//For IE
-if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
-if (window.navigator.msSaveBlob) {
-var blob = new Blob([tab_text], {type: "application/csv;charset=utf-8;"});
-navigator.msSaveBlob(blob, 'Listas Asistencia.xls');
-}
-} 
-//for Chrome and Firefox 
-else {
-$('#test').attr('href', data_type + ', ' + encodeURIComponent(tab_text));
-$('#test').attr('download', 'Listas Asistencia.xls');
-}
-}
+  horario = actividad.split("[")[1].split("]")[0];
+
+  periodo = per.options[per.selectedIndex].text;
+
+  $.ajax({
+    url: "../js/listastalleres.php",
+    type: "POST",
+    data: {"nombre_actividad":nombre_actividad, "horario":horario, "periodo": periodo}, 
+    success: function (response){
+      console.log(response);
+      location.href= "../js/listastalleres.php";
+    } 
+});
+
+});
 
 
 
