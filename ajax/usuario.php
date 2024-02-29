@@ -43,11 +43,16 @@ switch ($_GET["op"]){
     $fetch=$rspta->fetch_object();
 
     if(isset($fetch)){
+        $deptos = $usuario->departamento($email);
+        $list = $deptos->fetch_object();
+
         //variables de session
         $_SESSION['idusuario']=$fetch->idUsuario;
         $_SESSION['email']=$fetch->email;
         $_SESSION['Password']=$fetch->Password;
         $_SESSION['idRol']=$fetch->idRol;
+        $_SESSION['nombred']=$list->Departamento;
+        $_SESSION['jd']=$list->NombreJD;    
     
         //obtenemos los permisos del usuario segun rol
         $marcados = $usuario->listarmarcados($fetch->email);

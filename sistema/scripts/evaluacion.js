@@ -7,7 +7,14 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	var valorn = button.data('valorn') // Extraer la información de atributos de datos
 	var desempeño = button.data('desempeño') // Extraer la información de atributos de datos
 	var credito = button.data('credito') // Extraer la información de atributos de datos
-	
+	var P1 = button.data('p1')
+	var P2 = button.data('p2')
+	var P3 = button.data('p3')
+	var P4 = button.data('p4')
+	var P5 = button.data('p5')
+	var P6 = button.data('p6')
+	var P7 = button.data('p7')
+
 	var modal = $(this)
 	modal.find('.modal-body #idAlumnoT').val(id)
 	modal.find('.modal-body #nombrealumno').val(nombre)
@@ -16,6 +23,13 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	modal.find('.modal-body #valor_numerico').val(valorn)
 	modal.find('.modal-body #desempeno').val(desempeño)
 	modal.find('.modal-body #credito').val(credito)
+	modal.find('.modal-body input[name="desempeñouno"]').val([P1])
+	modal.find('.modal-body input[name="desempeñodos"]').val([P2])
+	modal.find('.modal-body input[name="desempeñotres"]').val([P3])
+	modal.find('.modal-body input[name="desempeñocuatro"]').val([P4])
+	modal.find('.modal-body input[name="desempeñocinco"]').val([P5])
+	modal.find('.modal-body input[name="desempeñoseis"]').val([P6])
+	modal.find('.modal-body input[name="desempeñosiete"]').val([P7])
 	$('.alert').hide();//Oculto alert
   })
 
@@ -24,7 +38,7 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	 var parametros = $(this).serialize();
 		 $.ajax({
 				type: "POST",
-				url: "../ajax/alumnotaller.php?op=editarcon",
+				url: "../ajax/alumnotaller.php?op=guardarcon",
 				data: parametros,
 				success: function(datos){
 				
@@ -131,3 +145,21 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 					desempeño = valor/7;
 					 $("#valor_numerico").val(desempeño.toFixed(2));
 }
+
+$(".btnexportar").click(function( event ) {
+	event.preventDefault();
+        var nombrealumno = document.getElementById("nombrealumno").value;
+		console.log(nombrealumno)
+	        $.ajax({
+            type:"POST", //aqui puede ser igual get
+            url: "../js/constanciacumplimiento.php",//aqui va tu direccion donde esta tu funcion php
+            data: {nombre_alumno : nombrealumno},//aqui tus datos
+            success:function(data){
+				location.href ="../js/constanciacumplimiento.php";
+			},
+           error:function(data){
+            //lo que devuelve si falla tu archivo mifuncion.php
+           }
+         });
+		})
+

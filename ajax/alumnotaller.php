@@ -76,6 +76,7 @@ if (strlen(session_id()) < 1){
      
     break;
 
+    //case para insertar alumno
     case 'insertarAlumno':
         $no_control = $_POST["no_control"];
         $email = $_POST["email"];
@@ -89,6 +90,7 @@ if (strlen(session_id()) < 1){
      
     break;
 
+    //case para visualizar datos en la tabla de constancias
     case 'visualizar':
         $rspta=$alumnotaller->visualizar();
         //Vamos a declarar un array
@@ -97,7 +99,7 @@ if (strlen(session_id()) < 1){
         while ($reg=$rspta->fetch_object()){
        
             $data[]=array(
-                "btn"=> '<button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="'.$reg->idAlumnoT.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'"  data-actividad="'.$reg->nombre_actividad ."-". $reg->tipo_actividad.'" data-periodo="'.$reg->periodo.'" data-credito="'.$reg->Credito.'" data-valorn ="'.$reg->valor_numerico.'" data-desempeño="'.$reg->desempeno.'" ><i class="fa fa-pencil"></i></button>',
+                "btn"=> '<button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="'.$reg->idAlumnoT.'" data-nombre="'.$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre.'"  data-actividad="'.$reg->nombre_actividad ."-". $reg->tipo_actividad.'" data-periodo="'.$reg->periodo.'" data-credito="'.$reg->Credito.'" data-valorn ="'.$reg->valor_numerico.'" data-desempeño="'.$reg->desempeno.'" data-p1="'.$reg->P1.'" data-p2="'.$reg->P2.'" data-p3="'.$reg->P3.'" data-p4="'.$reg->P4.'" data-p5="'.$reg->P5.'" data-p6="'.$reg->P6.'" data-p7="'.$reg->P7.'"><i class="fa fa-pencil"></i></button>',
                 "no"=> $reg->NumeroControl,
                 "alumno"=>$reg->ApellidoP." ". $reg->ApellidoM." ". $reg->Nombre,
                  "actividad"=>$reg->nombre_actividad ."-". $reg->tipo_actividad,
@@ -108,20 +110,28 @@ if (strlen(session_id()) < 1){
             );
         }
         $results = array(
-            "iTotalDisplayRecords"=>count($data), //enviamos el total registros a visualizar editar('.$reg->idAlumnoT.')
+            "iTotalDisplayRecords"=>count($data),
             "aaData"=>$data);
         echo json_encode($results);
 
         break;
 
-        case 'editarcon':
+        //case para guardar los datos del modal del evaluacion de desempeño
+        case 'guardarcon':
             $credito = $_POST["credito"];
             $periodo=$_POST["periodo"];
             $valornum = $_POST["valor_numerico"];
             $desempeño = $_POST["desempeno"];
+            $p1 = $_POST["pregunta1"];
+            $p2 = $_POST["pregunta2"];
+            $p3 = $_POST["pregunta3"];
+            $p4 = $_POST["pregunta4"];
+            $p5 = $_POST["pregunta5"];
+            $p6 = $_POST["pregunta6"];
+            $p7 = $_POST["pregunta7"];
             $idAlumnoT=$_POST['idAlumnoT'];
     
-            $rspta=$alumnotaller->editarcon($idAlumnoT,$periodo,$valornum, $desempeño, $credito);
+            $rspta=$alumnotaller->guardarcon($idAlumnoT,$periodo,$valornum, $desempeño, $credito, $p1, $p2, $p3, $p4, $p5, $p6, $p7);
             echo $rspta ? "Datos No Actualizados" : "Datos Actualizados";
          
         break;
@@ -169,6 +179,7 @@ if (strlen(session_id()) < 1){
             );
             echo json_encode($results);
             break;
+            
 
         }
  

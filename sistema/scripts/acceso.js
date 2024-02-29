@@ -145,7 +145,6 @@ $('#ModalEdicion').on('show.bs.modal', function (event) {
 	
 	  function cargaraccesos(){
 		Form = new FormData($('#filesForm')[0]);
-		console.log(Form);
 		$.ajax({
 			url: "../ajax/datos.php?op=accesos_nuevos",
 			type: "post",

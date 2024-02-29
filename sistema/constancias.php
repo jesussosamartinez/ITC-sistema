@@ -148,12 +148,12 @@ input , select {
                                             <td>1</td>
                                             <td>Cumple en tiempo y forma con las actividades encomendadas alcanzando los
                                                 objetivos.</td>
-                                            <td><input name="desempeñouno" type="radio" value="0" /></td>
-                                            <td><input name="desempeñouno" type="radio" value="1"  /></td>
-                                            <td><input name="desempeñouno" type="radio" value="2"  /></td>
-                                            <td><input name="desempeñouno" type="radio" value="3" /></td>
-                                            <td><input name="desempeñouno" type="radio" value="4" /></td>
-                                            <td><input type="text" name="" id="result1" hidden></td>
+                                            <td><input class="P1" name="desempeñouno" type="radio" value="0" /></td>
+                                            <td><input class="P1" name="desempeñouno" type="radio" value="1"  /></td>
+                                            <td><input class="P1" name="desempeñouno" type="radio" value="2"  /></td>
+                                            <td><input class="P1" name="desempeñouno" type="radio" value="3" /></td>
+                                            <td><input class="P1" name="desempeñouno" type="radio" value="4" /></td>
+                                            <td><input type="text" name="pregunta1" id="result1" hidden></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
@@ -163,7 +163,7 @@ input , select {
                                             <td><input name="desempeñodos" type="radio" value="2" /></td>
                                             <td><input name="desempeñodos" type="radio" value="3" /></td>
                                             <td><input name="desempeñodos" type="radio" value="4"/></td>
-                                            <td><input type="text" name="" id="result2" hidden></td>
+                                            <td><input type="text" name="pregunta2" id="result2" hidden></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
@@ -173,7 +173,7 @@ input , select {
                                             <td><input name="desempeñotres" type="radio" value="2" /></td>
                                             <td><input name="desempeñotres" type="radio" value="3" /></td>
                                             <td><input name="desempeñotres" type="radio" value="4" /></td>
-                                            <td><input type="text" name="" id="result3" hidden></td>
+                                            <td><input type="text" name="pregunta3" id="result3" hidden></td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
@@ -183,7 +183,7 @@ input , select {
                                             <td><input name="desempeñocuatro" type="radio" value="2" /></td>
                                             <td><input name="desempeñocuatro" type="radio" value="3" /></td>
                                             <td><input name="desempeñocuatro" type="radio" value="4" /></td>
-                                            <td><input type="text" name="" id="result4" hidden></td>
+                                            <td><input type="text" name="pregunta4" id="result4" hidden></td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
@@ -194,7 +194,7 @@ input , select {
                                             <td><input name="desempeñocinco" type="radio" value="2" /></td>
                                             <td><input name="desempeñocinco" type="radio" value="3" /></td>
                                             <td><input name="desempeñocinco" type="radio" value="4" /></td>
-                                            <td><input type="text" name="" id="result5" hidden></td>
+                                            <td><input type="text" name="pregunta5" id="result5" hidden></td>
                                         </tr>
                                         <tr>
                                             <td>6</td>
@@ -205,7 +205,7 @@ input , select {
                                             <td><input name="desempeñoseis" type="radio" value="2" /></td>
                                             <td><input name="desempeñoseis" type="radio" value="3" /></td>
                                             <td><input name="desempeñoseis" type="radio" value="4" /></td>
-                                            <td><input type="text" name="" id="result6" hidden></td>
+                                            <td><input type="text" name="pregunta6" id="result6" hidden></td>
                                         </tr>
                                         <tr>
                                             <td>7</td>
@@ -216,7 +216,7 @@ input , select {
                                             <td><input name="desempeñosiete" type="radio" value="2" /></td>
                                             <td><input name="desempeñosiete" type="radio" value="3" /></td>
                                             <td><input name="desempeñosiete" type="radio" value="4" /></td>
-                                            <td><input type="text" name="" id="result7" hidden></td>
+                                            <td><input type="text" name="pregunta7" id="result7" hidden></td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -242,9 +242,10 @@ input , select {
                             <label for="credito">Crédito Complementario:</label>
                             <input type="text" class="form-control" name="credito" id="credito" maxlength="256"
                                 placeholder="">
+                            <a class="btnexportar" >Exportar</a>
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Actualizar</button>
+                            <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>
                         </div>
                     </div>
                 </div>
@@ -257,7 +258,6 @@ input , select {
             <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
             <script src="scripts/evaluacion.js" type="text/javascript"></script>
-
             
             <script>
 
@@ -266,7 +266,6 @@ input , select {
     $(this).closest('tr').find('input[type="text"]').val($(this).val());
     mostrar();
 });
-
 
             </script>
          

@@ -33,6 +33,14 @@ Class Usuario
     	$sql="SELECT idUsuario, email, Password, idRol FROM usuarios WHERE email='$email' AND Password='$Password'"; 
     	return ejecutarConsulta($sql);  
     }
+
+	 //Función para verificar el acceso al sistema
+	 public function departamento($email)
+	 {
+		 $sql="SELECT d.Departamento, d.NombreJD  FROM usuarios u INNER JOIN departamento d ON 
+		 (u.email = d.correo) WHERE email='$email'"; 
+		 return ejecutarConsulta($sql);  
+	 }
 }
 
 ?>
