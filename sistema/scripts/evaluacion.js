@@ -146,8 +146,10 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 					 $("#valor_numerico").val(desempeño.toFixed(2));
 }
 
-		function constancia(idAlumnoT)
+		function constancia()
 {
+	idAlumnoT = document.getElementById("idAlumnoT").value;
+	console.log(idAlumnoT);
 	$.ajax({
 		type: "POST",
 		url: "../js/constanciacumplimiento.php",

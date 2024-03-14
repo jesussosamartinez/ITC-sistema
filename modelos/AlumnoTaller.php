@@ -48,7 +48,8 @@ Class AlumnoTaller
 
 	//modal de evaluación de desempeño
 	public function visualizar(){
-		$sql = "SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.valor_numerico, ae.desempeno,ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre, ae.P1, ae.P2, ae.P3, ae.P4, ae.P5, ae.P6, ae.P7 FROM alumnotaller ae 
+		$sql = "SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.valor_numerico, ae.desempeno,
+		ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre, ae.P1, ae.P2, ae.P3, ae.P4, ae.P5, ae.P6, ae.P7 FROM alumnotaller ae 
 		INNER JOIN alumnos a ON a.NumeroControl=ae.NumeroControl";
 		return ejecutarConsulta($sql);
 	}
@@ -56,7 +57,8 @@ Class AlumnoTaller
 	//Implementamos un método para guardar el periodo, el desempeño, el valor numerico de la actividad 
 	public function guardarcon($idAlumnoT,$periodo, $valornum, $desempeño, $credito, $p1, $p2, $p3, $p4, $p5, $p6, $p7)
     {
-	$sql="UPDATE alumnotaller SET periodo='$periodo', valor_numerico = '$valornum', desempeno = '$desempeño', Credito = '$credito', P1 = '$p1', P2 = '$p2', P3 = '$p3', P4 = '$p4', P5 = '$p5', P6 = '$p6', P7 = '$p7'
+	$sql="UPDATE alumnotaller SET periodo='$periodo', valor_numerico = '$valornum', desempeno = '$desempeño', Credito = '$credito', 
+	P1 = '$p1', P2 = '$p2', P3 = '$p3', P4 = '$p4', P5 = '$p5', P6 = '$p6', P7 = '$p7'
 	 WHERE idAlumnoT='$idAlumnoT'";
 	ejecutarConsulta($sql);
 	}
