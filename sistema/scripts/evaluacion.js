@@ -146,20 +146,15 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 					 $("#valor_numerico").val(desempeño.toFixed(2));
 }
 
-$(".btnexportar").click(function( event ) {
-	event.preventDefault();
-        var nombrealumno = document.getElementById("nombrealumno").value;
-		console.log(nombrealumno)
-	        $.ajax({
-            type:"POST", //aqui puede ser igual get
-            url: "../js/constanciacumplimiento.php",//aqui va tu direccion donde esta tu funcion php
-            data: {nombre_alumno : nombrealumno},//aqui tus datos
-            success:function(data){
-				location.href ="../js/constanciacumplimiento.php";
-			},
-           error:function(data){
-            //lo que devuelve si falla tu archivo mifuncion.php
-           }
-         });
-		})
+		function constancia(idAlumnoT)
+{
+	$.ajax({
+		type: "POST",
+		url: "../js/constanciacumplimiento.php",
+		data: {idAlumnoT : idAlumnoT},
+		success: function(datos){
+			location.href = "../js/constancia.php";
+	  }
+});
+}
 

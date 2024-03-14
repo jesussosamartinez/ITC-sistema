@@ -242,7 +242,7 @@ input , select {
                             <label for="credito">Crédito Complementario:</label>
                             <input type="text" class="form-control" name="credito" id="credito" maxlength="256"
                                 placeholder="">
-                            <a class="btnexportar" >Exportar</a>
+                            <a onclick="constancia()" >Exportar</a>
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Guardar</button>

@@ -106,7 +106,7 @@ if (strlen(session_id()) < 1){
                  "periodo"=>$reg->periodo,
                  "valor_numerico"=>$reg->valor_numerico,
                  "desempeno"=>$reg->desempeno,
-                 "credito"=>'<span><a href="'.$reg->Credito.'" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="bi bi-download"></i><br> PDF </a></span>'
+                 "credito"=>'<span><a onclick="constancia('.$reg->idAlumnoT.')" style="text-decoration: none; font-size: 15px; color: #1B396A;"><i class="bi bi-download"></i><br> PDF </a></span>'
             );
         }
         $results = array(

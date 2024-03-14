@@ -120,6 +120,12 @@ Class AlumnoTaller
 		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Servicios Escolares' ";
 		return ejecutarConsulta($sql);
 	}
+	//funcion para los datos de la constancia
+	public function constancia($idAlumnoT){
+		$sql="SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.nombre_carrera, ae.valor_numerico, ae.desempeno,ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre, ae.P1, ae.P2, ae.P3, ae.P4, ae.P5, ae.P6, ae.P7 
+		FROM alumnotaller ae INNER JOIN alumnos a ON a.NumeroControl=ae.NumeroControl WHERE ae.idAlumnoT = '$idAlumnoT'";
+		return ejecutarConsulta($sql);
+	}
 
 }
 
