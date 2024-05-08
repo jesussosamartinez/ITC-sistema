@@ -75,7 +75,7 @@ th {
 </div>
 </section>';} ?>
 <p></p>
-<?php if($_SESSION['idRol']==1){
+<?php if($_SESSION['idRol']==1 || $_SESSION['idRol']==2){
 echo '
 <main>
     <div class="input-container">
@@ -156,7 +156,86 @@ echo '
 <form>
 ';} ?>
 
-    
+<?php if($_SESSION['email']== ''){
+echo '
+<main>
+    <div class="input-container">
+        <input type="search" name="" id="search" placeholder="Buscar #" onkeypress="return event.charCode>=48 && event.charCode<=57">
+    </div>
+    <div class="errors-container" style="display: none; margin: auto, auto;" >
+    <p></p>
+    </div>
+    <section class="container">
+        <div class="table-responsive" id="tblContainer" >
+            <table class="table table-bordered table-hover" style="width:100%" id="tableContainer">
+                <thead>
+                    <th>Opciones</th>
+                    <th>No. Control</th>
+                    <th>Nombre del Alumno</th>
+                    <th>Actividad Complementaria</th>
+                    <th>Carrera</th>
+                    <th>Departamento</th>
+                    <th>Estatus</th>
+                </thead>
+                <tbody id="tblhistorial">
+           
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+<!-- Modal -->
+<form id="actualizardatos" method="POST">
+<div class="modal fade" id="ModalEdicion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="height: 520px;">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" >HISTORIAL DE ACTIVIDADES</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> 
+<div class="modal-body" >
+<div id="datos_ajax"></div>
+      <div class="form-group">
+          <label>No. Control:</label>
+          <input type="text" name="idAlumnoT" class="form-control" id="idAlumnoT" hidden>
+          <input type="text" name="no_control" class="form-control" id="no_control" readonly>
+      </div>
+      <div class="form-group" id="miinput">
+          <label>NOMBRE DEL ALUMNO(*):</label>
+          <input type="text" class="form-control" name="nombrealumno" id="nombrealumno" readonly>
+      </div>
+      <div class="form-group">
+          <label>ACTIVIDAD COMPLEMENTARIA</label>
+         <input type="text" class="form-control" name="actividadcomplementaria" id="actividadcomplementaria" readonly> 
+      </div>
+      <div class="form-group col-lg col-md">
+          <label>CARRERA:</label>
+          <input type="text" class="form-control" name="carrera" id="carrera" maxlength="8"
+              placeholder="carrera" readonly>
+      </div>
+      <div class="form-group col-lg col-md" >
+          <label>DEPARTAMENTO:</label>
+          <input type="text" class="form-control" name="departamento" id="departamento"
+              maxlength="256" readonly>
+      </div>
+      <div class="form-group col-lg col-md col-sm col-xs" >
+          <label>Estatus:</label>
+              <select class="form-select select-picker" name="estatus_" id="estatus" required>
+  <option value="CURSANDO">CURSANDO</option>
+  <option value="FINALIZADO">FINALIZADO</option>
+  <option value="ACREDITADO">ACREDITADO</option>
+</select>     
+      </div>
+
+      <div class="modal-footer">
+      <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Actualizar</button>
+     </div>
+     </div>
+    </div>
+  </div>
+</div>
+<form>
+';} ?>
 
 
 

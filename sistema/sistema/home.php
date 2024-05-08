@@ -2,9 +2,10 @@
 if(strlen(session_id())<1)
 session_start();
 
-
 require "header.php";
 
+if($_SESSION['Home']==1)
+{
  ?>
 
 
@@ -59,7 +60,6 @@ require "header.php";
 
     </body>
     <?php 
-
-
+}
 ob_end_flush();
 ?>

@@ -160,7 +160,7 @@
         </select>
         <label >Contraseña:</label>
         
-        <input type="text"  name="pass" id="pass" class="form-control input-sm">
+        <input type="text"  name="pass" id="pass" class="form-control input-sm" readonly>
         <button type="button" class="btn btn-success" onclick="generarcontraseña()">GENERAR CONTRASEÑA</button>
       </div>
       <div class="modal-footer">
@@ -183,7 +183,7 @@
       <div class="modal-body" style="text-align: center;">
         <input type="text" hidden id="idalumno" name="idalumno">
         <label >No. Control: </label>
-        <input type="text" name="ncontrolu" id="ncontrolu" class="form-control input-sm" onchange="CopiarNombre()" readonly>
+        <input type="text" name="ncontrolu" id="ncontrolu" class="form-control input-sm" readonly>
         <label >Nombre del Alumno: </label>
         <input type="text"  name="nombreu" id="nombreu" class="form-control input-sm" readonly>
         <label >Correo Institucional: </label>

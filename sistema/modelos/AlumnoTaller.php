@@ -46,19 +46,22 @@ Class AlumnoTaller
 		return ejecutarConsulta($sql);
 	}
 
-	//modal de evaluación
+	//modal de evaluación de desempeño
 	public function visualizar(){
-		$sql = "SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.valor_numerico, ae.desempeno,ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre FROM alumnotaller ae INNER JOIN alumnos a ON a.NumeroControl=ae.NumeroControl";
+		$sql = "SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.valor_numerico, ae.desempeno,
+		ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre, ae.P1, ae.P2, ae.P3, ae.P4, ae.P5, ae.P6, ae.P7 FROM alumnotaller ae 
+		INNER JOIN alumnos a ON a.NumeroControl=ae.NumeroControl";
 		return ejecutarConsulta($sql);
 	}
 
-	//Implementamos un método para editar el periodo, el desempeño, el valor numerico de la actividad 
-	public function editarcon($idAlumnoT,$periodo, $valornum, $desempeño, $credito)
+	//Implementamos un método para guardar el periodo, el desempeño, el valor numerico de la actividad 
+	public function guardarcon($idAlumnoT,$periodo, $valornum, $desempeño, $credito, $p1, $p2, $p3, $p4, $p5, $p6, $p7)
     {
-	$sql="UPDATE alumnotaller SET periodo='$periodo', valor_numerico = '$valornum', desempeno = '$desempeño', Credito = '$credito' WHERE idAlumnoT='$idAlumnoT'";
+	$sql="UPDATE alumnotaller SET periodo='$periodo', valor_numerico = '$valornum', desempeno = '$desempeño', Credito = '$credito', 
+	P1 = '$p1', P2 = '$p2', P3 = '$p3', P4 = '$p4', P5 = '$p5', P6 = '$p6', P7 = '$p7'
+	 WHERE idAlumnoT='$idAlumnoT'";
 	ejecutarConsulta($sql);
 	}
-	
 	
 	public function listadoAE($nombre_actividad, $horario , $periodo)
 	{
@@ -66,7 +69,66 @@ Class AlumnoTaller
 		return ejecutarConsulta($sql);
 	}
 
+	public function mostrarActividadesSistemas()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Sistemas y Computación' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividadesExtraexcolares()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Actividades Extraescolares' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividadesCienciasBasicas()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Ciencias Básicas' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividasEconomicoAdministrativas()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Ciencias Económico-Administrativas' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividadesElectricaElectronica()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Electrica y Electrónica' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividadesGestionTecnologica()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Gestión Tecnología y Vinculación' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividadesMetalMecanica()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Metal Mecánica' ";
+		return ejecutarConsulta($sql);
+	}
 	
+	public function mostrarActividadesCentroInformacion()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Centro de Información' ";
+		return ejecutarConsulta($sql);
+	}
+
+	public function mostrarActividadesServiciosEscolares()
+	{
+		$sql="SELECT t.idAlumnoT, t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito  FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE departamento = 'Departamento de Servicios Escolares' ";
+		return ejecutarConsulta($sql);
+	}
+	//funcion para los datos de la constancia
+	public function constancia($idAlumnoT){
+		$sql="SELECT ae.idAlumnoT, ae.NumeroControl , ae.nombre_actividad, ae.tipo_actividad,ae.periodo, ae.nombre_carrera, ae.valor_numerico, ae.desempeno,ae.Credito, a.ApellidoP, a.ApellidoM, a.Nombre, ae.P1, ae.P2, ae.P3, ae.P4, ae.P5, ae.P6, ae.P7 
+		FROM alumnotaller ae INNER JOIN alumnos a ON a.NumeroControl=ae.NumeroControl WHERE ae.idAlumnoT = '$idAlumnoT'";
+		return ejecutarConsulta($sql);
+	}
+
 }
 
 ?>

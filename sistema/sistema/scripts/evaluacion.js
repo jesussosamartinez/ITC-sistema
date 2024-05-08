@@ -7,7 +7,14 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	var valorn = button.data('valorn') // Extraer la información de atributos de datos
 	var desempeño = button.data('desempeño') // Extraer la información de atributos de datos
 	var credito = button.data('credito') // Extraer la información de atributos de datos
-	
+	var P1 = button.data('p1')
+	var P2 = button.data('p2')
+	var P3 = button.data('p3')
+	var P4 = button.data('p4')
+	var P5 = button.data('p5')
+	var P6 = button.data('p6')
+	var P7 = button.data('p7')
+
 	var modal = $(this)
 	modal.find('.modal-body #idAlumnoT').val(id)
 	modal.find('.modal-body #nombrealumno').val(nombre)
@@ -16,26 +23,24 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 	modal.find('.modal-body #valor_numerico').val(valorn)
 	modal.find('.modal-body #desempeno').val(desempeño)
 	modal.find('.modal-body #credito').val(credito)
+	modal.find('.modal-body input[name="desempeñouno"]').val([P1])
+	modal.find('.modal-body input[name="desempeñodos"]').val([P2])
+	modal.find('.modal-body input[name="desempeñotres"]').val([P3])
+	modal.find('.modal-body input[name="desempeñocuatro"]').val([P4])
+	modal.find('.modal-body input[name="desempeñocinco"]').val([P5])
+	modal.find('.modal-body input[name="desempeñoseis"]').val([P6])
+	modal.find('.modal-body input[name="desempeñosiete"]').val([P7])
 	$('.alert').hide();//Oculto alert
   })
 
   $("#evaluacion").submit(function( event ) {
 	 event.preventDefault();
 	 var parametros = $(this).serialize();
-
 		 $.ajax({
 				type: "POST",
-				url: "../ajax/alumnotaller.php?op=editarcon",
+				url: "../ajax/alumnotaller.php?op=guardarcon",
 				data: parametros,
 				success: function(datos){
-				
-					registrarEnBitacora( "Registro de Evaluación correcto", function(success) {
-						if (success) {
-							console.log("Registro en bitácora correcto");
-						} else {
-							console.log("Error al registrar en bitácora");
-						}
-					});   
 				
 				alertify.alert('ACTUALIZACION DE DATOS',datos, function(){ 
 					location.reload();
@@ -43,14 +48,6 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 				
 			  }
 		});
-		function registrarEnBitacora(estatus, callback) {
-			$.post("../ajax/Bitacora.php?op=RegistroEvaluacion", {
-				"Movimiento": "Registro de 	Evaluación",
-				"Estatus": estatus,
-			}, function(data) {
-				callback(data != "null");
-			});
-		}
 	 
 	});
 
@@ -148,3 +145,18 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 					desempeño = valor/7;
 					 $("#valor_numerico").val(desempeño.toFixed(2));
 }
+
+		function constancia()
+{
+	idAlumnoT = document.getElementById("idAlumnoT").value;
+	console.log(idAlumnoT);
+	$.ajax({
+		type: "POST",
+		url: "../js/constanciacumplimiento.php",
+		data: {idAlumnoT : idAlumnoT},
+		success: function(datos){
+			location.href = "../js/constancia.php";
+	  }
+});
+}
+

@@ -214,6 +214,3 @@ function eliminar(idTaller)
 
 
 init();
-
-
- 
