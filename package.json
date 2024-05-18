@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "asposewordscloud": "^1.0.4",
+    "docx-pdf": "^0.0.1"
+  }
+}

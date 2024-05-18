@@ -90,7 +90,7 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 		 const showResults = () => {
 		  searchData()
 		  .then(dataResults => {
-			console.log(dataResults)
+			//console.log(dataResults)
 			tableContainer.innerHTML = ''
 			if(typeof dataResults.data !== 'undefined' && !dataResults.data){
 			  errorsContainer.style.display = 'block'
@@ -102,7 +102,8 @@ $('#ModalEvaluacion').on('show.bs.modal', function (event) {
 			  for(const alumnos of dataResults){
 				const row = document.createElement('tr')
 				row.innerHTML = `
-				<td><button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="${alumnos.idAlumnoT}" data-nombre="${alumnos.ApellidoP+" "+alumnos.ApellidoM+" "+alumnos.Nombre}" data-actividad="${alumnos.nombre_actividad+"-"+alumnos.tipo_actividad}" data-periodo="${alumnos.periodo}" data-credito="${alumnos.Credito}" data-valorn ="${alumnos.valor_numerico}" data-desempeño="${alumnos.desempeno}" ><i class="fa fa-pencil"></i></button></td>
+				<td><button class="btn btn-warning" data-bs-toggle="modal" id="dataUpdate" data-bs-target="#ModalEvaluacion" data-id="${alumnos.idAlumnoT}" data-nombre="${alumnos.ApellidoP+" "+alumnos.ApellidoM+" "+alumnos.Nombre}" data-actividad="${alumnos.nombre_actividad+" - "+alumnos.tipo_actividad}" data-periodo="${alumnos.periodo}" data-credito="${alumnos.Credito}" data-valorn="${alumnos.valor_numerico}" data-desempeño="${alumnos.desempeno}" 
+				data-p1="${alumnos.P1}" data-p2="${alumnos.P2}" data-p3="${alumnos.P3}" data-p4="${alumnos.P4}" data-p5="${alumnos.P5}" data-p6="${alumnos.P6}" data-p7="${alumnos.P7}"><i class="fa fa-pencil"></i></button></td>
 				<td>${alumnos.NumeroControl.toUpperCase().replace(searchs, '<span class="bold">$&</span>')}</td>
 				<td>${alumnos.ApellidoP+" "+alumnos.ApellidoM+" "+alumnos.Nombre}</td>
 				<td>${alumnos.nombre_actividad+"-"+alumnos.tipo_actividad}</td>

@@ -33,6 +33,14 @@ Class Usuario
     	$sql="SELECT idUsuario, email, Password, idRol FROM usuarios WHERE email='$email' AND Password='$Password'"; 
     	return ejecutarConsulta($sql);  
     }
+
+	//Funcion para variables de sesión (departamentos)
+	public function variables($email)
+    {
+		$sql="SELECT u.idUsuario, u.email, d.NombreJD, d.Departamento From usuarios u INNER JOIN departamento d
+		ON d.Correo = u.email WHERE u.email='$email'";
+		return ejecutarConsulta($sql);
+	}
 }
 
 ?>

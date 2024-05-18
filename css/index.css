@@ -1,0 +1,885 @@
+@media screen and (min-width : 769px){
+nav {
+    background-color: #1B396A;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 89.76%;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Raleway';
+  }
+
+  .image {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 10%;
+    bottom: 0%;
+    height: auto;
+    background-image: url('../assets/img/TCNMCampusCuautla/EDIFICIO G.JPG');
+    background-size: cover;
+    width: auto;
+  }
+
+  #tcnm>img {
+    float: left;
+    width: 50px;
+    height: 42px;
+    position: absolute;
+    left: 17%;
+    top: 18%;
+  }
+
+  #TECNM>img {
+    float: left;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 3%;
+    top: 10%;
+  }
+
+  #login-form{
+    background-color: #F9F9F9;
+    position: absolute;
+    width: 430px;
+    height: 393px;
+    left: 34%;
+    top: 24%;
+    box-shadow: 0 15px 25px rgba(0,0,0,10);
+    border-radius: 18px;
+  }
+
+  .rectangulo>h2 {
+    position: absolute;
+    left: 8.28%;
+    right: 9.11%;
+    top: 5%;
+    bottom: 90.06%;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 35px;
+    text-align: center;
+
+    color: #1E3563;
+
+  }
+
+
+  form>.rectangulo>.email>label {
+    position: absolute;
+    left: 20%;
+    right: 40%;
+    top: 30%;
+    bottom: 77.54%;
+
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* BShades-500 */
+
+    color: #141927;
+    
+  }
+
+  form>.rectangulo>.email>input {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 15%;
+    right: 18.84%;
+    top: 38%;
+    bottom: 67.17%;
+
+    width: 23em;
+    height: 2em;
+
+    /* WShades-500 */
+
+    background: #F9F9F9;
+    /* Primary-500 */
+
+    border: 1px solid #1B396A;
+    border-radius: 8px;
+  }
+
+  ::placeholder {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    /* BShades-200 */
+
+    color: #A1A3A9;
+  }
+
+  form>.rectangulo>.password>label {
+    position: absolute;
+    left: 20%;
+    right: 40%;
+    top: 50%;
+    bottom: 77.54%;
+
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* BShades-500 */
+
+    color: #141927;
+    cursor: pointer;
+  }
+
+  form>.rectangulo>.password>input {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 15%;
+    right: 18.84%;
+    top: 57%;
+    bottom: 67.17%;
+
+    width: 23em;
+    height: 2em;
+
+    /* WShades-500 */
+
+    background: #F9F9F9;
+    /* Primary-500 */
+
+    border: 1px solid #1B396A;
+    border-radius: 8px;
+  }
+
+  form>.rectangulo>.forget>label {
+    position: absolute;
+    left: 30%;
+    right: 19.88%;
+    top: 73%;
+    bottom: 34.13%;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+
+    color: #916F09;
+  }
+
+ form> .rectangulo>.btn>button {
+    box-sizing: border-box;
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 8px;
+
+    position: absolute;
+    left: 30%;
+    right: 32.92%;
+    top: 80%;
+    bottom: 18.36%;
+
+    width: 12em;
+    height: 2em;
+    /* Primary-500 */
+
+    background: #1B396A;
+    /* BShades-500 */
+
+    border: 1px solid #141927;
+    border-radius: 12px;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    color: #F9F9F9;
+  }
+
+  form>.rectangulo>.btn>button:hover{
+    background: #00325F;
+  }
+
+
+  form>.rectangulo>.email>span {
+    position: absolute;
+    left: 18%;
+    right: 82.47%;
+    top: 39.5%;
+    bottom: 69.26%;
+
+    color: #A1A3A9;
+  }
+
+  form>.rectangulo>.password>span {
+    position: absolute;
+    left: 18%;
+    right: 50%;
+    top: 58%;
+    bottom: 44.71%;
+
+    color: #A1A3A9;
+
+  }
+
+  form>.rectangulo>.password>.eye-icon {
+    position: absolute;
+    left: 79%;
+    right: 50%;
+    top: 58%;
+    bottom: 60%;
+
+    cursor: pointer;
+    transition: 0.4s ease all;
+  }
+
+  .inputcenter {
+    text-align: center;
+  }
+
+  form>.rectangulo>.password>.eye-icon:hover{
+    color: #1B396A;
+  }
+
+  .loginbtn {
+    position:absolute; 
+    left: 85%; 
+    top: 35%;
+    color: #F9F9F9;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .loginbtn:hover{
+    color: #AD9706;
+  }
+
+  .fa-globe {
+    position: absolute;
+    color: #F9F9F9;
+    font-size: 25px;
+    top: 30%;
+    left: 80%;
+  }
+}
+
+@media screen and (min-width: 531px) and (max-width : 768px ){
+  nav {
+    background-color: #1B396A;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 89.76%;
+  }
+  h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Raleway';
+    width: 50%;
+    padding-left: 9.5em;
+  }
+  .image {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 10%;
+    bottom: 0%;
+    height: auto;
+    background-image: url('../assets/img/TCNMCampusCuautla/EDIFICIO G.JPG');
+    background-size: cover;
+    width: auto;
+  }
+
+  #tcnm>img {
+    float: left;
+    width: 50px;
+    height: 42px;
+    position: absolute;
+    left: 24%;
+    top: 25%;
+  }
+
+  #TECNM>img {
+    float: left;
+    width: 150px;
+    height: 50px;
+    position: absolute;
+    left: 2%;
+    top: 20%;
+  }
+
+  #login-form{
+    background-color: #F9F9F9;
+    position: absolute;
+    width: 430px;
+    height: 393px;
+    left: 25%;
+    top: 30%;
+    box-shadow: 0 15px 25px rgba(0,0,0,10);
+    border-radius: 18px;
+  }
+
+  .rectangulo>h2 {
+    position: absolute;
+    left: 8.28%;
+    right: 9.11%;
+    top: 5%;
+    bottom: 90.06%;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 35px;
+    text-align: center;
+
+    color: #1E3563;
+
+  }
+
+
+  form>.rectangulo>.email>label {
+    position: absolute;
+    left: 20%;
+    right: 40%;
+    top: 30%;
+    bottom: 77.54%;
+
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* BShades-500 */
+
+    color: #141927;
+    
+  }
+
+  form>.rectangulo>.email>input {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 15%;
+    right: 18.84%;
+    top: 38%;
+    bottom: 67.17%;
+
+    width: 23em;
+    height: 2em;
+
+    /* WShades-500 */
+
+    background: #F9F9F9;
+    /* Primary-500 */
+
+    border: 1px solid #1B396A;
+    border-radius: 8px;
+  }
+
+  ::placeholder {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    /* BShades-200 */
+
+    color: #A1A3A9;
+  }
+
+  form>.rectangulo>.password>label {
+    position: absolute;
+    left: 20%;
+    right: 40%;
+    top: 50%;
+    bottom: 77.54%;
+
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* BShades-500 */
+
+    color: #141927;
+    cursor: pointer;
+  }
+
+  form>.rectangulo>.password>input {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 15%;
+    right: 18.84%;
+    top: 57%;
+    bottom: 67.17%;
+
+    width: 23em;
+    height: 2em;
+
+    /* WShades-500 */
+
+    background: #F9F9F9;
+    /* Primary-500 */
+
+    border: 1px solid #1B396A;
+    border-radius: 8px;
+  }
+
+  form>.rectangulo>.forget>label {
+    position: absolute;
+    left: 30%;
+    right: 19.88%;
+    top: 73%;
+    bottom: 34.13%;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+
+    color: #916F09;
+  }
+
+ form> .rectangulo>.btn>button {
+    box-sizing: border-box;
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 8px;
+
+    position: absolute;
+    left: 30%;
+    right: 32.92%;
+    top: 80%;
+    bottom: 18.36%;
+
+    width: 12em;
+    height: 2em;
+    /* Primary-500 */
+
+    background: #1B396A;
+    /* BShades-500 */
+
+    border: 1px solid #141927;
+    border-radius: 12px;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    color: #F9F9F9;
+  }
+
+  form>.rectangulo>.btn>button:hover{
+    background: #00325F;
+  }
+
+
+  form>.rectangulo>.email>span {
+    position: absolute;
+    left: 18%;
+    right: 82.47%;
+    top: 39.5%;
+    bottom: 69.26%;
+
+    color: #A1A3A9;
+  }
+
+  form>.rectangulo>.password>span {
+    position: absolute;
+    left: 18%;
+    right: 50%;
+    top: 58%;
+    bottom: 44.71%;
+
+    color: #A1A3A9;
+
+  }
+
+  form>.rectangulo>.password>.eye-icon {
+    position: absolute;
+    left: 79%;
+    right: 50%;
+    top: 58%;
+    bottom: 60%;
+
+    cursor: pointer;
+    transition: 0.4s ease all;
+  }
+
+  .inputcenter {
+    text-align: center;
+  }
+
+  form>.rectangulo>.password>.eye-icon:hover{
+    color: #1B396A;
+  }
+
+  .loginbtn {
+    position:absolute; 
+    left: 87%; 
+    top: 26%;
+    color: #F9F9F9;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  .loginbtn:hover{
+    color: #AD9706;
+  }
+
+  .fa-globe {
+    position: absolute;
+    color: #F9F9F9;
+    font-size: 25px;
+    top: 30%;
+    left: 80%;
+  }
+}
+
+@media only screen and (max-width: 530px){
+  nav {
+    background-color: #1B396A;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 89.76%;
+    width: 530px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-family: 'Raleway';
+    width: 50%;
+    padding-left: 10em;
+    padding-top: 2%;
+  }
+  .image {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 10%;
+    bottom: 0%;
+    height: 125%;
+    background-image: url('../assets/img/TCNMCampusCuautla/EDIFICIO G.JPG');
+    background-size: cover;
+    width: 136%;
+  }
+
+  #tcnm>img {
+    float: left;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    left: 26%;
+    top: 25%;
+  }
+
+  #TECNM>img {
+    float: left;
+    width: 120px;
+    height: 40px;
+    position: absolute;
+    left: 2%;
+    top: 20%;
+  }
+
+  #login-form{
+    background-color: #F9F9F9;
+    position: absolute;
+    width: 430px;
+    height: 393px;
+    left: 14%;
+    top: 45%;
+    box-shadow: 0 15px 25px rgba(0,0,0,10);
+    border-radius: 18px;
+  }
+
+  .rectangulo>h2 {
+    position: absolute;
+    left: 8.28%;
+    right: 9.11%;
+    top: 5%;
+    bottom: 90.06%;
+
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 35px;
+    text-align: center;
+
+    color: #1E3563;
+
+  }
+
+
+  form>.rectangulo>.email>label {
+    position: absolute;
+    left: 20%;
+    right: 40%;
+    top: 30%;
+    bottom: 77.54%;
+
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* BShades-500 */
+
+    color: #141927;
+    
+  }
+
+  form>.rectangulo>.email>input {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 15%;
+    right: 18.84%;
+    top: 38%;
+    bottom: 67.17%;
+
+    width: 23em;
+    height: 2em;
+
+    /* WShades-500 */
+
+    background: #F9F9F9;
+    /* Primary-500 */
+
+    border: 1px solid #1B396A;
+    border-radius: 8px;
+  }
+
+  ::placeholder {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    /* BShades-200 */
+
+    color: #A1A3A9;
+  }
+
+  form>.rectangulo>.password>label {
+    position: absolute;
+    left: 20%;
+    right: 40%;
+    top: 50%;
+    bottom: 77.54%;
+
+    font-family: 'Raleway';
+    font-weight: bolder;
+    font-size: 12px;
+    line-height: 22px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* BShades-500 */
+
+    color: #141927;
+    cursor: pointer;
+  }
+
+  form>.rectangulo>.password>input {
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 15%;
+    right: 18.84%;
+    top: 57%;
+    bottom: 67.17%;
+
+    width: 23em;
+    height: 2em;
+
+    /* WShades-500 */
+
+    background: #F9F9F9;
+    /* Primary-500 */
+
+    border: 1px solid #1B396A;
+    border-radius: 8px;
+  }
+
+  form>.rectangulo>.forget>label {
+    position: absolute;
+    left: 30%;
+    right: 19.88%;
+    top: 73%;
+    bottom: 34.13%;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.15px;
+
+    color: #916F09;
+  }
+
+ form> .rectangulo>.btn>button {
+    box-sizing: border-box;
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    gap: 8px;
+
+    position: absolute;
+    left: 30%;
+    right: 32.92%;
+    top: 80%;
+    bottom: 18.36%;
+
+    width: 12em;
+    height: 2em;
+    /* Primary-500 */
+
+    background: #1B396A;
+    /* BShades-500 */
+
+    border: 1px solid #141927;
+    border-radius: 12px;
+
+    font-family: 'Raleway';
+    font-weight: bold;
+    color: #F9F9F9;
+  }
+
+  form>.rectangulo>.btn>button:hover{
+    background: #00325F;
+  }
+
+
+  form>.rectangulo>.email>span {
+    position: absolute;
+    left: 18%;
+    right: 82.47%;
+    top: 39.5%;
+    bottom: 69.26%;
+
+    color: #A1A3A9;
+  }
+
+  form>.rectangulo>.password>span {
+    position: absolute;
+    left: 18%;
+    right: 50%;
+    top: 58%;
+    bottom: 44.71%;
+
+    color: #A1A3A9;
+
+  }
+
+  form>.rectangulo>.password>.eye-icon {
+    position: absolute;
+    left: 79%;
+    right: 50%;
+    top: 58%;
+    bottom: 60%;
+
+    cursor: pointer;
+    transition: 0.4s ease all;
+  }
+
+  .inputcenter {
+    text-align: center;
+  }
+
+  form>.rectangulo>.password>.eye-icon:hover{
+    color: #1B396A;
+  }
+
+  .loginbtn {
+    position:absolute; 
+    left: 87%; 
+    top: 25%;
+    color: #F9F9F9;
+    font-family: 'Raleway';
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 15px;
+  }
+
+  .loginbtn:hover{
+    color: #AD9706;
+  }
+
+  .fa-globe {
+    position: absolute;
+    color: #F9F9F9;
+    font-size: 20px;
+    top: 30%;
+    left: 80%;
+  }
+}

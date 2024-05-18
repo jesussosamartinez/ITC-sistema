@@ -31,7 +31,7 @@ Class AlumnoTaller
 
 	//funcion para busqueda en las listas
 	public function buscar($searchs){
-		$sql = "SELECT t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito, t.periodo, t.valor_numerico, t.desempeno FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE a.NumeroControl LIKE '%$searchs%'";
+		$sql = "SELECT t.NumeroControl ,a.ApellidoP,a.ApellidoM, a.Nombre ,t.nombre_actividad, t.tipo_actividad, t.nombre_carrera, t.departamento, t.Estatus, t.Credito, t.periodo, t.valor_numerico, t.desempeno, t.P1, t.P2, t.P3, t.P4, t.P5, t.P6, t.P7 FROM alumnotaller t INNER JOIN alumnos a ON a.NumeroControl = t.NumeroControl WHERE a.NumeroControl LIKE '%$searchs%'";
 		return ejecutarConsulta($sql);
 	}
 

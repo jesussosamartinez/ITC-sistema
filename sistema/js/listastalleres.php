@@ -57,6 +57,9 @@ if ($_SESSION['Reporte']==1)
           $num++;
         }
       
+
+      $writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xlsx');
+      $writer->save("ListasActividadComplementaria.xlsx");
       
       $writer = \PhpOffice\PhpSpreadsheet\IOFactory::createWriter($spreadsheet, 'Xlsx');
       header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

@@ -28,6 +28,7 @@ session_start();
      $valornumerico = $list->valor_numerico;
      $periodo = $list->periodo;
      $nombredepto = $_SESSION['nombred'];
+     $jdepto = $_SESSION['jdepto'];
 
      if(($list->P1)==0){
           $P1_1 = 'X';
@@ -117,6 +118,7 @@ session_start();
      // --- Asignamos valores
      $templateWord->setValue('nombre_alumno', $nombre_alumno);
      $templateWord->setValue('departamento', $nombredepto);
+     $templateWord->setValue('jdepto', $jdepto);
      $templateWord->setValue('numerocontrol', $numerocontrol);
      $templateWord->setValue('nombrecarrera', $nombrecarrera);
      $templateWord->setValue('actividadcomplementaria', $nombre_actividad);

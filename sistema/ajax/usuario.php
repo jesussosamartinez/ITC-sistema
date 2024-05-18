@@ -59,11 +59,18 @@ switch ($_GET["op"]){
         $fetch=$rspta->fetch_object();
 
     if(isset($fetch)){
+
+        $depto = $usuario->variables($email);
+        $list = $deptos->fetch_object();
+
         //variables de session
         $_SESSION['idusuario']=$fetch->idUsuario;
         $_SESSION['email']=$fetch->email;
         $_SESSION['Password']=$fetch->Password;
         $_SESSION['idRol']=$fetch->idRol;
+        $_SESSION['jdepto']=$list->jefeDepartamento;
+        $_SESSION['ndepto']=$list->nombreDepartamento;
+        
         session_start();
 
       //VARIABLES DE SESION PARA LA EXPIRACION 

@@ -15,7 +15,7 @@ $("#excel").click(function(e){
     data: {"nombre_actividad":nombre_actividad, "horario":horario, "periodo": periodo}, 
     success: function (response){
       console.log(response);
-      location.href= "../js/listastalleres.php";
+      location.href= "../js/listas.php";
     } 
 });
 
